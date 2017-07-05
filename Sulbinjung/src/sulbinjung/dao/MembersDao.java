@@ -32,7 +32,7 @@ public class MembersDao {
 			conn = new DbcpBean().getConn();
 			String sql = "INSERT INTO users "
 					+ "(num,id,pwd,name,birth,gender,phone,email,regdate)"
-					+ " VALUES(member_seq.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
+					+ " VALUES(members_seq.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
