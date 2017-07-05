@@ -117,8 +117,7 @@
 					<div class="form-group">
 						<label for="phone">전화번호</label>
 						<br/>
-						<input type="text" class="form-control" id="phone1">&nbsp;&nbsp;-&nbsp;
-						<input type="text" class="form-control" id="phone2">	
+						<input type="text" class="form-control" id="phone">
 					</div>
 							
 					<div class="form-group">
