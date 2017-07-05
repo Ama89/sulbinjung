@@ -30,9 +30,9 @@ public class MembersDao {
 		int flag = 0;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "INSERT INTO users "
-					+ "(num,id,pwd,name,birth,gender,phone,email,regdate)"
-					+ " VALUES(members_seq.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
+			String sql = "INSERT INTO members"
+					+ " (num,id,pwd,name,birth,gender,phone,email,regdate)"
+					+ " VALUES(members_seq.NEXTVAL,?,?,?,TO_DATE(?, 'rrrr-mm-dd'),?,?,?,SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
@@ -69,7 +69,7 @@ public class MembersDao {
 		boolean isValid=false;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "SELECT * FROM users WHERE id=? AND pwd=?";
+			String sql = "SELECT * FROM members WHERE id=? AND pwd=?";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setString(1, dto.getId());
