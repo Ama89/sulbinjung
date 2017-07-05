@@ -64,18 +64,18 @@ public class MembersDao {
 	public boolean isValid(MembersDto dto){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		int chk=0;
+		ResultSet rs=null;
 
 		boolean isValid=false;
 		
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "SELECT id FROM members WHERE id=? AND pwd=?";
+			String sql = "SELECT * FROM members WHERE id=? AND pwd=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
-			chk=pstmt.executeUpdate();
-			if(chk>0){
+			rs=pstmt.executeQuery();
+			if(rs.next()){
 				isValid=true;
 				System.out.println("db성공8");
 			}

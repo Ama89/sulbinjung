@@ -8,7 +8,7 @@
 </head>
 <body>
 <script>
-	alert("<%=num%> 번 회원의 정보를 수정했습니다.");
+	alert("<%=id%> 님의 정보를 수정했습니다.");
 	location.href="list.jsp";
 </script>
 </body>
