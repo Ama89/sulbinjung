@@ -7,7 +7,13 @@
 <%
 	String cPath = request.getContextPath();
 	boolean isValid = MembersDao.getInstance().isValid(dto);
+	//로그인 후 리다일렉트 이동할 url 주소
+	String url = request.getParameter("url");
+	if(url==null){
+		url=request.getContextPath();
+	}
 %>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,33 +38,21 @@
 </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="wrapper">
-    	<div class="logo">logo</div>
-    </div>
-	<div class="row">
-		<div class="col-sm-5 col-sm-offset-3">
-			<form action="">
-				<div class="form-group">
-					<label for="id">아이디</label>
-					<input type="text" class="form-control" id="email"/>
-					<p class="help-block">반드시 입력하세요</p>
-				</div>
-				<div class="form-group">
-					<label for="pwd">비밀번호</label>
-					<input type="password" class="form-control" id="pwd"/>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox"/> 아이디 저장
-					</label>
-				</div>
-				<button type="submit" class="btn btn-default">로그인</button>
-				<button type="reset" class="btn btn-default">취소</button>
-			</form>			
-		</div>
-	</div>	
-</div>
+	<%if(isValid){ 
+		session.setAttribute("id", dto.getId()); %>
+		<script>
+		alert("로그인성공");
+		location.href="/index.jsp";
+		</script>
+		
+		
+	<%} else { %>
+		<p>아이디 혹은 비밀번호가 틀려요</p>
+		<script>
+		alert("로그인실패");
+		location.href="loginform.jsp";
+		</script>		
+		
+	<%} %>
 </body>
 </html>
