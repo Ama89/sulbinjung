@@ -1,63 +1,127 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%
-	String cPath = request.getContextPath();
-%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>===== 환영합니다 =====</title>
-<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<title>index.jsp</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
 <style>
-	.wrapper{
-		display: inline;
-
-	}
-	.logo{
-			width: 120px;
-			height: 70px;
-			border-width: 2px;
-			border-style: solid;
-			border-color: black;
-			text-align: center;
-			margin: 0 auto;
-			display: block;
-			margin-top: 10px;
-		}
-
-	#main1{
-		display: block;
-		margin: 0 auto;
-		padding: 20px;
-		width: 1000px;
-		height: 650px;
+	.container{		
+		border : 1px dotted blue;
 	}
 	
-	#two{
-		color: black;
-		float: right;
-		margin-right: 20px;
+	.row > div{
+		border: 1px dotted black;
 	}
-
-	#one{
-		color: black;
-		float: right;
-		margin-right: 200px;
+	#footer{
+		height: 200px;
+		background-color: #cecece;
 	}
+	.row{
+		text-align: center;
+		font-size: 20px;
+	}
+	#hat{
+		margin: 10px auto;
+	}
+	
 </style>
 </head>
 <body>
-<div class="container">
-    <div class="wrapper">
-    	<div class="logo">logo</div>
-		<a id="one" href="<%=cPath %>/members/signup.jsp">sign up</a>
-		<a id="two" href="<%=cPath %>/members/login.jsp">login</a>	
-    </div>
-	<img id="main1" src="<%=cPath %>/resource/images/sulbinjung_23.png" alt="main1">
-</div>
 
-<script src="<%=cPath %>/resource/js/jquery-3.2.0.js"></script>
-<script src="<%=cPath %>/resource/js/bootstrap.js"></script>	
+	<!-- 상단 네비게이션 (로그인/회원가입) -->
+	<div class="navbar navbar-inverse">
+		<a class="navbar-link navbar-text pull-right" href="#">Signup</a>
+		<a class="navbar-link navbar-text pull-right" href="#">Login</a>		
+	</div>
+
+
+	<div class="container">
+	
+		<!-- 로고 -->			
+		<div class="row" id="hat">	
+			<div class="col-xs-12">SulbinJung</div>	
+		</div>
+					
+		<!-- 메인이미지 -->
+		<div class="row">	
+			<div class="col-xs-12">			
+				<img src="images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
+			</div>
+		</div>
+		
+		<!-- 메뉴카테고리 -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					  <div class="btn-group" role="group">
+					    	<button type="button" class="btn btn-default">About us</button>
+					  </div>
+					  <div class="btn-group" role="group">
+					    	<button type="button" class="btn btn-default">Menu</button>
+					  </div>
+					  <div class="btn-group" role="group">
+					    	<button type="button" class="btn btn-default">Event</button>
+					  </div>
+					  <div class="btn-group" role="group">
+					    	<button type="button" class="btn btn-default">Notice</button>
+					  </div>
+					  <div class="btn-group" role="group">
+					    	<button type="button" class="btn btn-default">Contact us</button>
+					  </div>
+				</div>
+			</div>
+		</div>	
+		
+		<!-- 베스트메뉴_(썸네일) -->
+		<div class="row" id="hat">Best Menu</div>
+		
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+			    <a href="#" class="thumbnail">
+			      <img src="images/무월_3.png" alt="메뉴_새우장">
+			    </a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+			    <a href="#" class="thumbnail">
+			      <img src="images/무월_13.png" alt="메뉴_비빔밥">
+			    </a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+			    <a href="#" class="thumbnail">
+			      <img src="images/무월_15.png" alt="메뉴_수육">
+			    </a>
+			</div>
+			<div class="col-xs-6 col-md-3">
+			    <a href="#" class="thumbnail">
+			      <img src="images/무월_16.png" alt="메뉴_육회냉면">
+			    </a>
+			</div>
+		</div>
+		
+		<!-- 이벤트&공지사항 -->
+		<div class="row" id="hat">Event & Notice</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<p id="eventbg">
+					
+					</p>
+				</div>
+				<div class="col-xs-6">
+					<p id="noticebg">
+					
+					</p>
+				</div>
+			</div>	
+	</div>				
+			
+	<!-- footer -->
+	<div class="container-fluid">
+			<div class="row" id="footer">
+			<div class="col-xs-12">footer</div>
+		</div>	
+	</div>
 </body>
 </html>
+
