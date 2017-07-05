@@ -78,16 +78,36 @@
 
 				<div class="form-group">
 					<label for="birth">생년월일</label> <br/>
-					<input type="number" class="form-control" id="birth_yy">
-					
-					<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">월 <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-					</ul>
+					<select name="" id="birth" class="selectpicker form-control">
+						<option disabled="disabled">연도</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+						<option value="2015">2015</option>
+						<option value="2014">2014</option>
+					</select>
+					<select name="" id="birth" class="selectpicker form-control">
+						<option disabled="disabled">월</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
 
-					<input type="number" class="form-control" id="birth_dd">
+					</select>
+					<select name="" id="birth" class="selectpicker form-control">
+						<option disabled="disabled">일</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
 				</div>
 				
 				<div class="form-group">
@@ -107,7 +127,6 @@
 					  <input type="radio"  name="gender" value="M">남자 &nbsp;
 					  <input type="radio"  name="gender" value="F">여자
 					  </div>
-				
 				<button type="submit" class="btn btn-default">확인</button> &nbsp;
 				<button type="reset" class="btn btn-default">취소</button>
 				</div>
