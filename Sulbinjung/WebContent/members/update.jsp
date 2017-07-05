@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>회원정보수정 결과</title>
 </head>
 <body>
-
+<script>
+	alert("<%=num%> 번 회원의 정보를 수정했습니다.");
+	location.href="list.jsp";
+</script>
 </body>
 </html>

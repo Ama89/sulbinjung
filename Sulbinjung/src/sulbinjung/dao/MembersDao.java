@@ -3,10 +3,12 @@ package sulbinjung.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import sulbinjung.dto.MembersDto;
+import sulbinjung.util.DbcpBean;
 
 public class MembersDao {
 	private static MembersDao dao;
@@ -27,7 +29,34 @@ public class MembersDao {
 	
 	//회원정보 수정
 	public boolean update(MembersDto dto){
-		return false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			String sql = "UPDATE users SET pwd=?, email=? "
+					+ "WHERE id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getPwd());
+			pstmt.setString(2, dto.getEmail());
+			pstmt.setString(3, dto.getId());
+			flag = pstmt.executeUpdate();
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	//회원정보 삭제
