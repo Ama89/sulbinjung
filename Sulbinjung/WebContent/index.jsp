@@ -16,14 +16,17 @@
 	}
 	#footer{
 		height: 200px;
-		background-color: #cecece;
+		padding-top: 20px;
 	}
 	.row{
 		text-align: center;
 		font-size: 20px;
 	}
-	#hat{
-		margin: 10px auto;
+	#hat1{
+		margin: 10px auto;		
+	}
+	#hat2{
+		background-color: black;
 	}
 	
 </style>
@@ -47,7 +50,7 @@
 		<!-- 메인이미지 -->
 		<div class="row">	
 			<div class="col-xs-12">			
-				<img src="images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
+				<img src="resource/images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
 			</div>
 		</div>
 		
@@ -80,46 +83,39 @@
 		<div class="row">
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="images/무월_3.png" alt="메뉴_새우장">
+			      <img src="resource/images/무월_3.png" alt="메뉴_새우장">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="images/무월_13.png" alt="메뉴_비빔밥">
+			      <img src="resource/images/무월_13.png" alt="메뉴_비빔밥">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="images/무월_15.png" alt="메뉴_수육">
+			      <img src="resource/images/무월_15.png" alt="메뉴_수육">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="images/무월_16.png" alt="메뉴_육회냉면">
+			      <img src="resource/images/무월_16.png" alt="메뉴_육회냉면">
 			    </a>
 			</div>
 		</div>
 		
 		<!-- 이벤트&공지사항 -->
-		<div class="row" id="hat">Event & Notice</div>
-			<div class="row">
-				<div class="col-xs-6">
-					<p id="eventbg">
-					
-					</p>
+		<div class="row" id="hat1">Event & Notice</div>
+			<div class="row" id="hat2">	
+				<div class="col-xs-12">			
+					<img src="resource/images/event_notice.png" alt="무월식탁가게정문" class="img-thumbnail">	
 				</div>
-				<div class="col-xs-6">
-					<p id="noticebg">
-					
-					</p>
-				</div>
-			</div>	
+			</div>
 	</div>				
 			
 	<!-- footer -->
-	<div class="container-fluid">
-			<div class="row" id="footer">
-			<div class="col-xs-12">footer</div>
+	<div class="container-fluid" >
+			<div class="row">
+			<div class="col-xs-12" id="footer">footer</div>
 		</div>	
 	</div>
 </body>
