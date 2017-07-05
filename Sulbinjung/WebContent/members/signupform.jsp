@@ -91,7 +91,7 @@
 				</div>
 				<!-- 생년월일 -->
 				<div class="form-group">
-					<label for="birth">생년월일</label> <br/>
+					<label for="birth">생년월일( ex: 19901212 )</label> <br/>
 					<input type="text" name="birth" class="form-control"/>
 				</div>
 				<!-- 이메일  -->
