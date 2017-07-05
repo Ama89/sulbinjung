@@ -26,57 +26,28 @@
 			<form action="signupform.jsp" method="post">
 				<div class="form-group">
 					<label for="id">아이디</label>
-					<input type="text" class="form-control" id="email" value="<%= dto.getId()%>"/>
+					<input type="text" class="form-control" name="email" value="<%= dto.getId()%>"/>
 					<p class="help-block">반드시 입력하세요</p>
 				</div>
 
 				<div class="form-group">
 					<label for="name">이름</label>
-					<input type="text" class="form-control" id="name" value="<%= dto.getName()%>"/>
+					<input type="text" class="form-control" name="name" value="<%= dto.getName()%>"/>
 				</div>
 
 				<div class="form-group">
-					<label for="birth">생년월일</label> <br/>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">연도</option>
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">월</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">일</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
+					<label for="birth">생년월일( ex: 19901212 )</label> <br/>
+					<input type="text" name="birth" class="form-control value="<%= dto.getBirth()%>"/>
 				</div>
 				
 				<div class="form-group">
 					<label for="email">이메일</label>
-					<input type="text" class="form-control" id="email" value="<%= dto.getEmail()%>"/>
+					<input type="text" class="form-control" name="email" value="<%= dto.getEmail()%>"/>
 				</div>
 					<div class="form-group">
 						<label for="phone">전화번호</label>
 						<br/>
-						<input type="text" class="form-control" id="phone" value="<%= dto.getPhone()%>">
+						<input type="text" class="form-control" name="phone" value="<%= dto.getPhone()%>">
 					</div>
 							
 					<div class="form-group">

@@ -9,6 +9,8 @@ import java.util.List;
 
 import sulbinjung.dto.MembersDto;
 import sulbinjung.util.DbcpBean;
+import test.dto.MemberDto;
+import test.util.DBConnect;
 import sulbinjung.dto.MembersDto;
 
 public class MembersDao {
@@ -22,6 +24,43 @@ public class MembersDao {
 		}
 		return dao;
 	}
+	
+	
+	//인자로 전달된 번호에 해당하는 회원정보를 리턴해주는 메소드
+		public MembersDto getData(int num){
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			MembersDto dto=null;
+			try{
+				conn=new DBConnect().getConn();
+				String sql="SELECT name,addr FROM member "
+						+ "WHERE num=?";
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setInt(1, num);
+				//SELECT 문 수행하고 결과값을 ResultSet 으로 받아오기
+				rs=pstmt.executeQuery();
+				//SELECT 된 결과가 있다면 cursor 를 한칸 내려서
+				if(rs.next()){
+					//커서가 위치한곳의 정보를 읽어온다.
+					String name=rs.getString("name");
+					String addr=rs.getString("addr");
+					//MemberDto 객체를 생성해서 담는다. 
+					dto=new MembersDto(num, name);
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				try{
+					if(rs!=null)rs.close();
+					if(pstmt!=null)pstmt.close();
+					if(conn!=null)conn.close();
+				}catch(Exception e){}
+			}
+			//회원 한명의 정보가 담겨 있는 MemberDto 객체를 리턴해준다.
+			return dto;
+		}
+		
 		
 	//회원정보 저장
 	public boolean insert(MembersDto dto){
