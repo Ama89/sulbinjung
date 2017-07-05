@@ -52,7 +52,7 @@
     <div class="wrapper">
     	<div class="logo">logo</div>
 		<a id="one" href="<%=cPath %>/members/signup.jsp">sign up</a>
-		<a id="two" href="<%=cPath %>/members/login.jsp">login</a>	
+		<a id="two" href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">login</a>	
     </div>
 	<img id="main1" src="<%=cPath %>/resource/images/sulbinjung_23.png" alt="main1">
 </div>
