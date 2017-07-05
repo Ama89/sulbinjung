@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>index.jsp</title>
-<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="resource/css/bootstrap.css" />
 <style>
 	.container{		
 		border : 1px dotted blue;
