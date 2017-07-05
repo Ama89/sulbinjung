@@ -42,7 +42,7 @@
 
 	<div class="container">
 	
-		<!-- 로고 -->			
+		<!-- 로고로고 -->			
 		<div class="row" id="hat">	
 			<div class="col-xs-12">SulbinJung</div>	
 		</div>
