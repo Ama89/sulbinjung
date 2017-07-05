@@ -53,8 +53,6 @@
 		border: 3px solid black;
 	}
 	
-
-	
 </style>
 </head>
 <body>
@@ -73,68 +71,39 @@
 				<!-- 아이디 -->
 				<div class="form-group">
 					<label for="id">아이디</label>
-					<input type="text" class="form-control" id="email"/>
+					<input type="text" class="form-control" name="email"/>
 					<p class="help-block">반드시 입력하세요</p>
 				</div>
 				<!-- 비밀번호 -->
 				<div class="form-group">
 					<label for="pwd">비밀번호</label>
-					<input type="password" class="form-control" id="pwd"/>
+					<input type="password" class="form-control" name="pwd"/>
 				</div>
 				<!-- 비밀번호 확인 -->
 				<div class="form-group">
 					<label for="pwd">비밀번호 확인</label>
-					<input type="password" class="form-control" id="confirm_pwd"/>
+					<input type="password" class="form-control" name="confirm_pwd"/>
 				</div>
 				<!-- 이름 -->
 				<div class="form-group">
 					<label for="name">이름</label>
-					<input type="text" class="form-control" id="name"/>
+					<input type="text" class="form-control" name="name"/>
 				</div>
 				<!-- 생년월일 -->
 				<div class="form-group">
 					<label for="birth">생년월일</label> <br/>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">연도</option>
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">월</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">일</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
+					<input type="text" name="birth" class="form-control"/>
 				</div>
 				<!-- 이메일  -->
 				<div class="form-group">
 					<label for="email">이메일</label>
-					<input type="text" class="form-control" id="email"/>
+					<input type="text" class="form-control" name="email"/>
 				</div>
 				<!-- 전화번호  -->
 					<div class="form-group">
 						<label for="phone">전화번호</label>
 						<br/>
-						<input type="text" class="form-control" id="phone">
+						<input type="text" class="form-control" name="phone">
 					</div>
 					<!-- 성별 -->
 					<div class="form-group">
@@ -153,6 +122,5 @@
 			<br/>	
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
-
 </body>
 </html>
