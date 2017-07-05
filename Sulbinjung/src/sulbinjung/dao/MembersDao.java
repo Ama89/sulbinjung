@@ -9,7 +9,6 @@ import java.util.List;
 
 import sulbinjung.dto.MembersDto;
 import sulbinjung.util.DbcpBean;
-import sulbinjung.dto.MembersDto;
 
 public class MembersDao {
 	private static MembersDao dao;
@@ -21,6 +20,12 @@ public class MembersDao {
 			dao = new MembersDao();
 		}
 		return dao;
+	}
+	
+	public MembersDto getData(int num){
+		MembersDto dto = null;
+		
+		return dto;
 	}
 		
 	//회원정보 저장

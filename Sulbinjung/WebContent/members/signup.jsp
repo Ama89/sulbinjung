@@ -117,8 +117,7 @@
 					<div class="form-group">
 						<label for="phone">전화번호</label>
 						<br/>
-						<input type="text" class="form-control" id="phone1">&nbsp;&nbsp;-&nbsp;
-						<input type="text" class="form-control" id="phone2">	
+						<input type="text" class="form-control" id="phone">
 					</div>
 							
 					<div class="form-group">
@@ -126,11 +125,11 @@
 					<br/>
 					  <input type="radio"  name="gender" value="M">남자 &nbsp;
 					  <input type="radio"  name="gender" value="F">여자
-					  </div>
+					</div>
 				<button type="submit" class="btn btn-default">확인</button> &nbsp;
 				<button type="reset" class="btn btn-default">취소</button>
 				</div>
-			</form>			
+			</form>
 		</div>
 	</div>	
 </div>
