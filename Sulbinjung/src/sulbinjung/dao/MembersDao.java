@@ -9,6 +9,7 @@ import java.util.List;
 
 import sulbinjung.dto.MembersDto;
 import sulbinjung.util.DbcpBean;
+import sulbinjung.dto.MembersDto;
 
 public class MembersDao {
 	private static MembersDao dao;
@@ -58,6 +59,42 @@ public class MembersDao {
 			return false;
 		}
 	}//insert()
+	
+	//로그인 아이디, 비밀번호 매칭
+	public boolean isValid(MembersDto dto){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		boolean isValid=false;
+		try {
+			conn = new DbcpBean().getConn();
+			String sql = "SELECT * FROM users WHERE id=? AND pwd=?";
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, dto.getId());
+			pstmt.setString(2, dto.getPwd());
+
+			rs=pstmt.executeQuery();
+			while(rs.next()){
+				isValid=true;
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return isValid;
+	}//isValid()
+	
 	
 	
 	//회원정보 수정
@@ -110,4 +147,6 @@ public class MembersDao {
 		
 		return list;
 	}
+	
+	
 }
