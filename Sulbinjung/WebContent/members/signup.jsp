@@ -55,7 +55,7 @@
     </div>
 	<div class="row">
 		<div class="col-sm-5 col-sm-offset-3">
-			<form action="">
+			<form action="signupform.jsp" method="post">
 				<div class="form-group">
 					<label for="id">아이디</label>
 					<input type="text" class="form-control" id="email"/>
