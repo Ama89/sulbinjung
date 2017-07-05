@@ -2,12 +2,12 @@ package sulbinjung.dto;
 
 public class MembersDto {
 	private int num;
-	private String id, pwd, name, birth, gender, phone, email, regdate;
+	private String id, pwd, name, birth, gender, email, phone, regdate;
 	private boolean isMember;
 	
 	public MembersDto() {}
 
-	public MembersDto(int num, String id, String pwd, String name, String birth, String phone, String email,
+	public MembersDto(int num, String id, String pwd, String name, String birth, String email, String phone,
 			String regdate, String gender, boolean isMember) {
 		super();
 		this.num = num;
@@ -15,8 +15,8 @@ public class MembersDto {
 		this.pwd = pwd;
 		this.name = name;
 		this.birth = birth;
-		this.phone = phone;
 		this.email = email;
+		this.phone = phone;
 		this.regdate = regdate;
 		this.gender = gender;
 		this.isMember = isMember;

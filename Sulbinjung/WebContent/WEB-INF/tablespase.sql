@@ -1,6 +1,6 @@
 CREATE TABLESPACE SULBINJUNG DATAFILE 'C:\ORACLEXE\ORADATA\SULBINJUNG.DBF'
 SIZE 200M
-AUTOEXTEND ON NEXT 10M
+AUTOEXTEND ON NEXT 10M;
 
 select file_name, tablespace_name from dba_data_files;
 select TABLESPACE_NAME from dba_tablespaces;

@@ -25,7 +25,7 @@
 <%}else{ %>
 	<script>
 		alert("가입 실패");
-		location.href="signup.jsp";
+		location.href="signupform.jsp";
 	</script>
 <%} %>
 

@@ -67,11 +67,11 @@
 			<br/>	
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>	
-			<form action="signupform.jsp" method="post">
+			<form action="signup.jsp" method="post">
 				<!-- 아이디 -->
 				<div class="form-group">
 					<label for="id">아이디</label>
-					<input type="text" class="form-control" name="email"/>
+					<input type="text" class="form-control" name="id"/>
 					<p class="help-block">반드시 입력하세요</p>
 				</div>
 				<!-- 비밀번호 -->
