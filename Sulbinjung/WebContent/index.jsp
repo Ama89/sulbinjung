@@ -39,7 +39,7 @@
 
 	<!-- 상단 네비게이션 (로그인/회원가입) -->
 	<div class="navbar navbar-inverse">
-		<a class="navbar-link navbar-text pull-right" href="#">Signup</a>
+		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">Signup</a>
 		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">Login</a>		
 	</div>
 

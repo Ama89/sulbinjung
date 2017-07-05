@@ -30,7 +30,7 @@ public class MembersDao {
 		int flag = 0;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "INSERT INTO users "
+			String sql = "INSERT INTO members "
 					+ "(num,id,pwd,name,birth,gender,phone,email,regdate)"
 					+ " VALUES(members_seq.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
@@ -75,6 +75,7 @@ public class MembersDao {
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
 			rs=pstmt.executeQuery();
+			
 			if(rs.next()){
 				isValid=true;
 				System.out.println("db성공8");
