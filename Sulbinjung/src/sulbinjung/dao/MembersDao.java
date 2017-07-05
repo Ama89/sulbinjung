@@ -24,8 +24,41 @@ public class MembersDao {
 		
 	//회원정보 저장
 	public boolean insert(MembersDto dto){
-		return false;
-	}
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			String sql = "INSERT INTO users "
+					+ "(num,id,pwd,name,birth,gender,phone,email,regdate)"
+					+ " VALUES(member_seq.NEXTVAL,?,?,?,?,?,?,?,SYSDATE)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getId());
+			pstmt.setString(2, dto.getPwd());
+			pstmt.setString(3, dto.getName());
+			pstmt.setString(4, dto.getBirth());
+			pstmt.setString(5, dto.getGender());
+			pstmt.setString(6, dto.getPhone());
+			pstmt.setString(7, dto.getEmail());
+			flag = pstmt.executeUpdate();
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}//insert()
+	
 	
 	//회원정보 수정
 	public boolean update(MembersDto dto){
