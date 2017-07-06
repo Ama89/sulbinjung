@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import sulbinjung.dto.AdminDto;
-import sulbinjung.dto.MembersDto;
 import sulbinjung.util.DbcpBean;
 
 public class AdminDao {
@@ -83,9 +82,7 @@ public class AdminDao {
 			
 			if(rs.next()){
 				isValid=true;
-				System.out.println("db성공8");
 			}else{
-				System.out.println("결과값없음");
 			}
 		} catch (SQLException se) {
 			se.printStackTrace();
