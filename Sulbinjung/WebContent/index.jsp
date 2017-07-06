@@ -42,16 +42,16 @@
 			<div class="col-xs-12">
 				<div class="btn-group btn-group-justified" role="group" aria-label="...">
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Store</button>
+					    	<a href="<%=cPath%>/pages/store.jsp"><button type="button" class="btn btn-default">Store</button></a>
 					  </div>
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Menu</button>
+					    	<a href="<%=cPath%>/pages/menu.jsp"><button type="button" class="btn btn-default">Menu</button></a>
 					  </div>
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">reservation</button>
+					    	<a href="<%=cPath%>/pages/reservation.jsp"><button type="button" class="btn btn-default">reservation</button></a>
 					  </div>
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Review</button>
+					    	<a href="<%=cPath%>/pages/review.jsp"><button type="button" class="btn btn-default">Review</button></a>
 					  </div>
 				</div>
 			</div>
