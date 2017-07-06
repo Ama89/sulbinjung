@@ -17,15 +17,15 @@
 </head>
 <body>
 	<div class="container" style="margin-top:30px">
-		<form action="fileServlet" method="post">
+		<form action="write.jsp" method="post">
 			<div class="form-group"> <!-- Subject field -->
-				<label class="control-label " for="subject">Subject</label>
-				<input class="form-control" id="subject" name="subject" type="text"/>
+				<label class="control-label " for="subject">Title</label>
+				<input class="form-control" id="title" name="title" type="text"/>
 			</div>
 					
 			<div class="form-group"> <!-- Name field -->
 				<label class="control-label " for="name">Name</label>
-				<input class="form-control" id="name" name="name" type="text" disabled="true" value="<%=dto.getJob()%>"/>
+				<input class="form-control" id="job" name="job" type="text" disabled="true" value="<%=dto.getJob()%>"/>
 			</div>
 			
 			<div class="form-group"> <!-- Email field -->

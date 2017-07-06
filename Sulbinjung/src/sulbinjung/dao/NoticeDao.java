@@ -26,14 +26,18 @@ public class NoticeDao {
 			//Connection 객체의 참조값 얻어오기
 			conn=new DbcpBean().getConn();
 			String sql="INSERT INTO NOTICES "
-					+ "(num,title,adminjob,contents,writedate,filepath) "
-				+ "VALUES(board_guest_seq.NEXTVAL,?,?,?,SYSDATE,?)";
+					+ "(num,title,adminnum,contents,writedate,filepath) "
+				+ "SELECT notices_seq.NEXTVAL,?,?,?,SYSDATE,? "
+				+ "FROM notices, admins "
+				+ "WHERE notices.adminnum=admins.num";
+		
 			pstmt=conn.prepareStatement(sql);
 			//? 에 값 바인딩하기
 			pstmt.setString(1, dto.getTitle());
 			pstmt.setString(2, dto.getAdminjob());
 			pstmt.setString(3, dto.getContents());
 			pstmt.setString(4, dto.getFilepath());
+			System.out.println(dto.getContents());
 			//sql 문 수행하기
 			flag=pstmt.executeUpdate();
 		}catch(Exception e){
