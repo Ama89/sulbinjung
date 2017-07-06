@@ -73,6 +73,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-10 col-xs-push-1">
+					<p class="small_title">About us</p>
+					<p class="title">브랜드 소개</p>
+					<p class="content1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<!-- 이미지 자동 넘기기 (fotorama)-->
 					<div class="fotorama" data-autoplay="true" data-allowfullscreen="true">
 						<img src="resource/images/홍대_무월_4.png" alt="aboutus1"/>
@@ -82,7 +85,7 @@
 						<img src="resource/images/무월_36.png" alt="aboutus5"/>
 					</div>	
 					<!-- 소개글 내용 -->
-					<p class="content"> 맛있는 밥 한그릇이 주는 따뜻한 힘을 믿습니다.</br>
+					<p class="content2"> 맛있는 밥 한그릇이 주는 따뜻한 힘을 믿습니다.</br>
 					이 마음을 담아 준비합니다.</p>
 				</div>			
 			</div>
