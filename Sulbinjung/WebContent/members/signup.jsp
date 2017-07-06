@@ -16,16 +16,18 @@
 <title>회원가입 결과</title>
 </head>
 <body>
+
 <% if(isSuccess){%>
 	<script>
 		alert("가입 성공");
-		location.href="login.jsp";
+		location.href="loginform.jsp";
 	</script>
 <%}else{ %>
 	<script>
 		alert("가입 실패");
-		location.href="login.jsp";
+		location.href="signupform.jsp";
 	</script>
 <%} %>
+
 </body>
 </html>

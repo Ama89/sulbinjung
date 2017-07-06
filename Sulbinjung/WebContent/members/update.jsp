@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	int num=Integer.parseInt(request.getParameter("num"));
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,8 +11,8 @@
 </head>
 <body>
 <script>
-	alert("<%=id%> 님의 정보를 수정했습니다.");
-	location.href="list.jsp";
+	alert("<%=num%> 번 회원의 정보를 수정했습니다.");
+	location.href="../pages/mypage.jsp";
 </script>
 </body>
 </html>
