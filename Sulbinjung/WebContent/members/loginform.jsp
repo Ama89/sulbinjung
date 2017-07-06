@@ -28,7 +28,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="resource/css/bootstrap.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <style>
@@ -62,7 +62,7 @@
 		<div class="container-fluid">
 			<div>
 	    		<ul class="nav navbar-nav">
-	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+	    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
 	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
@@ -75,7 +75,7 @@
 	</nav>
 
 <div class="container" id="topmain">
-     <img src="../resource/images/sulbinjung_logo.png" alt="logo" class="logo" />
+     <img src="<%=cPath %>/resource/images/sulbinjung_logo.png" alt="logo" class="logo" />
 	<div class="row">
 		<div class="col-sm-5 col-sm-offset-3">
 			<form action="login.jsp?url=<%=url%>" method="post">
