@@ -1,13 +1,5 @@
 @CHARSET "UTF-8";
 
-.container{		
-		border : 1px dotted blue;
-	}
-	
-.row > div{
-	border: 1px dotted black;
-}
-
 #footer{
 	height: 200px;
 	padding-top: 20px;
@@ -18,14 +10,10 @@
 	font-size: 20px;
 }
 
-#hat1{
-	margin: 10px auto;		
+#toplogo{
+	margin-top:50px;
 }
 
-#hat2{
-	background-color: black;
-}
-
-#topmain{
-		margin-top : 100px;
+#menu{
+	margin-top:50px;
 }
