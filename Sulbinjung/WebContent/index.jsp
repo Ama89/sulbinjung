@@ -50,21 +50,24 @@
 	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
-	   			<% if (id ==null) {%>
-	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
-	   					<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-	   				
-	    			<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
-	    				<span class="glyphicon glyphicon-user"></span>Signup</a></li>
-	    		<% }else { %>
-	    			<li style="color:#fff"><%=id %> 님 환영합니다!</li>
-	    			<li><a href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>">
-	   					<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-	    		<% } %>
+
+	   				<%if(id == null){ %>
+	   					<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+	    				<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
+	    					<span class="glyphicon glyphicon-user"></span>Signup</a></li>
+	    			<%}else{ %>
+	    				<li><a href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+	    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>">
+	    					<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
+	    			<%} %>
+
 				</ul>
 		     </div>
 	  	</div>
 	</nav>
+
 
 
 	<div class="container" id="topmain">
