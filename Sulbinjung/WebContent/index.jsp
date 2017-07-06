@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%
 	String cPath = request.getContextPath();
+	
+	String id=(String)session.getAttribute("id");
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -46,13 +48,22 @@
 		<div class="container-fluid">
 			<div>
 	    		<ul class="nav navbar-nav">
-	    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
+	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
-	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
-	   					<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-	    			<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
-	    				<span class="glyphicon glyphicon-user"></span>Signup</a></li>
+
+	   				<%if(id == null){ %>
+	   					<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+	    				<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
+	    					<span class="glyphicon glyphicon-user"></span>Signup</a></li>
+	    			<%}else{ %>
+	    				<li><a href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+	    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>">
+	    					<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
+	    			<%} %>
+
 				</ul>
 		     </div>
 	  	</div>
