@@ -17,3 +17,14 @@
 #menu{
 	margin-top:50px;
 }
+
+.fotorama{
+		display: block;
+		margin: 0 auto;
+		width: 700px;
+		height: 550px;
+}
+
+.content{
+	font-size: 16px;
+}
