@@ -18,6 +18,30 @@
 	margin-top:50px;
 }
 
+.fotorama{
+		display: block;
+		margin: 0 auto;
+		width: 700px;
+		height: 550px;
+}
+
+.content1{
+	font-size: 16px;
+}
+.content2{
+	font-size: 16px;
+}
+
+.title{
+	text-align: center;
+	font-size: 25px;
+}
+
+.small_title{
+	text-align: center;
+	font-size: 14px;
+}
+
 .fnb{
 	list-style:none;
 	float: left;    		
