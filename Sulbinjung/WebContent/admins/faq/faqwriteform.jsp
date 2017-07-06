@@ -15,12 +15,12 @@
 	<div class="container" style="margin-top:30px">
 		<form action="faqwrite.jsp" method="post">
 			<div class="form-group"> <!-- Subject field -->
-				<label class="control-label " for="title">Title</label>
+				<label class="control-label " for="title">FAQ 제목</label>
 				<input class="form-control" id="title" name="title" type="text"/>
 			</div>
 			
 			<div class="form-group"> <!-- Message field -->
-				<label class="control-label " for="contents">Contents</label>
+				<label class="control-label " for="contents">FAQ 내용</label>
 				<textarea class="form-control" cols="40" id="contents" name="contents" rows="10"></textarea>
 			</div>
 			
