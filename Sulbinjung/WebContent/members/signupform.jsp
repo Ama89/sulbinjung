@@ -9,7 +9,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <style>
 
 	.container{
