@@ -21,6 +21,7 @@ INSERT INTO MEMBERS values (1,'kim','kim','kim','2017-10-10','y','0107501919','h
 
 select * from members;
 
+/* 관리자 */
 CREATE TABLE ADMINS
 (
 	NUM 		NUMBER			PRIMARY KEY,
@@ -36,6 +37,7 @@ INSERT INTO ADMINS values (1,'admin','admin','김수빈', 'CEO');
 
 SELECT * FROM ADMINS;
 
+/* 공지사항 */
 CREATE TABLE NOTICES
 (
 	num			NUMBER			PRIMARY KEY,
@@ -44,14 +46,14 @@ CREATE TABLE NOTICES
 	writedate	DATE			DEFAULT SYSDATE,
 	hit			NUMBER,
 	contents	VARCHAR2(500)	NOT NULL,
-	filepath	VARCHAR2(100)	NOT NULL
+	filepath	VARCHAR2(100)
 );
 
 CREATE SEQUENCE notices_seq;
 
 INSERT INTO NOTICES values (1, '공지입니다', 1, sysdate, 3,'여기는 공지사항란','Penguins.jpg');
 
-
+/* FAQ 테이블*/
 CREATE TABLE FAQ
 (
 	NUM 			NUMBER			PRIMARY KEY,
@@ -61,11 +63,21 @@ CREATE TABLE FAQ
 
 CREATE SEQUENCE faq_seq;
 
-
-CREATE RESERVATION
+/* Q&A 테이블*/
+CREATE TABLE QNA
 (
-	NUM		NUMBER	PRIMARY KEY,
-	
+	num			NUMBER			PRIMARY KEY,
+	membernum	NUMBER			REFERENCES MEMBERS(NUM),
+	title		VARCHAR2(100)	NOT NULL,	
+	contents	VARCHAR2(500)	NOT NULL,
+	hit			NUMBER			DEFAULT 0,
+	filepath	VARCHAR2(100),
+	writedate	DATE			DEFAULT SYSDATE	
 );
+
+CREATE SEQUENCE qna_seq;
+
+/* 공지사항 FILEPATH 컬럼 NULL 허용*/
+ALTER TABLE NOTICES MODIFY FILEPATH VARCHAR2(100);
 
 
