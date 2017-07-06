@@ -17,6 +17,8 @@
 <body>
 	<jsp:include page="../header.jsp"></jsp:include>
 	<h3>마이페이지</h3>
+	
+	
 	<% if(id==null){ %>
 		<script>
 			alert("로그인이 필요합니다.");

@@ -1,50 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%
+<%
 	String cPath = request.getContextPath();
 %>
-    <style>
-    	.fnb{
-    		list-style:none;
-    		float: left;
-    		
-    	}
-    	
-    	.fnb li a{
-    		color: black;
-    	}
-    	    	
-    	.right_content{
-    		text-align: right;
-    		margin-right: 30px;
-    	}
-    	
-    	.snsicon li{
-    		list-style:none;
-    		display: inline-block;
-    		margin: 5px;
-    		font-size: 25px;
-    		color: black;
-    	}
-    	
-    	.snsicon li a{
-    		color: black;
-    	}
-    	
-    	.info li a{
-    	  
-    	  font-size: 16px;
-    	}
-    	
-    	.info li{
-    	 list-style: none;
-    	}
-    	
-    </style>
-			</br>
-			<hr style="border: 1px solid black; width: 95%;">
-			</br>
-			</br>
+</br>
+<hr style="border: 1px solid black; width: 95%;">
+</br>
+</br>
 <footer class="container-fluid">
 	<div class="footer">
 		<!-- 왼쪽 내용 -->

@@ -27,8 +27,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>로그인</title>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
-<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 <style>
 	.container{
 		width: 1000px;
