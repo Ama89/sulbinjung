@@ -23,15 +23,19 @@
 			<tr>
 				<th>FAQ 번호</th>
 				<th>FAQ 제목</th>
-				<th>FAQ 내용</th>			
+				<th>FAQ 내용</th>	
+				<th>FAQ 수정</th>
+				<th>FAQ 삭제</th>		
 			</tr>
 		</thead>
 		<tbody>
 		<%for(FaqDto tmp:list){ %>
 			<tr>
 				<td><%=tmp.getNum() %></td>
-				<td><a href="updateform.jsp?num=<%=tmp.getNum()%>"><%=tmp.getTitle() %></a></td>
+				<td><a href="faqpage.jsp?num=<%=tmp.getNum()%>"><%=tmp.getTitle() %></a></td>
 				<td><%=tmp.getContents() %></td>
+				<td><a href="faqupdateform.jsp?num=<%=tmp.getNum()%>">수정</a></td>
+				<td><a href="faqdelete.jsp?num=<%=tmp.getNum()%>">삭제</a></td>
 			</tr>
 		<%} %>
 		</tbody>

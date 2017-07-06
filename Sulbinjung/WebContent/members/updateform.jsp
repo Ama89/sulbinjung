@@ -86,7 +86,7 @@
 			</div>
 			<!-- 비밀번호 -->
 			<div class="form-group">
-				<input type="hidden" class="form-control" name="id" value="<%=dto.getPwd()%>"/>
+				<input type="hidden" class="form-control" name="pwd" value="<%=dto.getPwd()%>"/>
 				<label for="pwd">비밀번호</label>
 				<input type="password" class="form-control" id="pwd" 
 					value="<%=dto.getPwd()%>" disabled/>
