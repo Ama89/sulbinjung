@@ -71,10 +71,13 @@ public class MembersDao {
 		try {
 			conn = new DbcpBean().getConn();
 			String sql = "SELECT * FROM members WHERE id=? AND pwd=?";
+			System.out.println("1");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
+			System.out.println();
 			rs=pstmt.executeQuery();
+			System.out.println(rs);
 			if(rs.next()){
 				isValid=true;
 				System.out.println("db성공8");
