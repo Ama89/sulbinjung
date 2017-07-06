@@ -67,16 +67,16 @@
 			<div class="col-xs-12">
 				<div class="btn-group btn-group-justified" role="group" aria-label="...">
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">About us</button>
+					    	<button type="button" class="btn btn-default">Store</button>
 					  </div>
 					  <div class="btn-group" role="group">
 					    	<button type="button" class="btn btn-default">Menu</button>
 					  </div>
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Event</button>
+					    	<button type="button" class="btn btn-default">reservation</button>
 					  </div>
 					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Notice</button>
+					    	<button type="button" class="btn btn-default">Review</button>
 					  </div>
 					  <div class="btn-group" role="group">
 					    	<button type="button" class="btn btn-default">Contact us</button>
@@ -99,29 +99,31 @@
 	            <h2 class="featurette-heading">Best Menu 1
 	                <span class="text-muted">부연설명</span>
 	            </h2>
-	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla.</p>
 	        </div>
 	
 	        <hr class="featurette-divider">
 	
 	        <!-- Second Featurette -->
 	        <div class="featurette" id="services">
-	            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
+	            <img class="featurette-image img-circle img-responsive pull-left" 
+	            		src="<%=cPath %>/resource/images/무월_3.png">
 	            <h2 class="featurette-heading">Best Menu 2
 	                <span class="text-muted">부연설명</span>
 	            </h2>
-	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla.</p>
 	        </div>
 	
 	        <hr class="featurette-divider">
 	
 	        <!-- Third Featurette -->
 	        <div class="featurette" id="contact">
-	            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+	            <img class="featurette-image img-circle img-responsive pull-right" 
+	         	       src="<%=cPath %>/resource/images/무월_7.png">
 	            <h2 class="featurette-heading">Best Menu3
 	                <span class="text-muted">부연설명</span>
 	            </h2>
-	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+	            <p class="lead">메뉴설명 :Donec ullamcorper nulla non metus auctor fringilla.</p>
 	        </div>
 	        	
 	        <hr class="featurette-divider">
