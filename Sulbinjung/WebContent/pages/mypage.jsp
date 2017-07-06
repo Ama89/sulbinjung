@@ -12,12 +12,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
-<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 <title>mypage.jsp</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp"></jsp:include>
 	<h3>마이페이지</h3>
+	
+	
 	<% if(id==null){ %>
 		<script>
 			alert("로그인이 필요합니다.");
