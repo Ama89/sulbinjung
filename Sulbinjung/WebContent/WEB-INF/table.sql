@@ -49,6 +49,8 @@ CREATE TABLE NOTICES
 
 CREATE SEQUENCE notices_seq;
 
+INSERT INTO NOTICES values (1, '공지입니다', 1, sysdate, 3,'여기는 공지사항란','Penguins.jpg');
+
 
 CREATE TABLE FAQ
 (
