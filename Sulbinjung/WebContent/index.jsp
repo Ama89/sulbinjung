@@ -112,7 +112,8 @@
 	
 	        <!-- First Featurette -->
 	        <div class="featurette" id="about">
-	            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+	            <img class="featurette-image img-circle img-responsive pull-right" 
+	            		src="<%=cPath %>/resource/images/sulbinjung_8.png">
 	            <h2 class="featurette-heading">Best Menu 1
 	                <span class="text-muted">부연설명</span>
 	            </h2>
