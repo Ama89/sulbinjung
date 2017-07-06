@@ -18,3 +18,5 @@ RENAME COLUMN ISMAN TO GENDER;
 CREATE SEQUENCE members_seq;
 
 INSERT INTO MEMBERS values (1,'kim','kim','kim','2017-10-10','y','0107501919','hyunhee@naver.com','2016-12-12','1');
+
+select * from members;
