@@ -10,8 +10,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
-<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 <style>
 
 	.container{
@@ -37,7 +37,7 @@
 </style>
 </head>
 <body>
-	<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../header.jsp"></jsp:include>
 				
 <!-- signupform 입니다 -->
 <div class="container" id="topmain">

@@ -17,3 +17,37 @@
 #menu{
 	margin-top:50px;
 }
+
+.fnb{
+	list-style:none;
+	float: left;    		
+}
+    	
+.fnb li a{
+	color: black;
+}
+    	    	
+.right_content{
+	text-align: right;
+	margin-right: 30px;
+}
+    	
+.snsicon li{
+	list-style:none;
+	display: inline-block;
+	margin: 5px;
+	font-size: 25px;
+	color: black;
+}
+    	
+.snsicon li a{
+	color: black;
+}
+
+.info li a{
+	font-size: 16px;
+}
+
+.info li{
+	list-style: none;
+}

@@ -20,7 +20,7 @@
 
 	<!-- 로고이미지 -->		
 	<div class="container-fluid">
-		<div class="row" id="toplogo">	
+		<div class="row" id="toplogo">
 			<div class="col-xs-12">				
 				<img src="<%=cPath %>/resource/images/logo.png" alt="logoimages" />
 			</div>
@@ -110,10 +110,10 @@
 	<jsp:include page="footer.jsp"></jsp:include>
 	
 	<!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="<%= cPath %>/resource/js/jquery-3.2.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<%= cPath %>/resource/js/bootstrap.min.js"></script>
 
 </body>
 </html>
