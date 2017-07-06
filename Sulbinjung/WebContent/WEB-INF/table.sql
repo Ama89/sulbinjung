@@ -20,3 +20,32 @@ CREATE SEQUENCE members_seq;
 INSERT INTO MEMBERS values (1,'kim','kim','kim','2017-10-10','y','0107501919','hyunhee@naver.com','2016-12-12','1');
 
 select * from members;
+
+CREATE TABLE ADMINS
+(
+	NUM 		NUMBER			PRIMARY KEY,
+	ID			VARCHAR2(100)	NOT NULL,
+	PWD 		VARCHAR2(100)	NOT NULL,
+	NAME 		VARCHAR2(100)	NOT NULL,
+	JOB 		VARCHAR2(100)	NOT NULL
+);
+
+CREATE SEQUENCE admin_seq;
+
+INSERT INTO ADMINS values (1,'admin','admin','김수빈', 'CEO');
+
+SELECT * FROM ADMINS;
+
+CREATE TABLE NOTICES
+(
+	num			NUMBER			PRIMARY KEY,
+	title		VARCHAR2(100)	NOT NULL,
+	ADMINNUM	NUMBER			REFERENCES ADMINS(NUM),
+	writedate	DATE			DEFAULT SYSDATE,
+	hit			NUMBER,
+	contents	VARCHAR2(500)	NOT NULL,
+	filepath	VARCHAR2(100)	NOT NULL
+);
+
+CREATE SEQUENCE notices_seq;
+

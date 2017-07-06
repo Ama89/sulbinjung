@@ -9,8 +9,7 @@
 		//인덱스 페이지로 이동 될 수 있도록 
 		url=request.getContextPath();
 	}
-	
-	
+		
 	String savedId="";
 
 	Cookie[] cookies=request.getCookies();
@@ -22,7 +21,6 @@
 			}
 		}
 	}	
-	
 %>
 <html>
 <head>
