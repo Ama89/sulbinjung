@@ -42,7 +42,7 @@
 		session.setAttribute("id", dto.getId()); %>
 		<script>
 		alert("로그인성공");
-		location.href="/index.jsp";
+		location.href="<%=cPath%>/index.jsp";
 		</script>
 		
 		
@@ -50,7 +50,7 @@
 		<p>아이디 혹은 비밀번호가 틀려요</p>
 		<script>
 		alert("로그인실패");
-		location.href="loginform.jsp";
+		location.href="<%=cPath%>/loginform.jsp";
 		</script>		
 		
 	<%} %>
