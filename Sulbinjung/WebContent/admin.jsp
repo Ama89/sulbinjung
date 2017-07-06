@@ -24,12 +24,12 @@
         <div class="col-xs-4 col-xs-offset-4 panel panel-default">
             <div class="panel-heading">관리자 로그인</div>
             <div class="panel-body">
-                <form class="login-form">
+                <form action="admins/login.jsp" method="post">
                     <div class="form-group">
-                        <input id="email" class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                        <input id="id" class="form-control" placeholder="E-mail" name="id" type="text" autofocus>
                     </div>
                     <div class="form-group">
-                        <input id="password" class="form-control" placeholder="Password" name="password" type="password" value="">
+                        <input id="pwd" class="form-control" placeholder="Password" name="pwd" type="password" value="">
                     </div>
                     <input class="btn btn-default btn-block" type="submit" value="로그인">
                 </form>
