@@ -13,29 +13,10 @@
 		url=request.getContextPath();
 	}
 %>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
-<style>
-	.wrapper{
-		display: inline;
-		}
-	.logo{
-			width: 120px;
-			height: 70px;
-			border-width: 2px;
-			border-style: solid;
-			border-color: black;
-			text-align: center;
-			margin: 0 auto;
-			display: block;
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-</style>
 </head>
 <body>
 	<%if(isValid){ 
@@ -43,16 +24,13 @@
 		<script>
 		alert("로그인성공");
 		location.href="<%=cPath%>/index.jsp";
-		</script>
-		
-		
+		</script>		
 	<%} else { %>
 		<p>아이디 혹은 비밀번호가 틀려요</p>
 		<script>
 		alert("로그인실패");
-		location.href="<%=cPath%>/loginform.jsp";
-		</script>		
-		
+		location.href="<%=cPath%>/members/loginform.jsp";
+		</script>
 	<%} %>
 </body>
 </html>
