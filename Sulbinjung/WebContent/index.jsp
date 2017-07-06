@@ -12,26 +12,9 @@
 <title>index.jsp</title>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
-<link rel="stylesheet" href="resource/css/one-page-wonder.css" >
+<link rel="stylesheet" href="<%=cPath %>/resource/css/one-page-wonder.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 
-<style>
-	
-	#footer{
-		height: 200px;
-		padding-top: 20px;
-	}
-	.row{
-		text-align: center;
-		font-size: 20px;
-	}
-	#toplogo{
-		margin-top:50px;
-	}
-	#menu{
-		margin-top:50px;
-	}
-	
-</style>
 </head>
 <body>
 	<!-- 상단 네비게이션 (로그인/회원가입) -->
@@ -54,7 +37,6 @@
 	    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>">
 	    					<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
 	    			<%} %>
-
 				</ul>
 		     </div>
 	  	</div>
