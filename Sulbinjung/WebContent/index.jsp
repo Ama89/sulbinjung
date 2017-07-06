@@ -27,7 +27,7 @@
 
 	<!-- 로고이미지 -->		
 	<div class="container-fluid">
-		<div class="row" id="toplogo">
+		<div class="row align" id="toplogo">
 			<div class="col-xs-12">				
 				<img src="<%=cPath %>/resource/images/logo.png" alt="logoimages" />
 			</div>
@@ -37,14 +37,14 @@
 	<!-- 메인 컨테이너 -->
 	<div class="container">								
 		<!-- 메인이미지 -->
-		<div class="row">	
+		<div class="row align">	
 			<div class="col-xs-12">			
 				<img src="<%=cPath %>/resource/images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
 			</div>
 		</div>
 		
 		<!-- 메뉴카테고리 -->
-		<div class="row" id="menu">
+		<div class="row align" id="menu">
 			<div class="col-xs-12">
 				<div class="btn-group btn-group-justified" role="group" aria-label="...">
 					  <div class="btn-group" role="group">
@@ -71,7 +71,7 @@
 		<p style="font-size: 30px; text-align: center;">SULBINJUNG</p>
 		</br>
 		<div class="container">
-			<div class="row">
+			<div class="row align">
 				<div class="col-xs-10 col-xs-push-1">
 					<p class="small_title">About us</p>
 					<p class="title">브랜드 소개</p>
