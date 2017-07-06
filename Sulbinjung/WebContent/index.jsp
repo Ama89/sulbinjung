@@ -78,9 +78,6 @@
 					  <div class="btn-group" role="group">
 					    	<button type="button" class="btn btn-default">Review</button>
 					  </div>
-					  <div class="btn-group" role="group">
-					    	<button type="button" class="btn btn-default">Contact us</button>
-					  </div>
 				</div>
 			</div>
 		</div>	
