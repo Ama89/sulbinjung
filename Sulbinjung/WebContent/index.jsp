@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>index.jsp</title>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
-<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css">
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 
 <style>
 	.container{		

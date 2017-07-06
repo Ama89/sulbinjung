@@ -16,6 +16,7 @@
 <title>로그인</title>
 <link rel="stylesheet" href="resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <style>
 	.container{
 		width: 1000px;
@@ -97,5 +98,7 @@
 			<br/>
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
+			
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
