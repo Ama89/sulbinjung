@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <%
 	String cPath = request.getContextPath();
+
+	//session 영역에 담긴 내용을 읽어온다.
+	String id=(String)session.getAttribute("id");
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -39,8 +42,14 @@
 
 	<!-- 상단 네비게이션 (로그인/회원가입) -->
 	<div class="navbar navbar-inverse">
-		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">Signup</a>
-		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">Login</a>		
+		<%if(id == null){ %>
+			<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">Signup</a>
+			<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">Login</a>
+		<%}else{ %>
+			<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>">Mypage</a>
+			<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>">Logout</a>
+		<%} %>
+				
 	</div>
 
 

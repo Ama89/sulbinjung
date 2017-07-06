@@ -42,7 +42,7 @@
 		session.setAttribute("id", dto.getId()); %>
 		<script>
 		alert("로그인성공");
-		location.href="/index.jsp";
+		location.href="../index.jsp";
 		</script>
 		
 		
