@@ -41,7 +41,7 @@
 			<div class="container-fluid">
 				<div>
 		    		<ul class="nav navbar-nav">
-		    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+		    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
 		    		</ul>  
 		   			<ul class="nav navbar-nav navbar-right">
 		   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
