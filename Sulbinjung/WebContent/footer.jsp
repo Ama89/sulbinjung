@@ -16,6 +16,7 @@
     	    	
     	.right_content{
     		text-align: right;
+    		margin-right: 30px;
     	}
     	
     	.snsicon li{
@@ -30,15 +31,20 @@
     		color: black;
     	}
     	
-    	.info{
-    	  list-style: none;
+    	.info li a{
+    	  
+    	  font-size: 16px;
+    	}
+    	
+    	.info li{
+    	 list-style: none;
     	}
     	
     </style>
-
-			<br/>
-			<hr style="border: 1.2px solid #cecece; width: 1400px;">
-			<br/>
+			</br>
+			<hr style="border: 1px solid black; width: 95%;">
+			</br>
+			</br>
 <footer class="container-fluid">
 	<div class="footer">
 		<!-- 왼쪽 내용 -->

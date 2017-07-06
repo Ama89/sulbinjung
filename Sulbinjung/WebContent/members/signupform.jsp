@@ -122,10 +122,12 @@
 			</div>		
 		</div>
 	</div>
-			<!-- 줄 -->
-			<br/>	
-			<hr style="border: 1.2px solid #cecece;">
-			<br/>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
