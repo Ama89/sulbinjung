@@ -30,7 +30,9 @@ public class MembersDao {
 			MembersDto dto=null;
 			try{
 				conn=new DbcpBean().getConn();
-				String sql="SELECT num,id,pwd,name,birth,email,phone,regdate,gender,isMember"
+				String sql="SELECT num,id,pwd,name,"
+						+ "TO_CHAR(birth,'rrrr-mm-dd') birth,gender,phone,email,"
+						+ "regdate,gender,isMember"
 						+ " FROM members WHERE id=?";
 				pstmt=conn.prepareStatement(sql);
 				pstmt.setString(1, id);
@@ -75,7 +77,8 @@ public class MembersDao {
 			conn = new DbcpBean().getConn();
 			String sql = "INSERT INTO members"
 					+ " (num,id,pwd,name,birth,gender,phone,email,regdate)"
-					+ " VALUES(members_seq.NEXTVAL,?,?,?,TO_DATE(?, 'rrrr-mm-dd'),?,?,?,SYSDATE)";
+					+ " VALUES(members_seq.NEXTVAL,?,?,?,TO_DATE(?, 'rrrr-mm-dd'),?,?,?,"
+					+ "SYSDATE)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
@@ -113,7 +116,9 @@ public class MembersDao {
 		
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "SELECT * FROM members WHERE id=? AND pwd=?";
+			String sql = "SELECT num,id,pwd,name,birth,gender,phone,email,"
+					+ "TO_CHAR(regdate,'rrrr-mm-dd') regdate " 
+					+ "FROM members WHERE id=? AND pwd=?";
 			System.out.println("1");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
@@ -154,13 +159,14 @@ public class MembersDao {
 		int flag = 0;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "UPDATE members SET name=?, birth=?, email=?, phone=?"
+			String sql = "UPDATE members SET name=?,birth=?,email=?,phone=? "
 					+ "WHERE id=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getName());
 			pstmt.setString(2, dto.getBirth());
 			pstmt.setString(3, dto.getEmail());
-			pstmt.setString(3, dto.getPhone());
+			pstmt.setString(4, dto.getPhone());
+			pstmt.setString(5, dto.getId());			
 			flag = pstmt.executeUpdate();
 		} catch (SQLException se) {
 			se.printStackTrace();
