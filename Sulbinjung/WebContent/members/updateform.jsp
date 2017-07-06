@@ -76,7 +76,21 @@
 			<br/>	
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>	
-		<form action="update.jsp" method="post">
+		<form action="update.jsp?num=<%=dto.getNum()%>&isMember=<%=dto.getIsMember()%>" method="post">
+		<!-- 아이디 -->
+			<div class="form-group">
+				<input type="hidden" class="form-control" name="id" value="<%=dto.getId()%>"/>
+				<label for="id">아이디</label>
+				<input type="text" class="form-control" id="id" 
+					value="<%=dto.getId()%>" disabled/>
+			</div>
+			<!-- 비밀번호 -->
+			<div class="form-group">
+				<input type="hidden" class="form-control" name="id" value="<%=dto.getPwd()%>"/>
+				<label for="pwd">비밀번호</label>
+				<input type="password" class="form-control" id="pwd" 
+					value="<%=dto.getPwd()%>" disabled/>
+			</div>
 		<!-- 이름 -->
 		<div class="form-group">
 			<label for="name">이름</label>
@@ -98,7 +112,14 @@
 				<br/>
 				<input type="text" class="form-control" name="phone" value="<%= dto.getPhone()%>"/>
 			</div>
-			
+		<!-- 성별 -->
+			<div class="form-group">
+				<input type="hidden" name="gender" value="<%=dto.getGender()%>"/>
+				<label>성별  </label>
+				<br/>
+				  <input type="radio"  id="gender" value="M" disabled>남자 &nbsp;
+				  <input type="radio"  id="gender" value="F" disabled>여자
+			</div>	
 		<button type="submit" class="btn btn-default">확인</button> &nbsp;
 		<button type="reset" class="btn btn-default">취소</button>	
 				
