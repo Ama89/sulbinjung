@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>admins/faq/faqlist.jsp</title>
 </head>
 <body>
-	<a href="notice/list.jsp">공지목록</a>
-	<a href="faq/faqlist.jsp">FAQ 목록</a>
+	<a href="faqwriteform.jsp">글쓰기</a>
 </body>
 </html>
