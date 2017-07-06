@@ -8,8 +8,13 @@
 </head>
 <body>
 	<script>
-		alert("탈퇴가 완료되었습니다");
-		location.href="../index.jsp";
+		if(confirm("정말 탈퇴하실건가요ㅜㅜ?"))
+		{
+			location.href="delete.jsp";
+		}else{
+			location.href="mypage.jsp";
+			alert("감사감사");
+		}
 	</script>
 </body>
 </html>
