@@ -23,8 +23,12 @@
 		</script>
 	<%}else{ %>
 		<p><strong><%=id %></strong>님 로그인중...</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae totam repellat nesciunt laboriosam atque ullam id cupiditate animi ad blanditiis sapiente quaerat excepturi quisquam consequatur sed itaque rerum perferendis.</p>	
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae totam repellat nesciunt laboriosam atque ullam id cupiditate animi ad blanditiis sapiente quaerat excepturi quisquam consequatur sed itaque rerum perferendis.</p>
+		<p><a href="<%=cPath %>/members/delete.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-out"></span>탈퇴하기</a></p>	
 		<a href="../members/updateform.jsp">회원정보수정</a>
+
 	<%} %>
 	
 	<jsp:include page="../footer.jsp"></jsp:include>

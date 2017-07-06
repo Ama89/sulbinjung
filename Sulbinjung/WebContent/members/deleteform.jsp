@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<script>
+		alert("탈퇴가 완료되었습니다");
+		location.href="../index.jsp";
+	</script>
 </body>
 </html>
