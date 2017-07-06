@@ -37,24 +37,8 @@
 </style>
 </head>
 <body>
-
-	<!-- 상단 네비게이션 (로그인/회원가입) -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div>
-		    		<ul class="nav navbar-nav">
-		    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
-		    		</ul>  
-		   			<ul class="nav navbar-nav navbar-right">
-		   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
-		   					<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-		    			<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
-		    				<span class="glyphicon glyphicon-user"></span>Signup</a></li>
-					</ul>
-			     </div>
-		  	</div>
-		</nav>		
-			
+	<jsp:include page="../header.jsp"></jsp:include>
+				
 <!-- signupform 입니다 -->
 <div class="container" id="topmain">
 	<!-- logo -->
