@@ -1,24 +1,65 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
+ <%
 	String cPath = request.getContextPath();
 %>
+    <style>
+    	.fnb{
+    		list-style:none;
+    		float: left;
+    		
+    	}
+    	
+    	.fnb li a{
+    		color: black;
+    	}
+    	    	
+    	.right_content{
+    		text-align: right;
+    	}
+    	
+    	.snsicon li{
+    		list-style:none;
+    		display: inline-block;
+    		margin: 5px;
+    		font-size: 25px;
+    		color: black;
+    	}
+    	
+    	.snsicon li a{
+    		color: black;
+    	}
+    	
+    	.info{
+    	  list-style: none;
+    	}
+    	
+    </style>
+
+			<br/>
+			<hr style="border: 1.2px solid #cecece; width: 1400px;">
+			<br/>
 <footer class="container-fluid">
 	<div class="footer">
+		<!-- 왼쪽 내용 -->
 		<ul class="fnb">
-			<li><a href="">공지사항</a></li>
-			<li><a href="">About Us</a></li>	
-			<li><a href="">예약하기</a></li>
-			<li><a href="">문의하기</a></li>
+			<li><a href="">notice</a></li>
+			<li><a href="">about us</a></li>	
+			<li><a href="">reservation</a></li>
+			<li><a href="">question</a></li>
 		</ul>
-		<ul class="snsicon">
+	</br>
+	<!-- 오른쪽 내용 -->	
+	<div class="right_content">
+	
+			<ul class="snsicon" style="color: black;">
 			<li><a href="mailto:contact@sulbinjung.kr" target="_blacnk"><i class="glyphicon glyphicon-envelope"></i></a></li>
 			<li><a href="https://www.instagram.com/" target="_blacnk"><i class="fa fa-instagram"></i></a></li>
 			<li><a href="https://www.facebook.com" target="_blacnk"><i class="fa fa-facebook-square"></i></a></li>
 			<li><a href="<%= cPath %>/index.jsp" target="_blacnk"><i class="glyphicon glyphicon-home"></i></a></li>
-		</ul>
+			</ul>
 		<ul class="info">
-			<li>술빈정</li>
+			<li>SUlBINJUNG</li>
 	        <li><span>대표</span> 김수빈</li>
 	        <li><span>개인정보담당자</span> 김수빈</li>
 	        <li><span>사업자등록번호</span> 123-45-67890</li>
@@ -31,4 +72,6 @@
 	        <li><span>영업시간</span> 09:00~22:00 (15:00~17:00 BreakTime)</li>
 		</ul>
 	</div>
+	</div>
+	</br>
 </footer>

@@ -126,6 +126,6 @@
 			<br/>	
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
-
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
