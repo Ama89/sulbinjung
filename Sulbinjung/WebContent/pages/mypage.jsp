@@ -10,6 +10,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <title>mypage.jsp</title>
 </head>
 <body>
@@ -21,8 +23,12 @@
 		</script>
 	<%}else{ %>
 		<p><strong><%=id %></strong>님 로그인중...</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae totam repellat nesciunt laboriosam atque ullam id cupiditate animi ad blanditiis sapiente quaerat excepturi quisquam consequatur sed itaque rerum perferendis.</p>	
-		<a href="../members/updateform.jsp?id=<%=id %>">회원정보수정</a>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae totam repellat nesciunt laboriosam atque ullam id cupiditate animi ad blanditiis sapiente quaerat excepturi quisquam consequatur sed itaque rerum perferendis.</p>
+		<p><a href="<%=cPath %>/members/deleteform.jsp?url=<%=cPath%>">
+	   						<span class="glyphicon glyphicon-log-out"></span>탈퇴하기</a></p>	
+		<a href="../members/updateform.jsp">회원정보수정</a>
 	<%} %>
+	
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

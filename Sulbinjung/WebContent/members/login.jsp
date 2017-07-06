@@ -7,11 +7,27 @@
 <%
     String cPath = request.getContextPath();
     boolean isValid = MembersDao.getInstance().isValid(dto);
+    
     //로그인 후 리다일렉트 이동할 url 주소
     String url = request.getParameter("url");
     if(url==null){
         url=request.getContextPath();
     }
+    
+    //쿠키관련 코드
+    String id = request.getParameter("id");
+    String isSave=request.getParameter("isSave");
+  
+    if(isSave != null){
+		Cookie cookie=new Cookie("savedId", id);
+		cookie.setMaxAge(300);
+		response.addCookie(cookie);
+	}else{
+		id="";
+		Cookie cookie=new Cookie("savedId", id);
+		cookie.setMaxAge(300);
+		response.addCookie(cookie);
+	}
 %>
 <html>
 <head>

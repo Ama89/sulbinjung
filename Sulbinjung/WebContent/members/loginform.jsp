@@ -9,13 +9,26 @@
 		//인덱스 페이지로 이동 될 수 있도록 
 		url=request.getContextPath();
 	}
+		
+	String savedId="";
+
+	Cookie[] cookies=request.getCookies();
+	
+	if(cookies != null && cookies.length > 0){
+		for(Cookie tmp:cookies){
+			if(tmp.getName().equals("savedId")){
+				savedId=tmp.getValue();
+			}
+		}
+	}	
 %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>로그인</title>
-<link rel="stylesheet" href="resource/css/bootstrap.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <style>
 	.container{
 		width: 1000px;
@@ -47,7 +60,7 @@
 		<div class="container-fluid">
 			<div>
 	    		<ul class="nav navbar-nav">
-	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+	    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
 	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
@@ -60,7 +73,7 @@
 	</nav>
 
 <div class="container" id="topmain">
-     <img src="../resource/images/sulbinjung_logo.png" alt="logo" class="logo" />
+     <img src="<%=cPath %>/resource/images/sulbinjung_logo.png" alt="logo" class="logo" />
 	<div class="row">
 		<div class="col-sm-5 col-sm-offset-3">
 			<form action="login.jsp?url=<%=url%>" method="post">
@@ -72,7 +85,7 @@
 				<!-- 아이디 입력 -->
 				<div class="form-group">
 					<label for="id">아이디</label>
-					<input type="text" class="form-control" name="id" id="id"/>
+					<input type="text" class="form-control" name="id" id="id" value="<%=savedId %>"/>
 					<p class="help-block">반드시 입력하세요</p>
 				</div>
 
@@ -84,7 +97,7 @@
 				<!-- 아이디 저장 -->
 				<div class="checkbox">
 					<label>
-						<input type="checkbox"/> 아이디 저장
+						<input type="checkbox" name="isSave" value="yes"/> 아이디 저장
 					</label>
 				</div>
 				<!-- 버튼 -->
@@ -97,5 +110,7 @@
 			<br/>
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
+			
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

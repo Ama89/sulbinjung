@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<script>
+		if(confirm("정말 탈퇴하실건가요ㅜㅜ?"))
+		{
+			location.href="delete.jsp";
+		}else{
+			location.href="mypage.jsp";
+			alert("감사감사");
+		}
+	</script>
 </body>
 </html>
