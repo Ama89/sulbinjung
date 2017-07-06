@@ -117,8 +117,13 @@
 				<input type="hidden" name="gender" value="<%=dto.getGender()%>"/>
 				<label>성별  </label>
 				<br/>
-				  <input type="radio"  id="gender" value="M" disabled>남자 &nbsp;
+				<%if(dto.getGender().equals('M')){ %>
+				  <input type="radio"  id="gender" value="M" checked disabled>남자 &nbsp;
 				  <input type="radio"  id="gender" value="F" disabled>여자
+				<%}else{ %>
+				  <input type="radio"  id="gender" value="M" disabled>남자 &nbsp;
+				  <input type="radio"  id="gender" value="F" checked disabled>여자
+				<%} %>
 			</div>	
 		<button type="submit" class="btn btn-default">확인</button> &nbsp;
 		<button type="reset" class="btn btn-default">취소</button>	
