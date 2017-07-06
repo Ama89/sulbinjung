@@ -8,7 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>index.jsp</title>
-<link rel="stylesheet" href="resource/css/bootstrap.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css">
+
 <style>
 	.container{		
 		border : 1px dotted blue;
@@ -39,13 +41,12 @@
 </style>
 </head>
 <body>
-
 	<!-- 상단 네비게이션 (로그인/회원가입) -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div>
 	    		<ul class="nav navbar-nav">
-	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+	    			<a class="navbar-brand" href="<%=cPath %>/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
 	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
@@ -57,7 +58,6 @@
 	  	</div>
 	</nav>
 
-
 	<div class="container" id="topmain">
 	
 		<!-- 로고로고 -->			
@@ -68,7 +68,7 @@
 		<!-- 메인이미지 -->
 		<div class="row">	
 			<div class="col-xs-12">			
-				<img src="resource/images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
+				<img src="<%=cPath %>/resource/images/무월_1.png" alt="무월식탁가게정문" class="img-thumbnail">	
 			</div>
 		</div>
 		
@@ -101,22 +101,22 @@
 		<div class="row">
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="resource/images/무월_3.png" alt="메뉴_새우장">
+			      <img src="<%=cPath %>/resource/images/무월_3.png" alt="메뉴_새우장">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="resource/images/무월_13.png" alt="메뉴_비빔밥">
+			      <img src="<%=cPath %>/resource/images/무월_13.png" alt="메뉴_비빔밥">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="resource/images/무월_15.png" alt="메뉴_수육">
+			      <img src="<%=cPath %>/resource/images/무월_15.png" alt="메뉴_수육">
 			    </a>
 			</div>
 			<div class="col-xs-6 col-md-3">
 			    <a href="#" class="thumbnail">
-			      <img src="resource/images/무월_16.png" alt="메뉴_육회냉면">
+			      <img src="<%=cPath %>/resource/images/무월_16.png" alt="메뉴_육회냉면">
 			    </a>
 			</div>
 		</div>
@@ -125,17 +125,12 @@
 		<div class="row" id="hat1">Event & Notice</div>
 			<div class="row" id="hat2">	
 				<div class="col-xs-12">			
-					<img src="resource/images/event_notice.png" alt="무월식탁가게정문" class="img-thumbnail">	
+					<img src="<%=cPath %>/resource/images/event_notice.png" alt="무월식탁가게정문" class="img-thumbnail">	
 				</div>
 			</div>
-	</div>				
-			
-	<!-- footer -->
-	<div class="container-fluid" >
-			<div class="row">
-			<div class="col-xs-12" id="footer">footer</div>
-		</div>	
 	</div>
+	
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
 
