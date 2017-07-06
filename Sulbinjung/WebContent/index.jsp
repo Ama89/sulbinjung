@@ -137,7 +137,7 @@
 	
 	
 	<!-- 이벤트&공지사항 -->
-	<div class="row" id="hat1">Event & Notice</div>
+	<div class="row align" id="hat1">Event & Notice</div>
 			
 	
 	<jsp:include page="footer.jsp"></jsp:include>
