@@ -5,6 +5,11 @@
 	padding-top: 20px;
 }
 
+.row{
+	text-align: center;
+	font-size: 20px;
+}
+
 #toplogo{
 	margin-top:50px;
 }
