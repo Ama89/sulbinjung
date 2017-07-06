@@ -23,23 +23,23 @@ public class MembersDao {
 	}	
 	
 	//인자로 전달된 번호에 해당하는 회원정보를 리턴해주는 메소드
-		public MembersDto getData(int num){
+		public MembersDto getData(String id){
 			Connection conn=null;
 			PreparedStatement pstmt=null;
 			ResultSet rs=null;
 			MembersDto dto=null;
 			try{
 				conn=new DbcpBean().getConn();
-				String sql="SELECT id,pwd,name,birth,email,phone,regdate,gender,isMember"
-						+ " FROM members WHERE num=?";
+				String sql="SELECT num,id,pwd,name,birth,email,phone,regdate,gender,isMember"
+						+ " FROM members WHERE id=?";
 				pstmt=conn.prepareStatement(sql);
-				pstmt.setInt(1, num);
+				pstmt.setString(1, id);
 				//SELECT 문 수행하고 결과값을 ResultSet 으로 받아오기
 				rs=pstmt.executeQuery();
 				//SELECT 된 결과가 있다면 cursor 를 한칸 내려서
 				if(rs.next()){
 					//커서가 위치한곳의 정보를 읽어온다.
-					String id=rs.getString("id");
+					int	   num=rs.getInt("num");
 					String pwd=rs.getString("pwd");
 					String name=rs.getString("name");
 					String birth=rs.getString("birth");
@@ -154,12 +154,13 @@ public class MembersDao {
 		int flag = 0;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "UPDATE members SET pwd=?, email=? "
+			String sql = "UPDATE members SET name=?, birth=?, email=?, phone=?"
 					+ "WHERE id=?";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, dto.getPwd());
-			pstmt.setString(2, dto.getEmail());
-			pstmt.setString(3, dto.getId());
+			pstmt.setString(1, dto.getName());
+			pstmt.setString(2, dto.getBirth());
+			pstmt.setString(3, dto.getEmail());
+			pstmt.setString(3, dto.getPhone());
 			flag = pstmt.executeUpdate();
 		} catch (SQLException se) {
 			se.printStackTrace();

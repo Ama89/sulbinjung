@@ -20,7 +20,7 @@
 </head>
 <body>
     <%if(isValid){ 
-        session.setAttribute("id", dto.getId()); %>
+        request.getSession().setAttribute("id", dto.getId()); %>
         <script>
         alert("로그인성공");
         location.href="<%=cPath%>/index.jsp";
