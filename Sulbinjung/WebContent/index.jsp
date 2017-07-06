@@ -3,7 +3,6 @@
 <%
 	String cPath = request.getContextPath();
 
-	//session 영역에 담긴 내용을 읽어온다.
 	String id=(String)session.getAttribute("id");
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -51,6 +50,7 @@
 	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
 	    		</ul>  
 	   			<ul class="nav navbar-nav navbar-right">
+
 	   				<%if(id == null){ %>
 	   					<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
 	   						<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
@@ -62,11 +62,12 @@
 	    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>">
 	    					<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
 	    			<%} %>
+
 				</ul>
 		     </div>
 	  	</div>
 	</nav>
->>>>>>> branch 'master' of https://github.com/Ama89/sulbinjung.git
+
 
 
 	<div class="container" id="topmain">

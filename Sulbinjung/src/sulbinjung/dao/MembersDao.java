@@ -9,7 +9,6 @@ import java.util.List;
 
 import sulbinjung.dto.MembersDto;
 import sulbinjung.util.DbcpBean;
-import sulbinjung.dto.MembersDto;
 
 public class MembersDao {
 	private static MembersDao dao;
@@ -21,8 +20,7 @@ public class MembersDao {
 			dao = new MembersDao();
 		}
 		return dao;
-	}
-	
+	}	
 	
 	//인자로 전달된 번호에 해당하는 회원정보를 리턴해주는 메소드
 		public MembersDto getData(int num){
@@ -116,13 +114,22 @@ public class MembersDao {
 		try {
 			conn = new DbcpBean().getConn();
 			String sql = "SELECT * FROM members WHERE id=? AND pwd=?";
+			System.out.println("1");
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPwd());
+			
+			System.out.println( dto.getId());
+			System.out.println( dto.getPwd());
+			System.out.println(pstmt.toString());
+			
 			rs=pstmt.executeQuery();
+			
 			if(rs.next()){
 				isValid=true;
 				System.out.println("db성공8");
+			}else{
+				System.out.println("결과값없음");
 			}
 		} catch (SQLException se) {
 			se.printStackTrace();
