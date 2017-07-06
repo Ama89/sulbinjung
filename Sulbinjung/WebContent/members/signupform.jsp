@@ -46,92 +46,114 @@
 		width: 100px;
 		display: inline-block;
 	}
+	#topmain{
+		margin-top:100px;
+	}
 </style>
 </head>
 <body>
-<div class="container">
-    <div class="wrapper">
-    	<div class="logo">logo</div>
-    </div>
-	<div class="row">
-		<div class="col-sm-5 col-sm-offset-3">
-			<form action="signupform.jsp" method="post">
-				<div class="form-group">
-					<label for="id">아이디</label>
-					<input type="text" class="form-control" id="email"/>
-					<p class="help-block">반드시 입력하세요</p>
-				</div>
-				<div class="form-group">
-					<label for="pwd">비밀번호</label>
-					<input type="password" class="form-control" id="pwd"/>
-				</div>
-				
-				<div class="form-group">
-					<label for="pwd">비밀번호 확인</label>
-					<input type="password" class="form-control" id="confirm_pwd"/>
-				</div>
 
-				<div class="form-group">
-					<label for="name">이름</label>
-					<input type="text" class="form-control" id="name"/>
+	<!-- 상단 네비게이션 (로그인/회원가입) -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div>
+		    		<ul class="nav navbar-nav">
+		    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+		    		</ul>  
+		   			<ul class="nav navbar-nav navbar-right">
+		   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
+		   					<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+		    			<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
+		    				<span class="glyphicon glyphicon-user"></span>Signup</a></li>
+					</ul>
+			     </div>
+		  	</div>
+		</nav>
+		
+		
+		<div class="container" id="topmain">
+		    <div class="wrapper">
+		    	<div class="logo">logo</div>
+		    </div>
+			<div class="row">
+				<div class="col-sm-5 col-sm-offset-3">
+					<form action="signupform.jsp" method="post">
+						<div class="form-group">
+							<label for="id">아이디</label>
+							<input type="text" class="form-control" id="email"/>
+							<p class="help-block">반드시 입력하세요</p>
+						</div>
+						<div class="form-group">
+							<label for="pwd">비밀번호</label>
+							<input type="password" class="form-control" id="pwd"/>
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd">비밀번호 확인</label>
+							<input type="password" class="form-control" id="confirm_pwd"/>
+						</div>
+		
+						<div class="form-group">
+							<label for="name">이름</label>
+							<input type="text" class="form-control" id="name"/>
+						</div>
+		
+						<div class="form-group">
+							<label for="birth">생년월일</label> <br/>
+							<select name="" id="birth" class="selectpicker form-control">
+								<option disabled="disabled">연도</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+							</select>
+							<select name="" id="birth" class="selectpicker form-control">
+								<option disabled="disabled">월</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+		
+							</select>
+							<select name="" id="birth" class="selectpicker form-control">
+								<option disabled="disabled">일</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="email">이메일</label>
+							<input type="text" class="form-control" id="email"/>
+						</div>
+							<div class="form-group">
+								<label for="phone">전화번호</label>
+								<br/>
+								<input type="text" class="form-control" id="phone">
+							</div>
+									
+							<div class="form-group">
+							<label>성별  </label>
+							<br/>
+							  <input type="radio"  name="gender" value="M">남자 &nbsp;
+							  <input type="radio"  name="gender" value="F">여자
+							</div>
+						<button type="submit" class="btn btn-default">확인</button> &nbsp;
+						<button type="reset" class="btn btn-default">취소</button>
+						</div>
+					</form>
 				</div>
-
-				<div class="form-group">
-					<label for="birth">생년월일</label> <br/>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">연도</option>
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">월</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-
-					</select>
-					<select name="" id="birth" class="selectpicker form-control">
-						<option disabled="disabled">일</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
-				</div>
-				
-				<div class="form-group">
-					<label for="email">이메일</label>
-					<input type="text" class="form-control" id="email"/>
-				</div>
-					<div class="form-group">
-						<label for="phone">전화번호</label>
-						<br/>
-						<input type="text" class="form-control" id="phone">
-					</div>
-							
-					<div class="form-group">
-					<label>성별  </label>
-					<br/>
-					  <input type="radio"  name="gender" value="M">남자 &nbsp;
-					  <input type="radio"  name="gender" value="F">여자
-					</div>
-				<button type="submit" class="btn btn-default">확인</button> &nbsp;
-				<button type="reset" class="btn btn-default">취소</button>
-				</div>
-			</form>
+			</div>	
 		</div>
-	</div>	
-</div>
 </body>
 </html>

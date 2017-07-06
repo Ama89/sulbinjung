@@ -31,20 +31,34 @@
 	#hat2{
 		background-color: black;
 	}
+	#topmain{
+		
+			margin-top : 100px;
+	}
 	
 </style>
 </head>
 <body>
 
-
 	<!-- 상단 네비게이션 (로그인/회원가입) -->
-	<div class="navbar navbar-inverse">
-		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">Signup</a>
-		<a class="navbar-link navbar-text pull-right" href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">Login</a>		
-	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div>
+	    		<ul class="nav navbar-nav">
+	    			<a class="navbar-brand" href="/index.jsp">sulbinjung</a>
+	    		</ul>  
+	   			<ul class="nav navbar-nav navbar-right">
+	   				<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>">
+	   					<span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+	    			<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>">
+	    				<span class="glyphicon glyphicon-user"></span>Signup</a></li>
+				</ul>
+		     </div>
+	  	</div>
+	</nav>
 
 
-	<div class="container">
+	<div class="container" id="topmain">
 	
 		<!-- 로고로고 -->			
 		<div class="row" id="hat">	
