@@ -25,8 +25,8 @@
 			</div>
 			
 			<div class="form-group"> <!-- Email field -->
-				<label class="control-label requiredField" for="email">image<span class="asteriskField">*</span></label>
-				<input class="form-control" id="email" name="email" type="file"/>
+				<label class="control-label requiredField" for="filepath">image<span class="asteriskField">*</span></label>
+				<input class="form-control" id="filepath" name="filepath" type="file"/>
 			</div>
 			
 
