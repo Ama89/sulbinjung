@@ -9,6 +9,20 @@
 		//인덱스 페이지로 이동 될 수 있도록 
 		url=request.getContextPath();
 	}
+	
+	
+	String savedId="";
+
+	Cookie[] cookies=request.getCookies();
+	
+	if(cookies != null && cookies.length > 0){
+		for(Cookie tmp:cookies){
+			if(tmp.getName().equals("savedId")){
+				savedId=tmp.getValue();
+			}
+		}
+	}	
+	
 %>
 <html>
 <head>
@@ -73,7 +87,7 @@
 				<!-- 아이디 입력 -->
 				<div class="form-group">
 					<label for="id">아이디</label>
-					<input type="text" class="form-control" name="id" id="id"/>
+					<input type="text" class="form-control" name="id" id="id" value="<%=savedId %>"/>
 					<p class="help-block">반드시 입력하세요</p>
 				</div>
 
@@ -85,7 +99,7 @@
 				<!-- 아이디 저장 -->
 				<div class="checkbox">
 					<label>
-						<input type="checkbox"/> 아이디 저장
+						<input type="checkbox" name="isSave" value="yes"/> 아이디 저장
 					</label>
 				</div>
 				<!-- 버튼 -->
