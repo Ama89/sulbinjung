@@ -9,7 +9,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css"/>
+<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <style>
 
 	.container{
@@ -122,10 +124,12 @@
 			</div>		
 		</div>
 	</div>
-			<!-- 줄 -->
-			<br/>	
-			<hr style="border: 1.2px solid #cecece;">
-			<br/>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

@@ -106,11 +106,13 @@
 			</form>	
 			</div>		
 		</div>
-	</div>
-			<br/>
-			<hr style="border: 1.2px solid #cecece;">
-			<br/>
-			
+	</div>	
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>	
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
