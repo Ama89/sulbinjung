@@ -163,44 +163,43 @@
 						<button type="reset" class="btn btn-default">취소</button>
 						</div>
 					</form>
-=======
+					
+					<div class="container">
+					    <div class="wrapper">
+					    	<div class="logo">logo</div>
+					    </div>
+						<div class="row">
+							<div class="col-sm-4 col-sm-offset-4">
+								<div id="member_login">MEMBER JOIN</div>
+								<br/>	
+								<hr style="border: 1.2px solid #cecece;">
+								<br/>	
+								<form action="signup.jsp" method="post">
+									<!-- 아이디 -->
+									<div class="form-group">
+										<label for="id">아이디</label>
+										<input type="text" class="form-control" name="id"/>
+										<p class="help-block">반드시 입력하세요</p>
+									</div>
+									<!-- 비밀번호 -->
+									<div class="form-group">
+										<label for="pwd">비밀번호</label>
+										<input type="password" class="form-control" name="pwd"/>
+									</div>
+									<!-- 비밀번호 확인 -->
+									<div class="form-group">
+										<label for="pwd">비밀번호 확인</label>
+										<input type="password" class="form-control" name="confirm_pwd"/>
+									</div>
+									<!-- 이름 -->
+									<div class="form-group">
+										<label for="name">이름</label>
+										<input type="text" class="form-control" name="name"/>
 
-<div class="container">
-    <div class="wrapper">
-    	<div class="logo">logo</div>
-    </div>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-			<div id="member_login">MEMBER JOIN</div>
-			<br/>	
-			<hr style="border: 1.2px solid #cecece;">
-			<br/>	
-			<form action="signup.jsp" method="post">
-				<!-- 아이디 -->
-				<div class="form-group">
-					<label for="id">아이디</label>
-					<input type="text" class="form-control" name="id"/>
-					<p class="help-block">반드시 입력하세요</p>
-				</div>
-				<!-- 비밀번호 -->
-				<div class="form-group">
-					<label for="pwd">비밀번호</label>
-					<input type="password" class="form-control" name="pwd"/>
-				</div>
-				<!-- 비밀번호 확인 -->
-				<div class="form-group">
-					<label for="pwd">비밀번호 확인</label>
-					<input type="password" class="form-control" name="confirm_pwd"/>
-				</div>
-				<!-- 이름 -->
-				<div class="form-group">
-					<label for="name">이름</label>
-					<input type="text" class="form-control" name="name"/>
->>>>>>> branch 'master' of https://github.com/Ama89/sulbinjung.git
-				</div>
-<<<<<<< HEAD
-			</div>	
-=======
+							</div>
+			
+						</div>	
+
 				<!-- 생년월일 -->
 				<div class="form-group">
 					<label for="birth">생년월일( ex: 19901212 )</label> <br/>
@@ -228,15 +227,12 @@
 				<button type="reset" class="btn btn-default">취소</button>
 				</div>
 			</form>
->>>>>>> branch 'master' of https://github.com/Ama89/sulbinjung.git
 		</div>
-<<<<<<< HEAD
-=======
 	</div>	
 </div>
 			<br/>	
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
->>>>>>> branch 'master' of https://github.com/Ama89/sulbinjung.git
+
 </body>
 </html>
