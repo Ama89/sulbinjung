@@ -1,0 +1,17 @@
+DROP TABLE NOTICES;
+DROP SEQUENCE notices_seq;
+
+CREATE TABLE NOTICES
+(
+	num				NUMBER			PRIMARY KEY,
+	title			VARCHAR2(100)	NOT NULL,
+	contents		VARCHAR2(500)	NOT NULL,
+	regdate			DATE,
+	hit				NUMBER,
+	orgfileName		VARCHAR2(100),
+	saveFileName	VARCHAR2(100),
+	fileSize		NUMBER,
+	ADMINNUM		NUMBER			REFERENCES ADMINS(NUM)
+);
+
+CREATE SEQUENCE notices_seq;
