@@ -80,4 +80,17 @@ CREATE SEQUENCE qna_seq;
 /* 공지사항 FILEPATH 컬럼 NULL 허용*/
 ALTER TABLE NOTICES MODIFY FILEPATH VARCHAR2(100);
 
+SELECT n.num,a.job,title,hit,TO_CHAR(writedate,'YYYY.MM.DD AM HH:MI') writedate, contents, filepath
+FROM notices n, admins a
+WHERE n.adminnum=a.num
+ORDER BY num DESC;
 
+SELECT b.job
+FROM NOTICES a
+JOIN admins b ON(a.adminnum=b.num)
+ORDER BY num DESC;
+
+
+INSERT INTO NOTICES (num,title,adminnum,contents,writedate,filepath) SELECT notices_seq.NEXTVAL,'test',1,'test',SYSDATE,'1' FROM notices, admins WHERE notices.adminnum=admins.num;
+
+SELECT * FROM notices;
