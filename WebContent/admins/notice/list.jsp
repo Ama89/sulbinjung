@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<a href="writeform.jsp">글쓰기</a>
 </body>
 </html>

@@ -75,3 +75,8 @@
 .info li{
 	list-style: none;
 }
+#event_notice{
+	list-style-type: none;
+	padding-top:20px;
+	margin-left:50px;
+}

@@ -11,9 +11,9 @@
 	<div class="footer">
 		<!-- 왼쪽 내용 -->
 		<ul class="fnb">
-			<li><a href="">notice</a></li>
+			<li><a href="<%=cPath%>/pages/notice.jsp">notice</a></li>
 			<li><a href="">about us</a></li>	
-			<li><a href="">reservation</a></li>
+			<li><a href="<%=cPath%>/pages/reservation.jsp">reservation</a></li>
 			<li><a href="">question</a></li>
 		</ul>
 	</br>
