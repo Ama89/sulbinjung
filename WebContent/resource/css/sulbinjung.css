@@ -10,10 +10,6 @@
 	font-size: 20px;
 }
 
-#toplogo{
-	margin-top:50px;
-}
-
 #menu{
 	margin-top:50px;
 }
@@ -74,9 +70,4 @@
 
 .info li{
 	list-style: none;
-}
-#event_notice{
-	list-style-type: none;
-	padding-top:20px;
-	margin-left:50px;
 }

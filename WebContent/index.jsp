@@ -11,12 +11,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>index.jsp</title>
 	<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
-	<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="<%=cPath %>/resource/css/one-page-wonder.css" />
+	<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />	
 	<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
+	<link rel="stylesheet" href="<%=cPath %>/resource/css/bestmenu.css" />	
 	
-	<!-- main_event_notice CSS -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
 	<!-- jQuery -->
     <script src="<%=cPath %>/resource/js/jquery-3.2.0.js"></script>
 	<!-- 플러그인 css 로딩하기 -->
@@ -30,7 +28,7 @@
 
 	<!-- 로고이미지 -->		
 	<div class="container-fluid">
-		<div class="row align" id="toplogo">
+		<div class="row align">
 			<div class="col-xs-12">				
 				<img src="<%=cPath %>/resource/images/logo.png" alt="logoimages" />
 			</div>
@@ -39,15 +37,9 @@
 
 	<!-- 메인 컨테이너 -->
 	<div class="container">								
-		<!-- 메인이미지 -->
-		<div class="row align">	
-			<div class="col-xs-12">			
-				<img src="<%=cPath %>/resource/images/mu_3.png" alt="무월식탁가게정문" class="img-thumbnail">	
-			</div>
-		</div>
 		
 		<!-- 메뉴카테고리 -->
-		<div class="row align" id="menu" style="margin-top:150px;">
+		<div class="row align">
 			<div class="col-xs-12">
 				<div class="btn-group btn-group-justified" role="group" aria-label="...">
 					  <div class="btn-group" role="group">
@@ -69,77 +61,66 @@
 	
 	
 	<!--베스트메뉴-->
+	<div class="container" id="best_container">
+	  	<div class="blog-posts">
+		    <div class="post featured">	      
+		        <div class="image" style="background-image: url(<%=cPath%>/resource/images/mu_4.png)">
+		          <div class="sidediv">
+		            <div class='time'>
+		              <div class='date'>Best</div>
+		              <div class='month'>01</div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="content">
+		          <h1>Best Menu1</h1>
+		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
+			   </div>	      
+		    </div>   	
+	    	
+			<div class='row cf'>
+		      	<div class='post'>	        
+					<div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_1.png)">
+					  <div class='time'>
+					    <div class='date'>Best</div>
+					    <div class='month'>02</div>
+					  </div>
+					</div>
+					<div class='content'>
+					  <h3>Best Menu2</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+					</div>
+		      	</div>
+				<div class='post'>	        
+				    <div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_2.png)">
+				      <div class='time'>
+				        <div class='date'>Best</div>
+				        <div class='month'>03</div>
+				      </div>
+				    </div>
+				    <div class='content'>
+				      <h3>Best Menu3</h3>
+				      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+				    </div>
+				</div>
+		        <div class='post'>	        
+				    <div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_3.png)">
+				      <div class='time'>
+				        <div class='date'>Best</div>
+				        <div class='month'>04</div>
+				      </div>
+				    </div>
+				    <div class='content'>
+				      <h3>Best Menu4</h3>
+				      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+				    </div>
+				</div>
+		   	</div>
+		</div>
+	</div>
+  
 	
-	<!-- Page Content -->
-	    <div class="container">
-	   		 <div class="row">
-			    <div class="col-md-9">		
-			        <hr class="featurette-divider">
-			
-			        <!-- First Featurette -->
-			        <div class="featurette" id="about">
-			            <img class="featurette-image img-circle img-responsive pull-right" 
-			            		src="<%=cPath %>/resource/images/menu_14.png">
-			            <h2 class="featurette-heading">Best Menu 1
-			               <!--<span class="text-muted">부연설명</span>--> 			           
-			            </h2>
-			            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.</p>
-			        </div>
-			
-			        <hr class="featurette-divider">
-			
-			        <!-- Second Featurette -->
-			        <div class="featurette" id="services">
-			            <img class="featurette-image img-circle img-responsive pull-left" 
-			            		src="<%=cPath %>/resource/images/menu_20.png">
-			            <h2 class="featurette-heading">Best Menu 2
-			               <!--<span class="text-muted">부연설명</span>--> 			           
-			            </h2>
-			            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.</p>
-			        </div>
-			
-			        <hr class="featurette-divider">
-			
-			        <!-- Third Featurette -->
-			        <div class="featurette" id="contact">
-			            <img class="featurette-image img-circle img-responsive pull-right" 
-			         	       src="<%=cPath %>/resource/images/menu_5.png">
-			            <h2 class="featurette-heading">Best Menu3
-			                <!--<span class="text-muted">부연설명</span>--> 			           
-			            </h2>
-			            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla.</p>
-			        </div>
-			        	
-			        <hr class="featurette-divider">
-			    </div>
-		    
-			    <!-- 이벤트&공지사항 -->				
-	            <div class="col-md-3">
-		            <div class="row" id="event_notice">
-		                <h3>Event</h3>	                
-		                <ul >
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                </ul>
-		             </div>
-		             <div class="row" id="event_notice">
-		                <h3>Notice</h3>	                
-		                <ul>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                    <li><a href="">Lorem Ipsum</a></li>
-		                </ul>
-		             </div>
-	            </div>	
-	        </div>
-	  	 </div>	     
-	
-	
-		<!-- 소개  -->	
-		
+		<!-- 소개  -->			
 		<p style="font-size: 35px; text-align: center; margin-top:100px;">About us</p>
 		</br>
 		<div class="container">
@@ -165,10 +146,14 @@
 				</div>			
 			</div>
 		</div>
-		
+		</div>
 	
 	
 	<jsp:include page="footer.jsp"></jsp:include>
+	
+	<script>
+	
+	</script>
 	
 	<!-- jQuery -->
     <script src="<%= cPath %>/resource/js/jquery-3.2.0.js"></script>
