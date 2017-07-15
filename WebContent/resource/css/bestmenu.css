@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://markmurray.co/codepen/customstyle.css);
+@CHARSET "UTF-8";
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -102,9 +104,9 @@ html, body {
   -webkit-box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
   box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
 }
-#best_container .blog-posts .post .content h1{
+#best_container .blog-posts .row .post .content h3{
   font-weight: 500;
-  color:#8e9631;
+  color:#35281c;
   line-height: 2;
   white-space: nowrap;
   overflow: hidden;
@@ -112,7 +114,7 @@ html, body {
 }
 #best_container .blog-posts .post .content h3{
   font-weight: 500;
-  color:#8e9631;
+  color:#35281c;
   line-height: 2;
   white-space: nowrap;
   overflow: hidden;
