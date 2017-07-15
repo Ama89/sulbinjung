@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 	<link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />	
 	<link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
-	<link rel="stylesheet" href="<%=cPath %>/resource/css/bestmenu.css" />	
+	<link rel="stylesheet" href="<%=cPath %>/resource/css/bestmenu.css" />			
 	
 	<!-- jQuery -->
     <script src="<%=cPath %>/resource/js/jquery-3.2.0.js"></script>
@@ -24,8 +24,13 @@
 </head>
 
 <body>
+
+	<!-- main_상단navbar -->
 	<jsp:include page="header.jsp"></jsp:include>
 
+	<!-- main_왼쪽사이드메뉴 -->
+	<jsp:include page="mainmenu.jsp"></jsp:include>
+	
 	<!-- 로고이미지 -->		
 	<div class="container-fluid">
 		<div class="row align">
@@ -37,29 +42,7 @@
 
 	<!-- 메인 컨테이너 -->
 	<div class="container">								
-		
-		<!-- 메뉴카테고리 -->
-		<div class="row align">
-			<div class="col-xs-12">
-				<div class="btn-group btn-group-justified" role="group" aria-label="...">
-					  <div class="btn-group" role="group">
-					    	<a href="<%=cPath%>/pages/store.jsp"><button type="button" class="btn btn-default">Store</button></a>
-					  </div>
-					  <div class="btn-group" role="group">
-					    	<a href="<%=cPath%>/pages/menu.jsp"><button type="button" class="btn btn-default">Menu</button></a>
-					  </div>
-					  <div class="btn-group" role="group">
-					    	<a href="<%=cPath%>/pages/reservation.jsp"><button type="button" class="btn btn-default">reservation</button></a>
-					  </div>
-					  <div class="btn-group" role="group">
-					    	<a href="<%=cPath%>/pages/review.jsp"><button type="button" class="btn btn-default">Review</button></a>
-					  </div>
-				</div>
-			</div>
-		</div>	
-	</div>
-	
-	
+
 	<!--베스트메뉴-->
 	<div class="container" id="best_container">
 	  	<div class="blog-posts">

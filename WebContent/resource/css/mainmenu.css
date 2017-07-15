@@ -1,0 +1,160 @@
+@import "compass/css3";
+
+* {	
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+#mainmenu_ul {
+   position: absolute;
+   padding-top: 50px;
+}
+
+#mainmenu_ul li {
+   height: 50px;
+   background: green;
+   display: block;
+   font-family:  Open Sans, sans-serif;
+   position: relative;
+   z-index: 100;
+   margin: 5px 0;
+   -webkit-animation: menu 1s;
+   -webkit-animation-fill-mode: forwards;
+   -moz-animation: menu 1s; 
+   -moz-animation-fill-mode: forwards; 
+   -ms-animation: menu 1s; 
+   -ms-animation-fill-mode: forwards; 
+   animation: menu 1s; /* Safari and Chrome */
+   animation-fill-mode: forwards; 
+   opacity: 0;
+}
+
+#mainmenu_ul li:hover {
+   cursor: pointer;
+  }
+  
+  
+#mainmenu_ul li:before {
+    display: block;
+    height: 50px;
+    width: 50px;
+    content: '';
+    font-size: 2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: rgba(255,255,255,0.2) 1px solid;
+    text-align: center;
+    color:white;
+    text-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
+    z-index: 200;
+    line-height: 1.3em;
+  }
+    
+  
+ #mainmenu_li a {
+     color: #fff;
+     display: block;
+     height: 50px;
+     padding: 0 2em 0 70px;
+     z-index: 100;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-size: 15px;
+     line-height: 2.8em;
+     position: absolute;
+     top: 0;
+     left: 0;
+     overflow: hidden;
+     -webkit-transition: all 0.1s ease-in-out;
+     -moz-transition: all 0.1s ease-in-out;
+     -ms-transition: all 0.1s ease-in-out;
+     transition: all 0.1s ease-in-out;
+     text-shadow: rgba(0,0,0,0.3) 1px 1px;
+}
+
+#mainmenu_ul li:nth-child(1) a {
+    background: #35281c;
+  }
+
+#mainmenu_ul li:nth-child(2) a {
+    background: #35281c;
+  }
+
+#mainmenu_ul li:nth-child(3) a {
+    background: #35281c;
+  }
+
+#mainmenu_ul li:nth-child(4) a {
+    background: #35281c;
+  }
+
+#mainmenu_ul li:nth-child(5) a {
+    background: #35281c;
+  }
+
+#mainmenu_li a:hover {
+   opacity: 1.0;
+   padding-right: 3.0em;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#mainmenu_ul li:nth-child(2) {
+   -webkit-animation-delay: 0.4s;
+   -moz-animation-delay: 0.4s;
+   -ms-animation-delay: 0.4s;
+   animation-delay: 0.4s;
+}
+
+#mainmenu_ul li:nth-child(3) {
+   -webkit-animation-delay: 0.8s; 
+   -moz-animation-delay: 0.8s;
+   -ms-animation-delay: 0.8s;
+   animation-delay: 0.8s;
+}
+
+#mainmenu_ul li:nth-child(4) {
+   -webkit-animation-delay: 1.2s;
+   -moz-animation-delay: 1.2s; 
+   -ms-animation-delay: 1.2s; 
+   animation-delay: 1.2s; 
+}
+
+#mainmenu_ul li:nth-child(5) {
+   -webkit-animation-delay: 1.6s;
+   -moz-animation-delay: 1.6s;
+   -ms-animation-delay: 1.6s;
+   animation-delay: 1.6s;
+}
+
+@-webkit-keyframes menu {
+  0%   {opacity: 0;}
+  25%  {opacity: 0.7;}
+  50%  {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes menu {
+  0%   {opacity: 0;}
+  25%  {opacity: 0.7;}
+  50%  {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@-ms-keyframes menu {
+  0%   {opacity: 0;}
+  25%  {opacity: 0.7;}
+  50%  {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@keyframes menu {
+  0%   {opacity: 0;}
+  25%  {opacity: 0.7;}
+  50%  {opacity: 1;}
+  100% {opacity: 1;}
+}

@@ -31,17 +31,24 @@
 					</div> 					
 			    	<div class="collapse navbar-collapse" id="myNavbar">
 			      		<ul class="nav navbar-nav navbar-right">
-			   				<%if(id == null){ %>
+		   					<%if(id == null){ %>
 			   					<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>"  class="hvrcenter">
 			   						<span class="glyphicon glyphicon-log-in"></span>&nbsp Login</a></li>
 			    				<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>"  class="hvrcenter">
-			    					<span class="glyphicon glyphicon-user"></span>&nbsp Signup</a></li>
-			    			<%}else{ %>
+		    						<span class="glyphicon glyphicon-user"></span>&nbsp Signup</a></li>			    				
+		    				<%}else{ %>
 			    				<li><a href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>"  class="hvrcenter">
 			   						<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
 			    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>"  class="hvrcenter">
-			    					<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
-			    			<%} %>
+		    						<span class="glyphicon glyphicon-user"></span>Mypage</a></li>
+		    				<%} %>
+		    				
+			    				<li class="visible-xs"><a href="<%=cPath%>/pages/store.jsp" class="hvrcenter">Store</a></li>
+								<li class="visible-xs"><a href="<%=cPath%>/pages/menu.jsp" class="hvrcenter">Menu</a></li>
+								<li class="visible-xs"><a href="<%=cPath%>/pages/reservation.jsp" class="hvrcenter">Reservation</a></li>
+								<li class="visible-xs"><a href="<%=cPath%>/pages/review.jsp" class="hvrcenter">Review</a></li>
+								<li class="visible-xs"><a href="<%=cPath%>/pages/notice.jsp" class="hvrcenter">Notice</a></li>
+							
 						</ul>
 			  	  	</div>
 				</div>
