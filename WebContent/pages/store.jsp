@@ -28,9 +28,15 @@
     }
     
     #hr1{
-    	width: 80%;
+    	width: 100%;
     	border: 1px solid #cecece;
     }
+    
+    #img1{
+    	width: 450px;
+    	height: 350px;
+    }
+    
 </style>
 </head>
 
@@ -56,6 +62,14 @@
 	<p class="store_title">Store</p>
 	<p class="store_title1">-강남점-</p>
 	<hr id="hr1"> 
+	<br/>
+	<br/>
+	<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="강남점" />
+	<br/>
+	<br/>
+	<hr id="hr1">
+	<br/>
+	<br/> 
 	<p class="store_title1">-홍대점-</p>
 	
 	</div>
