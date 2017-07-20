@@ -16,7 +16,6 @@ private Connection conn;
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
 			DataSource ds = (DataSource)envContext.lookup("jdbc/sulbinjung");
 			conn = ds.getConnection();
-			System.out.println("DbcpBean 작업성공!");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

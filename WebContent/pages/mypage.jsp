@@ -42,7 +42,7 @@
 	<h3>마이페이지</h3>
 	 <!-- 로고이미지 -->        
    <div class="container-fluid">    
-       <div class="row" id="toplogo">    
+       <div class="row">    
            <div class="col-xs-12">                
                    <img src="<%=cPath %>/resource/images/sulbinjung_logo.png" alt="logo" class="logo" 
                      style="width: 450px;
