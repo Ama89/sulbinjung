@@ -24,7 +24,7 @@
         <div class="col-xs-4 col-xs-offset-4 panel panel-default">
             <div class="panel-heading">관리자 로그인</div>
             <div class="panel-body">
-                <form action="admins/login.do" method="post">
+                <form action="admin/login.do" method="post">
                     <div class="form-group">
                         <input id="id" class="form-control" placeholder="E-mail" name="id" type="text" autofocus>
                     </div>
