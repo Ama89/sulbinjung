@@ -1,7 +1,10 @@
 package sulbinjung.controller;
 
+import sulbinjung.admin.action.AdminFaqListAction;
+import sulbinjung.admin.action.AdminFaqWriteformAction;
 import sulbinjung.admin.action.AdminLoginAction;
 import sulbinjung.admin.action.AdminLogoutAction;
+import sulbinjung.admin.action.AdminNoticeListAction;
 import sulbinjung.users.action.HomeAction;
 
 public class UserActionFactory {
@@ -24,6 +27,12 @@ public class UserActionFactory {
 			action=new AdminLoginAction();
 		}else if(command.equals("/admin/logout")){
 			action=new AdminLogoutAction();
+		}else if(command.equals("/admin/notice/list")){
+			action=new AdminNoticeListAction();
+		}else if(command.equals("/admin/faq/list")){
+			action=new AdminFaqListAction();
+		}else if(command.equals("/admin/faq/writeform")){
+			action=new AdminFaqWriteformAction();
 		}
 		return action;
 	}

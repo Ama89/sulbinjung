@@ -19,8 +19,8 @@
 		</script>
 		
 	<% }else{ %>
-		<a href="notice/list.jsp">공지목록</a>
-		<a href="faq/faqlist.jsp">FAQ 목록</a>
+		<a href="notice/list.do">공지목록</a>
+		<a href="faq/list.do">FAQ 목록</a>
 		<a href="logout.do">로그아웃</a>
 	<% } %>
 </body>

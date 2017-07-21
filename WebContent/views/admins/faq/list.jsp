@@ -16,7 +16,7 @@
 <title>admins/faq/faqlist.jsp</title>
 </head>
 <body>
-	<a href="faqwriteform.jsp">글쓰기</a>
+	<a href="writeform.do">글쓰기</a>
 	
 	<table>
 		<thead>
