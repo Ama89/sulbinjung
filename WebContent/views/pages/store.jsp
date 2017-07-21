@@ -37,9 +37,13 @@
     	width: 500px;
     	height: 400px;    	
     }
-    ul li{
+    #content > li{
     	list-style: none;
     	font-size: 16px;
+    }
+    
+    #map_content > li{
+    	list-style: none;
     }
     
 </style>
@@ -68,8 +72,8 @@
     		<!-- 강남점 소개 -->
 			<div class="col-xs-12" style="text-align:center;">   
 				<p class="store_title">Store</p>
-				<p class="store_title1">-강남점-</p>
 				<hr id="hr1"> 
+				<p class="store_title1">-강남점-</p>
 				<br/>
 				<br/>			
 				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
@@ -83,16 +87,26 @@
 				</div> 
 				
 				<div class="col-xs-12">
-				<br/>
-				<p>오시는 길</p>
-				<br/><br/><br/>
-				<div id="map" style="width:450px;height:350px;"></div>
+					<br/>
+					<p>오시는 길</p>
+					<br/><br/><br/>
+					<div class="col-xs-6">
+						<div id="map" style="width:450px;height:350px;"></div>	
+					</div>
+					<br/>
+						<ul id="map_content" calss="col-xs-push-8">
+								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
+								<li><span>강남역 11번출구 10분거리</span></li><br/>
+								<li><span>신논현역 5번출구 5분거리</span></li>
+						</ul>
+						
 				</div>
 				
+				
 			<!-- 홍대점 소개 -->
-				<div class="col-xs-12"  style="text-align:center;"> 
+			<div class="col-xs-12"  style="text-align:center;"> 
+				<hr id="hr1"> 
 					<p class="store_title1">-홍대입구점-</p>
-					<hr id="hr1"> 
 					<br/>
 					<br/>			
 					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
@@ -102,6 +116,22 @@
 						<li><span>TEL 02-719-1994</span></li><br/>
 						<li><span>ADDRESS 서울 마포구 어울로마당로 44</span></li>
 					</ul>
+				</div>
+				
+				<div class="col-xs-12">
+					<br/>
+					<p>오시는 길</p>
+					<br/><br/><br/>
+					<div class="col-xs-6">
+						<div id="map2" style="width:450px;height:350px;"></div>	
+					</div>
+					<br/>
+						<ul id="map_content" calss="col-xs-push-8">
+								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
+								<li><span>강남역 11번출구 10분거리</span></li><br/>
+								<li><span>신논현역 5번출구 5분거리</span></li>
+						</ul>
+						
 				</div>
 				
 				
@@ -116,9 +146,70 @@
 			center: new daum.maps.LatLng(37.502551, 127.027342),
 			level: 3
 		};
-
+		
 		var map = new daum.maps.Map(container, options);
+		
+		// 지도를 클릭한 위치에 표출할 마커입니다
+		var marker = new daum.maps.Marker({ 
+		    // 지도 중심좌표에 마커를 생성합니다 
+		    position: map.getCenter() 
+		}); 
+		// 지도에 마커를 표시합니다
+		marker.setMap(map);
+		
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		// 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+		daum.maps.event.addListener(map, 'zoom_changed', function() {        
+		    
+		    // 지도의 현재 레벨을 얻어옵니다
+		    var level = map.getLevel();
+		    
+		    var message = '현재 지도 레벨은 ' + level + ' 입니다';
+		    var resultDiv = document.getElementById('result');  
+		    resultDiv.innerHTML = message;
+		    
+		});
+
 	</script>
+	
+	<script>
+		var container = document.getElementById('map2');
+		var options = {
+			center: new daum.maps.LatLng(37.549019, 126.920863),
+			level: 3
+		};
+		
+		var map = new daum.maps.Map(container, options);
+		
+		// 지도를 클릭한 위치에 표출할 마커입니다
+		var marker = new daum.maps.Marker({ 
+		    // 지도 중심좌표에 마커를 생성합니다 
+		    position: map.getCenter() 
+		}); 
+		// 지도에 마커를 표시합니다
+		marker.setMap(map);
+		
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		// 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+		daum.maps.event.addListener(map, 'zoom_changed', function() {        
+		    
+		    // 지도의 현재 레벨을 얻어옵니다
+		    var level = map.getLevel();
+		    
+		    var message = '현재 지도 레벨은 ' + level + ' 입니다';
+		    var resultDiv = document.getElementById('result');  
+		    resultDiv.innerHTML = message;
+		    
+		});
+		
+	</script>
+	    
 	    
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
