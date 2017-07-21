@@ -10,11 +10,12 @@
 	<insert id="insert" parameterType="membersDto">
 		INSERT INTO members
 		(num,id,pwd,name,birth,gender,phone,email,regdate)
-		VALUES(members_seq.NEXTVAL,#{id},#{pwd},#{name},#{birth},#{gender},#{phone},#{email}, SYSDATE)
+		VALUES(members_seq.NEXTVAL,#{id},#{pwd},#{name},TO_DATE(#{birth}, 'rrrr-mm-dd'),#{gender},#{phone},#{email}, SYSDATE)
 	</insert>
 	<select id="isValid" parameterType="membersDto" 
 			resultType="membersDto">
-		SELECT id,pwd
+		SELECT	num,id,pwd,name,birth,gender,phone,email,
+				TO_CHAR(regdate,'rrrr-mm-dd') regdate
 		FROM members
 		WHERE id=#{id} AND pwd=#{pwd}
 	</select>
@@ -32,7 +33,7 @@
 	</delete>
 	<update id="update" parameterType="membersDto">
 		UPDATE members
-		SET pwd=#{pwd},email=#{email}
+		SET name=#{name},birth=#{birth},email=#{email},phone=#{phone}
 		WHERE id=#{id}
 	</update>
 </mapper>
