@@ -19,7 +19,7 @@ public class UserActionFactory {
 		Action action = null;
 		if(command.equals("/home")){
 			action=new HomeAction();
-		}else if(command.equals("/admins/login")){
+		}else if(command.equals("/admin/login")){
 			action=new AdminLoginAction();
 		}
 		return action;
