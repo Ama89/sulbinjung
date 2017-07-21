@@ -38,13 +38,12 @@
     .store_title{	
     	/*폰트 적용하기*/
     	font-family: poetfont;
-    	font-size: 35px;
+    	font-size: 28px;
     	text-align: center;
     }
     .store_title1{
     	font-family: poetfont;
-    	font-size: 28px;
-    	font-
+    	font-size: 25px;
     	text-align: center;
     }
     
@@ -60,12 +59,12 @@
     #content > li{
     	font-family: basicfont;
     	list-style: none;
-    	font-size: 16px;
+    	font-size: 17px;
     }
     
     #map_content > li{
    		font-family: basicfont;
-   		font-size: 16px;
+   		font-size: 17px;
     	list-style: none;
     }
     
@@ -94,7 +93,7 @@
     <div class="row">    
     		<!-- 강남점 소개 -->
 			<div class="col-xs-12" style="text-align:center;">   
-				<p class="store_title">store</p>
+				<p class="store_title">store<br/><strong>매장안내</strong></p>
 				<hr id="hr1"> 
 				<p class="store_title1">강남점 </p>
 				<br/>	
