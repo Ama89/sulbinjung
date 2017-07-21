@@ -9,6 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=273671b159b0900cfc107554fc578457"></script>
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
@@ -33,8 +34,12 @@
     }
     
     #img1{
-    	width: 450px;
-    	height: 350px;
+    	width: 500px;
+    	height: 400px;    	
+    }
+    ul li{
+    	list-style: none;
+    	font-size: 16px;
     }
     
 </style>
@@ -59,20 +64,61 @@
 
    <!-- 메인 컨테이너 -->
     <div class="container">
-	<p class="store_title">Store</p>
-	<p class="store_title1">-강남점-</p>
-	<hr id="hr1"> 
-	<br/>
-	<br/>
-	<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="강남점" />
-	<br/>
-	<br/>
-	<hr id="hr1">
-	<br/>
-	<br/> 
-	<p class="store_title1">-홍대점-</p>
-	
+    <div class="row">    
+    		<!-- 강남점 소개 -->
+			<div class="col-xs-12" style="text-align:center;">   
+				<p class="store_title">Store</p>
+				<p class="store_title1">-강남점-</p>
+				<hr id="hr1"> 
+				<br/>
+				<br/>			
+				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+				<br/><br/><br/><br/>			
+				<ul id="content">
+					<li><span>OPEN 11:00 CLOSE 23:00</span></li><br/>
+					<li><span>TEL 02-108-1994</span></li><br/>
+					<li><span>ADDRESS 서울 강남구 강남대로 102길 23</span></li>
+				</ul>
+				
+				</div> 
+				
+				<div class="col-xs-12">
+				<br/>
+				<p>오시는 길</p>
+				<br/><br/><br/>
+				<div id="map" style="width:450px;height:350px;"></div>
+				</div>
+				
+			<!-- 홍대점 소개 -->
+				<div class="col-xs-12"  style="text-align:center;"> 
+					<p class="store_title1">-홍대입구점-</p>
+					<hr id="hr1"> 
+					<br/>
+					<br/>			
+					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
+					<br/><br/><br/><br/>				
+					<ul id="content">
+						<li><span>OPEN 11:30 CLOSE 23:00</span></li><br/>
+						<li><span>TEL 02-719-1994</span></li><br/>
+						<li><span>ADDRESS 서울 마포구 어울로마당로 44</span></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+			
+			<br/><br/><br/>
 	</div>
+	
+		<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new daum.maps.LatLng(37.502551, 127.027342),
+			level: 3
+		};
+
+		var map = new daum.maps.Map(container, options);
+	</script>
 	    
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
