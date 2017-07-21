@@ -24,8 +24,14 @@
     
     @font-face {
 	  /*폰트 이름 설정*/
-	  font-family: 'basicfont1';
+	  font-family: 'basicfont';
       src: url('<%=cPath %>/resource/fonts/DXKPMB-KSCpc-EUC-H.ttf') format('truetype');
+    }
+    
+     @font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'titlefont';
+      src: url('<%=cPath %>/resource/fonts/wkr고직.ttf') format('truetype');
     }
 
 	/* CSS */
@@ -36,14 +42,9 @@
     	text-align: center;
     }
     .store_title1{
-    	font-family: basicfont1;
-    	font-size: 20px;
-    	text-align: center;
-    }
-    
-    .store_title1{
-    	font-family: basicfont1;
-    	font-size: 20px;
+    	font-family: poetfont;
+    	font-size: 28px;
+    	font-
     	text-align: center;
     }
     
@@ -57,13 +58,13 @@
     	height: 400px;    	
     }
     #content > li{
-    	font-family: basicfont1;
+    	font-family: basicfont;
     	list-style: none;
     	font-size: 16px;
     }
     
     #map_content > li{
-   		font-family: basicfont1;
+   		font-family: basicfont;
    		font-size: 16px;
     	list-style: none;
     }
@@ -95,9 +96,8 @@
 			<div class="col-xs-12" style="text-align:center;">   
 				<p class="store_title">store</p>
 				<hr id="hr1"> 
-				<p class="store_title1">- 강남점 -</p>
-				<br/>
-				<br/>			
+				<p class="store_title1">강남점 </p>
+				<br/>	
 				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
 				<br/><br/><br/><br/>			
 				<ul id="content">
@@ -110,7 +110,7 @@
 				
 				<div class="col-xs-12">
 					<br/>
-					<p>강남점 오시는 길</p>
+					<p style="font-family:poetfont; font-size:25px;">location</p>
 					<br/><br/><br/>
 					<div class="col-xs-6">
 						<div id="map" style="width:450px;height:350px;"></div>	
@@ -130,9 +130,8 @@
 			<div class="col-xs-12"  style="text-align:center;">
 			<br/><br/> 
 				<hr id="hr1"> 
-					<p class="store_title1">- 홍대입구점 -</p>
-					<br/>
-					<br/>			
+					<p class="store_title1">홍대입구점</p>
+					<br/>		
 					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
 					<br/><br/><br/><br/>				
 					<ul id="content">
@@ -144,7 +143,7 @@
 				
 				<div class="col-xs-12">
 					<br/>
-					<p>홍대입구점 오시는 길</p>
+					<p style="font-family:poetfont; font-size:25px;">location</p>
 					<br/><br/><br/>
 					<div class="col-xs-6">
 						<div id="map2" style="width:450px;height:350px;"></div>	
