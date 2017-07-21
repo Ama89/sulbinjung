@@ -21,7 +21,7 @@
 	<% }else{ %>
 		<a href="notice/list.jsp">공지목록</a>
 		<a href="faq/faqlist.jsp">FAQ 목록</a>
-		<a href="logout.jsp">로그아웃</a>
+		<a href="logout.do">로그아웃</a>
 	<% } %>
 </body>
 </html>

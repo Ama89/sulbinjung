@@ -1,6 +1,7 @@
 package sulbinjung.controller;
 
 import sulbinjung.admin.action.AdminLoginAction;
+import sulbinjung.admin.action.AdminLogoutAction;
 import sulbinjung.users.action.HomeAction;
 
 public class UserActionFactory {
@@ -21,6 +22,8 @@ public class UserActionFactory {
 			action=new HomeAction();
 		}else if(command.equals("/admin/login")){
 			action=new AdminLoginAction();
+		}else if(command.equals("/admin/logout")){
+			action=new AdminLogoutAction();
 		}
 		return action;
 	}
