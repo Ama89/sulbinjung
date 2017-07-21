@@ -13,18 +13,37 @@
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
+
 <style>
-    .store_title{
-    	font-size: 25px;
+	/* 폰트 */
+	@font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'poetfont';
+      src: url('<%=cPath %>/resource/fonts/poetfont.ttf') format('truetype');
+    }
+    
+    @font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'basicfont1';
+      src: url('<%=cPath %>/resource/fonts/DXKPMB-KSCpc-EUC-H.ttf') format('truetype');
+    }
+
+	/* CSS */
+    .store_title{	
+    	/*폰트 적용하기*/
+    	font-family: poetfont;
+    	font-size: 35px;
     	text-align: center;
     }
     .store_title1{
-    	font-size: 16px;
+    	font-family: basicfont1;
+    	font-size: 20px;
     	text-align: center;
     }
     
     .store_title1{
-    	font-size: 16px;
+    	font-family: basicfont1;
+    	font-size: 20px;
     	text-align: center;
     }
     
@@ -38,11 +57,14 @@
     	height: 400px;    	
     }
     #content > li{
+    	font-family: basicfont1;
     	list-style: none;
     	font-size: 16px;
     }
     
     #map_content > li{
+   		font-family: basicfont1;
+   		font-size: 16px;
     	list-style: none;
     }
     
@@ -71,9 +93,9 @@
     <div class="row">    
     		<!-- 강남점 소개 -->
 			<div class="col-xs-12" style="text-align:center;">   
-				<p class="store_title">Store</p>
+				<p class="store_title">store</p>
 				<hr id="hr1"> 
-				<p class="store_title1">-강남점-</p>
+				<p class="store_title1">- 강남점 -</p>
 				<br/>
 				<br/>			
 				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
@@ -88,11 +110,12 @@
 				
 				<div class="col-xs-12">
 					<br/>
-					<p>오시는 길</p>
+					<p>강남점 오시는 길</p>
 					<br/><br/><br/>
 					<div class="col-xs-6">
 						<div id="map" style="width:450px;height:350px;"></div>	
 					</div>
+					<br/>
 					<br/>
 						<ul id="map_content" calss="col-xs-push-8">
 								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
@@ -104,9 +127,10 @@
 				
 				
 			<!-- 홍대점 소개 -->
-			<div class="col-xs-12"  style="text-align:center;"> 
+			<div class="col-xs-12"  style="text-align:center;">
+			<br/><br/> 
 				<hr id="hr1"> 
-					<p class="store_title1">-홍대입구점-</p>
+					<p class="store_title1">- 홍대입구점 -</p>
 					<br/>
 					<br/>			
 					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
@@ -120,16 +144,15 @@
 				
 				<div class="col-xs-12">
 					<br/>
-					<p>오시는 길</p>
+					<p>홍대입구점 오시는 길</p>
 					<br/><br/><br/>
 					<div class="col-xs-6">
 						<div id="map2" style="width:450px;height:350px;"></div>	
 					</div>
 					<br/>
 						<ul id="map_content" calss="col-xs-push-8">
-								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
-								<li><span>강남역 11번출구 10분거리</span></li><br/>
-								<li><span>신논현역 5번출구 5분거리</span></li>
+								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
+								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
 						</ul>
 						
 				</div>
@@ -139,7 +162,7 @@
 			
 			<br/><br/><br/>
 	</div>
-	
+	<!-- 강남점 지도 설정 -->
 		<script>
 		var container = document.getElementById('map');
 		var options = {
@@ -174,7 +197,7 @@
 		});
 
 	</script>
-	
+	<!-- 홍대입구점 지도 설정 -->
 	<script>
 		var container = document.getElementById('map2');
 		var options = {
