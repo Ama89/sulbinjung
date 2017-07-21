@@ -1,4 +1,4 @@
-package sulbinjung.users.action;
+package sulbinjung.members.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

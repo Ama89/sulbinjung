@@ -8,6 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- Type 별칭 미리 정의하기 -->
 	<typeAliases>
 		<typeAlias type="sulbinjung.dto.AdminDto" alias="adminDto"/>
+		<typeAlias type="sulbinjung.dto.MembersDto" alias="membersDto"/>
 	</typeAliases>
 	
 	<!-- 환경설정 -->
@@ -25,6 +26,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- sql 문을 정의하고 있는 xml 문서 -->
 	<mappers>
 		<mapper resource="sulbinjung/mybatis/AdminMapper.xml"/>
+		<mapper resource="sulbinjung/mybatis/MembersMapper.xml"/>
 	</mappers>	
 </configuration>
 

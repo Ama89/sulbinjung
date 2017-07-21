@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="members">
+	<select id="isExistId" parameterType="string" 
+				resultType="string">
+		SELECT id 
+		FROM members
+		WHERE id=#{id}
+	</select>
+	<insert id="insert" parameterType="membersDto">
+		INSERT INTO members
+		(num,id,pwd,name,birth,gender,phone,email,regdate)
+		VALUES(members_seq.NEXTVAL,#{id},#{pwd},#{name},#{birth},#{gender},#{phone},#{email}, SYSDATE)
+	</insert>
+	<select id="isValid" parameterType="membersDto" 
+			resultType="membersDto">
+		SELECT id,pwd
+		FROM members
+		WHERE id=#{id} AND pwd=#{pwd}
+	</select>
+	<select id="getData" parameterType="string"
+		resultType="membersDto">
+		SELECT	num,id,pwd,name,
+				TO_CHAR(birth,'rrrr-mm-dd') birth,gender,phone,email,
+				regdate,gender,isMember
+		FROM members
+		WHERE id=#{id}	
+	</select>
+	<delete id="delete" parameterType="string">
+		DELETE FROM members
+		WHERE id=#{id}
+	</delete>
+	<update id="update" parameterType="membersDto">
+		UPDATE members
+		SET pwd=#{pwd},email=#{email}
+		WHERE id=#{id}
+	</update>
+</mapper>
+
+
