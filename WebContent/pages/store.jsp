@@ -13,6 +13,29 @@
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 <style>
+    .store_title{
+    	font-size: 25px;
+    	text-align: center;
+    }
+    .store_title1{
+    	font-size: 16px;
+    	text-align: center;
+    }
+    
+    .store_title1{
+    	font-size: 16px;
+    	text-align: center;
+    }
+    
+    #hr1{
+    	width: 100%;
+    	border: 1px solid #cecece;
+    }
+    
+    #img1{
+    	width: 450px;
+    	height: 350px;
+    }
     
 </style>
 </head>
@@ -36,7 +59,19 @@
 
    <!-- 메인 컨테이너 -->
     <div class="container">
-
+	<p class="store_title">Store</p>
+	<p class="store_title1">-강남점-</p>
+	<hr id="hr1"> 
+	<br/>
+	<br/>
+	<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="강남점" />
+	<br/>
+	<br/>
+	<hr id="hr1">
+	<br/>
+	<br/> 
+	<p class="store_title1">-홍대점-</p>
+	
 	</div>
 	    
 	<jsp:include page="../footer.jsp"></jsp:include>
