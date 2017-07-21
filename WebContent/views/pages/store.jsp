@@ -33,8 +33,11 @@
     }
     
     #img1{
-    	width: 450px;
-    	height: 350px;
+    	width: 400px;
+    	height: 320px;    	
+    }
+    ul li{
+    	list-style: none;
     }
     
 </style>
@@ -59,19 +62,44 @@
 
    <!-- 메인 컨테이너 -->
     <div class="container">
-	<p class="store_title">Store</p>
-	<p class="store_title1">-강남점-</p>
-	<hr id="hr1"> 
-	<br/>
-	<br/>
-	<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="강남점" />
-	<br/>
-	<br/>
-	<hr id="hr1">
-	<br/>
-	<br/> 
-	<p class="store_title1">-홍대점-</p>
-	
+    <div class="row">    
+    		<!-- 강남점 소개 -->
+			<div class="col-xs-12">   
+				<p class="store_title">Store</p>
+				<p class="store_title1">-강남점-</p>
+				<hr id="hr1"> 
+				<br/>
+				<br/>			
+				<img class="col-xs-6" id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+				<br/><br/><br/><br/>				
+				<ul id="content" class="col-xs-push-2">
+					<li><span>OPEN 11:00 CLOSE 23:00</span></li>
+					<li><span>TEL 02-108-1994</span></li>
+					<li><span>ADDRESS 서울 강남구 강남대로 102길 23</span></li>
+				</ul>
+				
+				
+				
+
+				</div> 
+			<!-- 홍대점 소개 -->
+				<div class="col-xs-12"> 
+				
+					<p class="store_title1">-홍대입구점-</p>
+					<hr id="hr1"> 
+					<br/>
+					<br/>			
+					<img class="col-xs-6" id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
+					<br/><br/><br/><br/>				
+					<ul id="content" class="col-xs-push-2">
+						<li><span>OPEN 11:00 CLOSE 23:00</span></li>
+						<li><span>TEL 02-108-1994</span></li>
+						<li><span>ADDRESS 서울 강남구 강남대로 102길 23</span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<br/><br/><br/>
 	</div>
 	    
 	<jsp:include page="../footer.jsp"></jsp:include>
