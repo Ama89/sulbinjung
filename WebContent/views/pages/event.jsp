@@ -38,7 +38,15 @@
     	width: 100%;
     	border: 1px solid #cecece;
     }
+    .galleryList > ul > li{
+    	list-style: none;
+    }
     
+    .grid{
+    	display: inline;
+    	float:left;
+    	margin: 15px;
+    }
 </style>
 </head>
 
@@ -58,32 +66,63 @@
 			</div>
 		</div>    
 	</div>  
+				
 
-   <!-- 메인 컨테이너 -->
+
+  <!-- 메인 컨테이너 -->
     <div class="container">
-		<div class="row">    
-    		
+		<div class="row">    		
 			<div class="col-xs-12" style="text-align:center;">   
 				<p class="store_title">event<br/><strong>이벤트</strong></p>
 				<hr id="hr1"> 
+				<br/>		
+				<!-- 검색 -->		
+				
+				<form class="form-inline" action="list.do" method="post" 
+						style="width: 400px; margin: 0 auto;">
+					<select class="form-control" name="condition" id="condition">
+						<option value="title">제목</option>
+						<option value="content">내용</option>
+					</select>
+					<input class="form-control" value="${keyword }" type="text" name="keyword" placeholder="검색어"/>
+					<button class="btn btn-default" type="submit">
+						<span class="sr-only">검색</span>
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
 				<br/>
-				
+				<br/>
+				<!-- 게시물 리스트 -->
+				<div class="contents">
+					<div class="galleryList">
+						<ul>
+							<!-- 첫번째 이벤트 게시물 -->
+							<li class="grid">
+								<a href="">
+								<img src="<%=cPath %>/resource/images/event1.jpg" alt="맥주이벤트" width="290" height="" />
+								<div class="info">
+									<a href="">
+										<div class="content_title">sulbinjung 시원한 여름나기</div>
+									</a>
+								</div>
+								</a>
+							</li>
+							<!-- 두번째 이벤트 게시물 -->
+							<li class="grid">
+								<a href="">
+								<img src="<%=cPath %>/resource/images/event2.jpg" alt="화이트데이 이벤트" width="290" height="" />
+								<div class="info">
+									<a href="">
+										<div class="content_title">선물의 크기보다 마음의 크기가 중요해요<br/>
+												화이트데이 이벤트</div>
+									</a>
+								</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>	
-				
-<!-- 검색 -->		
-
-<form class="form-inline" action="list.do" method="post" 
-		style="width: 300px; margin: 0 auto;">
-	<select name="condition" id="condition">
-		<option value="title">제목</option>
-		<option value="content">내용</option>
-	</select>
-	<input class="form-control" value="${keyword }" type="text" name="keyword" placeholder="검색어"/>
-	<button class="btn btn-default" type="submit">
-		<span class="sr-only">검색</span>
-		<span class="glyphicon glyphicon-search"></span>
-	</button>
-</form>
 
 			
 		</div>
