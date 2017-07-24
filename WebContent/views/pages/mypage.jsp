@@ -40,54 +40,55 @@
 <body>
 	<jsp:include page="../header.jsp"></jsp:include>
 	<h3>마이페이지</h3>
-	 <!-- 로고이미지 -->        
-   <div class="container-fluid">    
+	
+	<!-- 로고이미지 -->        
+   	<div class="container-fluid">    
        <div class="row">    
            <div class="col-xs-12">                
-                   <img src="<%=cPath %>/resource/images/sulbinjung_logo.png" alt="logo" class="logo" 
-                     style="width: 450px;
-                    height: 220px;
-                    display: block;
-                    margin: 0 auto;" />
-               </div>
-           </div>    
-       </div>
+               <img src="<%=cPath %>/resource/images/sulbinjung_logo.png" alt="logo" class="logo" 
+                 style="width: 450px;
+                height: 220px;
+                display: block;
+                margin: 0 auto;" />
+           </div>
+       </div>    
+    </div>
    
-   <!-- 메인 컨테이너 -->
-   <div class="container">
+	<!-- 메인 컨테이너 -->
+	<div class="container">
 		<div class="row">
 			<div class="col-xs-4 col-xs-push-4">
 			<p class="myinfo">My Info</p>
 			<br/>
 			<hr style="border: 1.2px solid #cecece;">
 			<br/>
-				<% if(id==null){ %>
+			<% if(id==null){ %>
 		<script>
 			alert("로그인이 필요합니다.");
 			location.href="../members/loginform.jsp?url=<%=cPath%>/pages/mypage.jsp";
 		</script>
-	<%}else{ %>
+		<%}else{ %>
 		<p><strong><%=id %></strong>님 로그인중...</p>
 		<form action="update.jsp?num=<%=dto.getNum()%>&isMember=<%=dto.getIsMember()%>" method="post">
 		<!-- 아이디 -->
-			<div class="form-group">
-				<input type="hidden" class="form-control" name="id" value="<%=dto.getId()%>"/>
-				<label for="id">아이디</label>
-				<input type="text" class="form-control" id="id" 
-					value="<%=dto.getId()%>" disabled/>
-			</div>
-			<!-- 비밀번호 -->
-			<div class="form-group">
-				<input type="hidden" class="form-control" name="pwd" value="<%=dto.getPwd()%>"/>
-				<label for="pwd">비밀번호</label>
-				<input type="password" class="form-control" id="pwd" 
-					value="<%=dto.getPwd()%>" disabled/>
-			</div>
+		<div class="form-group">
+			<input type="hidden" class="form-control" name="id" value="<%=dto.getId()%>"/>
+		<label for="id">아이디</label>
+		<input type="text" class="form-control" id="id" 
+			value="<%=dto.getId()%>" disabled/>
+		</div>
+		<!-- 비밀번호 -->
+		<div class="form-group">
+			<input type="hidden" class="form-control" name="pwd" value="<%=dto.getPwd()%>"/>
+		<label for="pwd">비밀번호</label>
+		<input type="password" class="form-control" id="pwd" 
+			value="<%=dto.getPwd()%>" disabled/>
+		</div>
 		<!-- 이름 -->
 		<div class="form-group">
 			<label for="name">이름</label>
 			<input type="text" class="form-control" name="name" value="<%= dto.getName()%>" disabled/>	
-			</div>
+		</div>
 		<!-- 생년월일 -->
 		<div class="form-group">
 			<label for="birth">생년월일( ex: 19901212 )</label> <br/>
@@ -99,36 +100,36 @@
 			<input type="text" class="form-control" name="email" value="<%= dto.getEmail()%>"disabled/>
 		</div>
 		<!-- 전화번호  -->
-			<div class="form-group">
-				<label for="phone">전화번호</label>
-				<br/>
-				<input type="text" class="form-control" name="phone" value="<%= dto.getPhone()%>"disabled/>
-			</div>
+		<div class="form-group">
+			<label for="phone">전화번호</label>
+			<br/>
+			<input type="text" class="form-control" name="phone" value="<%= dto.getPhone()%>"disabled/>
+		</div>
 		<!-- 성별 -->
-			<div class="form-group">
-				<input type="hidden" name="gender" value="<%=dto.getGender()%>"disabled/>
-				<label>성별  </label>
-				<br/>
-				<%if(dto.getGender().equals('M')){ %>
-				  <input type="radio"  id="gender" value="M" checked disabled>남자 &nbsp;
-				  <input type="radio"  id="gender" value="F" disabled>여자
-				<%}else{ %>
-				  <input type="radio"  id="gender" value="M" disabled>남자 &nbsp;
-				  <input type="radio"  id="gender" value="F" checked disabled>여자
-				<%} %>
-			</div>			
-			</form>	
-			<div class="button">				
-				<p><button class="btn btn-default btn1" onclick="window.open('<%=cPath %>/members/deleteform.jsp?url=<%=cPath%>')">
-	   						<span class="glyphicon glyphicon-log-out"></span>탈퇴하기</button></p>
-	   						&nbsp;&nbsp;	
+		<div class="form-group">
+			<input type="hidden" name="gender" value="<%=dto.getGender()%>"disabled/>
+		<label>성별  </label>
+		<br/>
+		<%if(dto.getGender().equals('M')){ %>
+		  <input type="radio"  id="gender" value="M" checked disabled>남자 &nbsp;
+		  <input type="radio"  id="gender" value="F" disabled>여자
+		<%}else{ %>
+		  <input type="radio"  id="gender" value="M" disabled>남자 &nbsp;
+		  <input type="radio"  id="gender" value="F" checked disabled>여자
+		<%} %>
+		</div>			
+		</form>	
+		<div class="button">				
+			<p><button class="btn btn-default btn1" onclick="window.open('<%=cPath %>/members/deleteform.jsp?url=<%=cPath%>')">
+		  						<span class="glyphicon glyphicon-log-out"></span>탈퇴하기</button></p>
+		  						&nbsp;&nbsp;	
 		<button class="btn btn-default" onclick="window.open('../members/updateform.jsp')">회원정보수정</button>		
-			</div>
-			
-	<%} %>			
+		</div>
+		
+		<%} %>			
 			</div>
 		</div>
-</div>
+	</div>
 	
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
