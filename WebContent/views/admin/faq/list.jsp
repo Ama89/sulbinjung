@@ -28,35 +28,38 @@
                     height: 220px;
                     display: block;
                     margin: 0 auto;
-                    margin-top:50px;" />
+                    margin-top:50px;
+                    margin-bottom:100px;" />
 			</div>
 		</div>    
 	</div>    
 
    <!-- contents -->	
-	<a href="writeform.do">글쓰기</a>	
-	<table>
-		<thead>
-			<tr>
-				<th>FAQ 번호</th>
-				<th>FAQ 제목</th>
-				<th>FAQ 내용</th>	
-				<th>FAQ 수정</th>
-				<th>FAQ 삭제</th>		
-			</tr>
-		</thead>
-		<tbody>
-		<c:forEach var="tmp" items="${list }">
-			<tr>
-				<td>${tmp.num }</td>
-				<td><a href="detail.do?num=${tmp.num }">${tmp.title }</a></td>
-				<td>${tmp.contents }</td>
-				<td><a href="updateform.do?num=${tmp.num }">수정</a></td>
-				<td><a href="delete.do?num=${tmp.num }">삭제</a></td>				
-			</tr>
-		</c:forEach>
-		</tbody>
-	</table>
+   <div class="container">
+		<a href="writeform.do">글쓰기</a>	
+		<table>
+			<thead>
+				<tr>
+					<th>FAQ 번호</th>
+					<th>FAQ 제목</th>
+					<th>FAQ 내용</th>	
+					<th>FAQ 수정</th>
+					<th>FAQ 삭제</th>		
+				</tr>
+			</thead>
+			<tbody>
+			<c:forEach var="tmp" items="${list }">
+				<tr>
+					<td>${tmp.num }</td>
+					<td><a href="detail.do?num=${tmp.num }">${tmp.title }</a></td>
+					<td>${tmp.contents }</td>
+					<td><a href="updateform.do?num=${tmp.num }">수정</a></td>
+					<td><a href="delete.do?num=${tmp.num }">삭제</a></td>				
+				</tr>
+			</c:forEach>
+			</tbody>
+		</table>
+	</div>
 	
 	<jsp:include page="../../footer.jsp"></jsp:include>
 </body>

@@ -28,7 +28,8 @@
                     height: 220px;
                     display: block;
                     margin: 0 auto;
-                    margin-top:50px;" />
+                    margin-top:50px;
+                    margin-bottom:100px;" />
 			</div>
 		</div>    
 	</div>    
