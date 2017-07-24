@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="notice">
+	<insert id="insert" parameterType="noticeDto">
+		INSERT INTO notices
+		(num, title, contents, regdate, hit, orgfileName, saveFileName, fileSize, ADMINNUM)
+		VALUES(faq_seq.NEXTVAL,#{title},#{contents},SYSDATE,#{hit},#{orgfileName},#{saveFileName},#{fileSize},#{ADMINNUM})
+	</insert>
+	<select id="getList" resultType="noticeDto">
+		SELECT num, title, contents, regdate, hit, ADMINNUM
+		FROM notices
+		ORDER BY num DESC
+	</select>	
+	<select id="getData" parameterType="int" resultType="noticeDto">
+		SELECT num, title, contents, regdate, hit, orgfileName, saveFileName, ADMINNUM
+		FROM notices
+		WHERE num=#{num}
+	</select>	
+	<update id="update" parameterType="noticeDto">
+		UPDATE notices
+		SET title=#{title},contents=#{contents},orgfileName=#{orgfileName},saveFileName=#{saveFileName}
+		WHERE num=#{num}
+	</update>	
+	<delete id="delete" parameterType="int">
+		DELETE FROM notices
+		WHERE num=#{num}
+	</delete>	
+</mapper>

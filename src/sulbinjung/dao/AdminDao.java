@@ -1,7 +1,5 @@
 package sulbinjung.dao;
 
-
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -11,7 +9,8 @@ import sulbinjung.mybatis.SqlMapConfig;
 public class AdminDao {
 	private static AdminDao dao;
 	private static SqlSessionFactory factory;
-	private AdminDao(){}
+	
+	public AdminDao(){}
 
 	public static AdminDao getInstance(){
 		if(dao==null){
@@ -36,6 +35,11 @@ public class AdminDao {
 			return true;
 		}
 	}//isValid()
+	
+	public AdminDto getData(String id){
+		AdminDto dto = null;
+		return dto;
+	}
 
 	
 }

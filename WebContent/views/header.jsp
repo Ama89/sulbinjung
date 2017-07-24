@@ -32,12 +32,12 @@
 			    	<div class="collapse navbar-collapse" id="myNavbar">
 			      		<ul class="nav navbar-nav navbar-right">
 		   					<%if(id == null){ %>
-			   					<li><a href="<%=cPath %>/members/loginform.jsp?url=<%=cPath%>"  class="hvrcenter">
+			   					<li><a href="<%=cPath %>/members/loginform.do"  class="hvrcenter">
 			   						<span class="glyphicon glyphicon-log-in"></span>&nbsp Login</a></li>
-			    				<li><a href="<%=cPath %>/members/signupform.jsp?url=<%=cPath%>"  class="hvrcenter">
+			    				<li><a href="<%=cPath %>/members/signupform.do"  class="hvrcenter">
 		    						<span class="glyphicon glyphicon-user"></span>&nbsp Signup</a></li>			    				
 		    				<%}else{ %>
-			    				<li><a href="<%=cPath %>/members/logout.jsp?url=<%=cPath%>"  class="hvrcenter">
+			    				<li><a href="<%=cPath %>/members/logout.do"  class="hvrcenter">
 			   						<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
 			    				<li><a href="<%=cPath %>/pages/mypage.jsp?url=<%=cPath%>"  class="hvrcenter">
 		    						<span class="glyphicon glyphicon-user"></span>Mypage</a></li>

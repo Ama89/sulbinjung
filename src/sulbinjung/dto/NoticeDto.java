@@ -1,38 +1,22 @@
 package sulbinjung.dto;
 
 public class NoticeDto {
-	private int num,adminnum,hit;
-	private String title, adminjob, writedate, contents, filepath;
+	private int hit, fileSize;
+	private String title, contents, regdate, orgFileName, saveFileName, adminId;
 	
 	public NoticeDto() {}
 
-	public NoticeDto(int num, int adminnum, int hit, String title, String adminjob, String writedate, String contents,
-			String filepath) {
+	public NoticeDto(String title, String contents, String regdate, int hit, String orgFileName,
+			String saveFileName, int fileSize, String adminId) {
 		super();
-		this.num = num;
-		this.adminnum = adminnum;
-		this.hit = hit;
 		this.title = title;
-		this.adminjob = adminjob;
-		this.writedate = writedate;
 		this.contents = contents;
-		this.filepath = filepath;
-	}
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
-	public int getAdminnum() {
-		return adminnum;
-	}
-
-	public void setAdminnum(int adminnum) {
-		this.adminnum = adminnum;
+		this.regdate = regdate;
+		this.hit = hit;
+		this.orgFileName = orgFileName;
+		this.saveFileName = saveFileName;
+		this.fileSize = fileSize;		
+		this.adminId = adminId;
 	}
 
 	public int getHit() {
@@ -43,28 +27,20 @@ public class NoticeDto {
 		this.hit = hit;
 	}
 
+	public int getFileSize() {
+		return fileSize;
+	}
+
+	public void setFileSize(int fileSize) {
+		this.fileSize = fileSize;
+	}
+
 	public String getTitle() {
 		return title;
 	}
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-	public String getAdminjob() {
-		return adminjob;
-	}
-
-	public void setAdminjob(String adminjob) {
-		this.adminjob = adminjob;
-	}
-
-	public String getWritedate() {
-		return writedate;
-	}
-
-	public void setWritedate(String writedate) {
-		this.writedate = writedate;
 	}
 
 	public String getContents() {
@@ -75,13 +51,35 @@ public class NoticeDto {
 		this.contents = contents;
 	}
 
-	public String getFilepath() {
-		return filepath;
+	public String getRegdate() {
+		return regdate;
 	}
 
-	public void setFilepath(String filepath) {
-		this.filepath = filepath;
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
 	}
-	
-	
+
+	public String getOrgFileName() {
+		return orgFileName;
+	}
+
+	public void setOrgFileName(String orgFileName) {
+		this.orgFileName = orgFileName;
+	}
+
+	public String getSaveFileName() {
+		return saveFileName;
+	}
+
+	public void setSaveFileName(String saveFileName) {
+		this.saveFileName = saveFileName;
+	}
+
+	public String getAdminId() {
+		return adminId;
+	}
+
+	public void setAdminId(String adminId) {
+		this.adminId = adminId;
+	}
 }

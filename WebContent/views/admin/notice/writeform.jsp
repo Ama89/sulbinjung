@@ -5,7 +5,6 @@
 <%
 	String cPath = request.getContextPath();
 	String id=(String)session.getAttribute("id");
-	AdminDto dto=AdminDao.getInstance().getData(id);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,7 +16,7 @@
 </head>
 <body>
 	<div class="container" style="margin-top:30px">
-		<form action="write.jsp" method="post">
+		<form action="write.do" method="post">
 			<div class="form-group"> <!-- Subject field -->
 				<label class="control-label " for="subject">Title</label>
 				<input class="form-control" id="title" name="title" type="text"/>
@@ -25,7 +24,7 @@
 					
 			<div class="form-group"> <!-- Name field -->
 				<label class="control-label " for="name">Name</label>
-				<input class="form-control" id="job" name="job" type="text" disabled="true" value="<%=dto.getJob()%>"/>
+				<input class="form-control" id="job" name="job" type="text" disabled="true" value="<%=id%>"/>
 			</div>
 			
 			<div class="form-group"> <!-- Email field -->

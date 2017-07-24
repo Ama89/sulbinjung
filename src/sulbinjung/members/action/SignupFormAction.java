@@ -6,12 +6,11 @@ import javax.servlet.http.HttpServletResponse;
 import sulbinjung.controller.Action;
 import sulbinjung.controller.ActionForward;
 
-public class SigninAction extends Action{
+public class SignupFormAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ActionForward("/views/members/signupform.jsp");
 	}
 
 }
