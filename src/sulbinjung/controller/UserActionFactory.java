@@ -1,6 +1,11 @@
 package sulbinjung.controller;
 
+import sulbinjung.admin.action.AdminFaqDeleteAction;
+import sulbinjung.admin.action.AdminFaqDetailAction;
 import sulbinjung.admin.action.AdminFaqListAction;
+import sulbinjung.admin.action.AdminFaqUpdateAction;
+import sulbinjung.admin.action.AdminFaqUpdateformAction;
+import sulbinjung.admin.action.AdminFaqWriteAction;
 import sulbinjung.admin.action.AdminFaqWriteformAction;
 import sulbinjung.admin.action.AdminLoginAction;
 import sulbinjung.admin.action.AdminLogoutAction;
@@ -33,6 +38,16 @@ public class UserActionFactory {
 			action=new AdminFaqListAction();
 		}else if(command.equals("/admin/faq/writeform")){
 			action=new AdminFaqWriteformAction();
+		}else if(command.equals("/admin/faq/write")){
+			action=new AdminFaqWriteAction();
+		}else if(command.equals("/admin/faq/detail")){
+			action=new AdminFaqDetailAction();
+		}else if(command.equals("/admin/faq/updateform")){
+			action=new AdminFaqUpdateformAction();
+		}else if(command.equals("/admin/faq/update")){
+			action=new AdminFaqUpdateAction();
+		}else if(command.equals("/admin/faq/delete")){
+			action=new AdminFaqDeleteAction();
 		}
 		return action;
 	}

@@ -10,7 +10,7 @@ public class AdminFaqWriteformAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-		return new ActionForward("/views/admins/faq/writeform.jsp");
+		return new ActionForward("/views/admin/faq/writeform.jsp");
 	}
 
 }

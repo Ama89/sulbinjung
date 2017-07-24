@@ -21,7 +21,7 @@ public class AdminLoginAction extends Action{
 		if(isValid){//유효한 경우 
 			//로그인 처리를 해준다. 
 			request.getSession().setAttribute("id", id);
-			return new ActionForward("/views/admins/index.jsp");
+			return new ActionForward("/views/admin/index.jsp");
 		}else{//유효하지 않은 경우 
 			return new ActionForward("/views/admins/login.jsp");
 		}		

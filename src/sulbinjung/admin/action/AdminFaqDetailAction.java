@@ -10,15 +10,15 @@ import sulbinjung.controller.ActionForward;
 import sulbinjung.dao.FaqDao;
 import sulbinjung.dto.FaqDto;
 
-public class AdminFaqListAction extends Action{
+public class AdminFaqDetailAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-		//1. 카페 글 목록을 읽어온다.
-		List<FaqDto> list=FaqDao.getInstance().getList();
-		//2. request 에 담는다
-		request.setAttribute("list", list);		
-		return new ActionForward("/views/admin/faq/list.jsp");
+		int num=Integer.parseInt(request.getParameter("num"));
+		FaqDto dto=FaqDao.getInstance().getData(num);
+		
+		request.setAttribute("dto", dto);
+		return new ActionForward("/views/admin/faq/detail.jsp");
 	}
 
 }

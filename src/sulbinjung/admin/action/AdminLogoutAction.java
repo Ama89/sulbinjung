@@ -12,7 +12,7 @@ public class AdminLogoutAction extends Action{
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		request.getSession().invalidate();
 
-		return new ActionForward("/views/admins/logout.jsp");
+		return new ActionForward("/views/admin/logout.jsp");
 	}
 
 }
