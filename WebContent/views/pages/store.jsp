@@ -15,25 +15,19 @@
 <link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
 
 <style>
-	/* 폰트 */
+	/* 제목 폰트 */
 	@font-face {
 	  /*폰트 이름 설정*/
 	  font-family: 'poetfont';
       src: url('<%=cPath %>/resource/fonts/poetfont.ttf') format('truetype');
     }
-    
+    /* 내용 폰트 */
     @font-face {
 	  /*폰트 이름 설정*/
 	  font-family: 'basicfont';
       src: url('<%=cPath %>/resource/fonts/DXKPMB-KSCpc-EUC-H.ttf') format('truetype');
     }
-    
-     @font-face {
-	  /*폰트 이름 설정*/
-	  font-family: 'titlefont';
-      src: url('<%=cPath %>/resource/fonts/wkr고직.ttf') format('truetype');
-    }
-
+ 
 	/* CSS */
     .store_title{	
     	/*폰트 적용하기*/
@@ -53,7 +47,7 @@
     }
     
     #img1{
-    	width: 500px;
+    	width: 500px; 
     	height: 400px;    	
     }
     #content > li{
