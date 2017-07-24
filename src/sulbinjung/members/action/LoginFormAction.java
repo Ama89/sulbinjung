@@ -10,8 +10,6 @@ public class LoginFormAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-
 		return new ActionForward("/views/members/loginform.jsp");
 	}
-
 }
