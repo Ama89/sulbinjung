@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
     String cPath = request.getContextPath();
@@ -54,6 +56,19 @@
     	font-family: basicfont;
     	font-size: 16px;
     }
+    
+    .pagination > li{
+    	display: inline;
+    	width: 300px;
+    	margin: 0 auto;
+    }
+    
+    .pag{
+    	position: absolute;
+    	width: 100%;
+		text-align: center;
+    }
+   
 </style>
 </head>
 
@@ -143,13 +158,45 @@
 								</a>
 							</li>
 						</ul>
-						
 					</div>
 				</div> <!-- 게시물 -->		
 			</div>			
 		</div>
-	</div>
-	    
+	 </div><!-- 메인 컨테이너 -->
+	 
+	 <!-- 페이징 처리에 관련된 UI -->
+	<div class="pag">
+		<ul class="pagination">
+			<!-- 이전버튼 -->
+			<li>
+				<c:choose>
+					<c:when test="${startPageNum ne 1 }">
+						<a href="event.do?pageNum=${startPageNum-1 }">이전</a>
+					</c:when>
+					<c:otherwise>
+						<a class="muted" href="javascript:">이전</a>
+					</c:otherwise>
+				</c:choose>
+			</li>	
+			<li><a href="event.do?pageNum=1">1</a></li>
+			<li><a href="event.do?pageNum=2">2</a></li>
+			<li><a href="event.do?pageNum=3">3</a></li>
+			<!-- 다음버튼 -->
+			<li>
+				<c:choose>
+				<c:when test="${endPageNum lt totalPageCount }">
+					<a href="event.do?pageNum=${endPageNum+1 }">다음</a>
+				</c:when>
+				<c:otherwise>
+					<a class="muted" href="javascript:">다음</a>
+				</c:otherwise>
+			</c:choose>
+			</li>
+		</ul>		
+	  </div>
+	  <br/>
+	  <br/>
+	  <br/>
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
