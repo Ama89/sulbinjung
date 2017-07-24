@@ -1,16 +1,14 @@
 package sulbinjung.dto;
 
 public class MembersDto {
-	private int num;
 	private String id, pwd, name, birth, gender, email, phone, regdate;
 	private boolean isMember;
 	
 	public MembersDto() {}
 
-	public MembersDto(int num, String id, String pwd, String name, String birth, String email, String phone,
+	public MembersDto(String id, String pwd, String name, String birth, String email, String phone,
 			String regdate, String gender, boolean isMember) {
 		super();
-		this.num = num;
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
@@ -21,15 +19,7 @@ public class MembersDto {
 		this.gender = gender;
 		this.isMember = isMember;
 	}
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
+	
 	public String getId() {
 		return id;
 	}

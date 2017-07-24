@@ -1,22 +1,23 @@
 package sulbinjung.dto;
 
 public class NoticeDto {
-	private int num,adminnum,hit;
-	private String title, adminjob, writedate, contents, filepath;
+	private int num,hit;
+	private String title, adminjob, writedate, contents, orgFileName, saveFileName, adminId;
 	
 	public NoticeDto() {}
 
-	public NoticeDto(int num, int adminnum, int hit, String title, String adminjob, String writedate, String contents,
-			String filepath) {
+	public NoticeDto(int num, int hit, String title, String adminjob, String writedate, String contents,
+			String orgFileName, String saveFileName, String adminId) {
 		super();
 		this.num = num;
-		this.adminnum = adminnum;
 		this.hit = hit;
 		this.title = title;
 		this.adminjob = adminjob;
 		this.writedate = writedate;
 		this.contents = contents;
-		this.filepath = filepath;
+		this.orgFileName = orgFileName;
+		this.saveFileName = saveFileName;
+		this.adminId = adminId;
 	}
 
 	public int getNum() {
@@ -25,14 +26,6 @@ public class NoticeDto {
 
 	public void setNum(int num) {
 		this.num = num;
-	}
-
-	public int getAdminnum() {
-		return adminnum;
-	}
-
-	public void setAdminnum(int adminnum) {
-		this.adminnum = adminnum;
 	}
 
 	public int getHit() {
@@ -75,13 +68,27 @@ public class NoticeDto {
 		this.contents = contents;
 	}
 
-	public String getFilepath() {
-		return filepath;
+	public String getOrgFileName() {
+		return orgFileName;
 	}
 
-	public void setFilepath(String filepath) {
-		this.filepath = filepath;
+	public void setOrgFileName(String orgFileName) {
+		this.orgFileName = orgFileName;
 	}
-	
-	
+
+	public String getSaveFileName() {
+		return saveFileName;
+	}
+
+	public void setSaveFileName(String saveFileName) {
+		this.saveFileName = saveFileName;
+	}
+
+	public String getAdminId() {
+		return adminId;
+	}
+
+	public void setAdminId(String adminId) {
+		this.adminId = adminId;
+	}
 }
