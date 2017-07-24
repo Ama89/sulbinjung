@@ -1,31 +1,22 @@
 package sulbinjung.dto;
 
 public class NoticeDto {
-	private int num,hit;
-	private String title, adminjob, writedate, contents, orgFileName, saveFileName, adminId;
+	private int hit, fileSize;
+	private String title, contents, regdate, orgFileName, saveFileName, adminId;
 	
 	public NoticeDto() {}
 
-	public NoticeDto(int num, int hit, String title, String adminjob, String writedate, String contents,
-			String orgFileName, String saveFileName, String adminId) {
+	public NoticeDto(int hit, int fileSize, String title, String contents, String regdate, String orgFileName,
+			String saveFileName, String adminId) {
 		super();
-		this.num = num;
 		this.hit = hit;
+		this.fileSize = fileSize;
 		this.title = title;
-		this.adminjob = adminjob;
-		this.writedate = writedate;
 		this.contents = contents;
+		this.regdate = regdate;
 		this.orgFileName = orgFileName;
 		this.saveFileName = saveFileName;
 		this.adminId = adminId;
-	}
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
 	}
 
 	public int getHit() {
@@ -36,6 +27,14 @@ public class NoticeDto {
 		this.hit = hit;
 	}
 
+	public int getFileSize() {
+		return fileSize;
+	}
+
+	public void setFileSize(int fileSize) {
+		this.fileSize = fileSize;
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -44,28 +43,20 @@ public class NoticeDto {
 		this.title = title;
 	}
 
-	public String getAdminjob() {
-		return adminjob;
-	}
-
-	public void setAdminjob(String adminjob) {
-		this.adminjob = adminjob;
-	}
-
-	public String getWritedate() {
-		return writedate;
-	}
-
-	public void setWritedate(String writedate) {
-		this.writedate = writedate;
-	}
-
 	public String getContents() {
 		return contents;
 	}
 
 	public void setContents(String contents) {
 		this.contents = contents;
+	}
+
+	public String getRegdate() {
+		return regdate;
+	}
+
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
 	}
 
 	public String getOrgFileName() {
@@ -90,5 +81,5 @@ public class NoticeDto {
 
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;
-	}
+	}	
 }
