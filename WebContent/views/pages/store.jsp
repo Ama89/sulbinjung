@@ -13,18 +13,37 @@
 <link rel="stylesheet" href="<%=cPath %>/resource/css/bootstrap.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/font-awesome.min.css" />
 <link rel="stylesheet" href="<%=cPath %>/resource/css/sulbinjung.css" />
+
 <style>
-    .store_title{
-    	font-size: 25px;
-    	text-align: center;
-    }
-    .store_title1{
-    	font-size: 16px;
-    	text-align: center;
+	/* 폰트 */
+	@font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'poetfont';
+      src: url('<%=cPath %>/resource/fonts/poetfont.ttf') format('truetype');
     }
     
+    @font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'basicfont';
+      src: url('<%=cPath %>/resource/fonts/DXKPMB-KSCpc-EUC-H.ttf') format('truetype');
+    }
+    
+     @font-face {
+	  /*폰트 이름 설정*/
+	  font-family: 'titlefont';
+      src: url('<%=cPath %>/resource/fonts/wkr고직.ttf') format('truetype');
+    }
+
+	/* CSS */
+    .store_title{	
+    	/*폰트 적용하기*/
+    	font-family: poetfont;
+    	font-size: 28px;
+    	text-align: center;
+    }
     .store_title1{
-    	font-size: 16px;
+    	font-family: poetfont;
+    	font-size: 25px;
     	text-align: center;
     }
     
@@ -37,9 +56,16 @@
     	width: 500px;
     	height: 400px;    	
     }
-    ul li{
+    #content > li{
+    	font-family: basicfont;
     	list-style: none;
-    	font-size: 16px;
+    	font-size: 17px;
+    }
+    
+    #map_content > li{
+   		font-family: basicfont;
+   		font-size: 17px;
+    	list-style: none;
     }
     
 </style>
@@ -67,11 +93,10 @@
     <div class="row">    
     		<!-- 강남점 소개 -->
 			<div class="col-xs-12" style="text-align:center;">   
-				<p class="store_title">Store</p>
-				<p class="store_title1">-강남점-</p>
+				<p class="store_title">store<br/><strong>매장안내</strong></p>
 				<hr id="hr1"> 
-				<br/>
-				<br/>			
+				<p class="store_title1">강남점 </p>
+				<br/>	
 				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
 				<br/><br/><br/><br/>			
 				<ul id="content">
@@ -83,18 +108,29 @@
 				</div> 
 				
 				<div class="col-xs-12">
-				<br/>
-				<p>오시는 길</p>
-				<br/><br/><br/>
-				<div id="map" style="width:450px;height:350px;"></div>
+					<br/>
+					<p style="font-family:poetfont; font-size:25px;">location</p>
+					<br/><br/><br/>
+					<div class="col-xs-6">
+						<div id="map" style="width:450px;height:350px;"></div>	
+					</div>
+					<br/>
+					<br/>
+						<ul id="map_content" calss="col-xs-push-8">
+								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
+								<li><span>강남역 11번출구 10분거리</span></li><br/>
+								<li><span>신논현역 5번출구 5분거리</span></li>
+						</ul>
+						
 				</div>
 				
+				
 			<!-- 홍대점 소개 -->
-				<div class="col-xs-12"  style="text-align:center;"> 
-					<p class="store_title1">-홍대입구점-</p>
-					<hr id="hr1"> 
-					<br/>
-					<br/>			
+			<div class="col-xs-12"  style="text-align:center;">
+			<br/><br/> 
+				<hr id="hr1"> 
+					<p class="store_title1">홍대입구점</p>
+					<br/>		
 					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
 					<br/><br/><br/><br/>				
 					<ul id="content">
@@ -104,21 +140,97 @@
 					</ul>
 				</div>
 				
+				<div class="col-xs-12">
+					<br/>
+					<p style="font-family:poetfont; font-size:25px;">location</p>
+					<br/><br/><br/>
+					<div class="col-xs-6">
+						<div id="map2" style="width:450px;height:350px;"></div>	
+					</div>
+					<br/>
+						<ul id="map_content" calss="col-xs-push-8">
+								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
+								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
+						</ul>
+						
+				</div>
+				
 				
 			</div>
 			
 			<br/><br/><br/>
 	</div>
-	
+	<!-- 강남점 지도 설정 -->
 		<script>
 		var container = document.getElementById('map');
 		var options = {
 			center: new daum.maps.LatLng(37.502551, 127.027342),
 			level: 3
 		};
-
+		
 		var map = new daum.maps.Map(container, options);
+		
+		// 지도를 클릭한 위치에 표출할 마커입니다
+		var marker = new daum.maps.Marker({ 
+		    // 지도 중심좌표에 마커를 생성합니다 
+		    position: map.getCenter() 
+		}); 
+		// 지도에 마커를 표시합니다
+		marker.setMap(map);
+		
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		// 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+		daum.maps.event.addListener(map, 'zoom_changed', function() {        
+		    
+		    // 지도의 현재 레벨을 얻어옵니다
+		    var level = map.getLevel();
+		    
+		    var message = '현재 지도 레벨은 ' + level + ' 입니다';
+		    var resultDiv = document.getElementById('result');  
+		    resultDiv.innerHTML = message;
+		    
+		});
+
 	</script>
+	<!-- 홍대입구점 지도 설정 -->
+	<script>
+		var container = document.getElementById('map2');
+		var options = {
+			center: new daum.maps.LatLng(37.549019, 126.920863),
+			level: 3
+		};
+		
+		var map = new daum.maps.Map(container, options);
+		
+		// 지도를 클릭한 위치에 표출할 마커입니다
+		var marker = new daum.maps.Marker({ 
+		    // 지도 중심좌표에 마커를 생성합니다 
+		    position: map.getCenter() 
+		}); 
+		// 지도에 마커를 표시합니다
+		marker.setMap(map);
+		
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		// 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
+		daum.maps.event.addListener(map, 'zoom_changed', function() {        
+		    
+		    // 지도의 현재 레벨을 얻어옵니다
+		    var level = map.getLevel();
+		    
+		    var message = '현재 지도 레벨은 ' + level + ' 입니다';
+		    var resultDiv = document.getElementById('result');  
+		    resultDiv.innerHTML = message;
+		    
+		});
+		
+	</script>
+	    
 	    
 	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
