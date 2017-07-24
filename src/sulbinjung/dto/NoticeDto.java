@@ -6,16 +6,16 @@ public class NoticeDto {
 	
 	public NoticeDto() {}
 
-	public NoticeDto(int hit, int fileSize, String title, String contents, String regdate, String orgFileName,
-			String saveFileName, String adminId) {
+	public NoticeDto(String title, String contents, String regdate, int hit, String orgFileName,
+			String saveFileName, int fileSize, String adminId) {
 		super();
-		this.hit = hit;
-		this.fileSize = fileSize;
 		this.title = title;
 		this.contents = contents;
 		this.regdate = regdate;
+		this.hit = hit;
 		this.orgFileName = orgFileName;
 		this.saveFileName = saveFileName;
+		this.fileSize = fileSize;		
 		this.adminId = adminId;
 	}
 
@@ -81,5 +81,5 @@ public class NoticeDto {
 
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;
-	}	
+	}
 }

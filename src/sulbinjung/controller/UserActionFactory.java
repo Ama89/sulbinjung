@@ -11,6 +11,8 @@ import sulbinjung.admin.action.AdminLoginAction;
 
 import sulbinjung.admin.action.AdminLogoutAction;
 import sulbinjung.admin.action.AdminNoticeListAction;
+import sulbinjung.admin.action.AdminNoticeWriteAction;
+import sulbinjung.admin.action.AdminNoticeWriteformAction;
 import sulbinjung.members.action.CheckIdAction;
 import sulbinjung.members.action.HomeAction;
 import sulbinjung.members.action.MembersDeleteAction;
@@ -85,6 +87,12 @@ public class UserActionFactory {
 			action=new MembersUpdateformAction();
 		}else if(command.equals("/members/private/update")){
 			action=new MembersUpdateAction();
+		}else if(command.equals("/admin/notice/list")){
+			action=new AdminNoticeListAction();
+		}else if(command.equals("/admin/notice/writeform")){
+			action=new AdminNoticeWriteformAction();
+		}else if(command.equals("/admin/notice/write")){
+			action=new AdminNoticeWriteAction();
 		}
 		return action;
 	}

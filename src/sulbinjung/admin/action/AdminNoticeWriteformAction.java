@@ -1,21 +1,17 @@
 package sulbinjung.admin.action;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import sulbinjung.controller.Action;
 import sulbinjung.controller.ActionForward;
-import sulbinjung.dao.NoticeDao;
-import sulbinjung.dto.NoticeDto;
 
-public class AdminNoticeListAction extends Action{
+public class AdminNoticeWriteformAction extends Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-		List<NoticeDto> list=NoticeDao.getInstance().getList();
-		return new ActionForward("/views/admin/notice/list.jsp");
+		
+		return new ActionForward("/views/admin/notice/writeform.jsp");
 	}
 
 }
