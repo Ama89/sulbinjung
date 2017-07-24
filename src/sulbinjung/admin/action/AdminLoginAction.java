@@ -14,6 +14,8 @@ public class AdminLoginAction extends Action{
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		String id=request.getParameter("id");
 		String pwd=request.getParameter("pwd");
+		System.out.println(id);
+		System.out.println(pwd);
 		AdminDto dto=new AdminDto();
 		dto.setId(id);
 		dto.setPwd(pwd);
@@ -23,7 +25,7 @@ public class AdminLoginAction extends Action{
 			request.getSession().setAttribute("id", id);
 			return new ActionForward("/views/admin/index.jsp");
 		}else{//유효하지 않은 경우 
-			return new ActionForward("/views/admins/login.jsp");
+			return new ActionForward("/views/admin/login.jsp");
 		}		
 		
 	}
