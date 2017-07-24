@@ -15,8 +15,7 @@ import sulbinjung.controller.Action;
 import sulbinjung.controller.ActionForward;
 import sulbinjung.dao.NoticeDao;
 import sulbinjung.dto.NoticeDto;
-import test.file.dao.FileDao;
-import test.file.dto.FileDto;
+
 
 public class AdminNoticeWriteAction extends Action{
 
@@ -88,7 +87,8 @@ public class AdminNoticeWriteAction extends Action{
 	                    
 	                }else{//폼 필드라면 
 	                	if(item.getFieldName().equals("writer")){
-	                		//작성자 읽어오기 
+	                		//작성자 읽어오기
+	                		NoticeDao.getInstance().getWriter();
 	                		String writer=item.getString("utf-8");
 	                		dto.setWriter(writer);
 	                	}
