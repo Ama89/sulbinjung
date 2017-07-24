@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias type="sulbinjung.dto.AdminDto" alias="adminDto"/>
 		<typeAlias type="sulbinjung.dto.MembersDto" alias="membersDto"/>
-
+		<typeAlias type="sulbinjung.dto.FaqDto" alias="faqDto"/>
 	</typeAliases>
 	
 	<!-- 환경설정 -->
@@ -28,7 +28,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="sulbinjung/mybatis/AdminMapper.xml"/>
 		<mapper resource="sulbinjung/mybatis/FaqMapper.xml"/>
-		<mapper resource="sulbinjung/mybatis/MembersMapper.xml"/>
+		<mapper resource="sulbinjung/mybatis/MemberMapper.xml"/>
 	</mappers>	
 </configuration>
 
