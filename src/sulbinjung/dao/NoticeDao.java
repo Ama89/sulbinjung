@@ -1,59 +1,95 @@
 package sulbinjung.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 
 import sulbinjung.dto.NoticeDto;
-import sulbinjung.util.DbcpBean;
+import sulbinjung.mybatis.SqlMapConfig;
 
 
 public class NoticeDao {
 	private static NoticeDao dao;
+
+	private static SqlSessionFactory factory;
 	private NoticeDao(){}
+
 	public static NoticeDao getInstance(){
 		if(dao==null){
 			dao=new NoticeDao();
+			factory=SqlMapConfig.getSqlSession();
 		}
 		return dao;
 	}
-	
-	//새글을 DB 에 저장하는 메소드
-	public boolean insert(NoticeDto dto){
-		Connection conn=null;
-		PreparedStatement pstmt=null;
-		int flag=0;
+	public void insert(NoticeDto dto){
+		SqlSession session=factory.openSession(true);
 		try{
-			//Connection 객체의 참조값 얻어오기
-			conn=new DbcpBean().getConn();
-			String sql="INSERT INTO NOTICES "
-					+ "(num,title,adminnum,contents,writedate,filepath) "
-				+ "SELECT notices_seq.NEXTVAL,?,?,?,SYSDATE,? "
-				+ "FROM notices, admins "
-				+ "WHERE notices.adminnum=admins.num";
-		
-			pstmt=conn.prepareStatement(sql);
-			//? 에 값 바인딩하기
-			pstmt.setString(1, dto.getTitle());
-			pstmt.setString(2, dto.getAdminjob());
-			pstmt.setString(3, dto.getContents());
-			pstmt.setString(4, dto.getFilepath());
-			System.out.println(dto.getContents());
-			//sql 문 수행하기
-			flag=pstmt.executeUpdate();
+			session.insert("notice.insert", dto);
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
-			try{
-				if(pstmt!=null)pstmt.close();
-				//Connection 객체의 .close() 메소드 호출하면 
-				//Connection 객체가 알아서 Pool 에 반납된다. 
-				if(conn!=null)conn.close();
-			}catch(Exception e){}
+			session.close();
 		}
-		if(flag>0){
-			return true; //작업 성공
-		}else{
-			return false; //작업 실패
-		}
+		
 	}//insert()
+		
+	public List<NoticeDto> getList(){
+		SqlSession session=factory.openSession();
+		
+		List<NoticeDto> list=null;
+		try{
+			list=session.selectList("notice.getList");
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+	public NoticeDto getData(int num){
+		SqlSession session=factory.openSession();
+		NoticeDto dto=null;
+		try{
+			dto=session.selectOne("notice.getData", num);
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+		return dto;
+	}
+	public NoticeDto getWriter(String writer){
+		SqlSession session=factory.openSession();
+		NoticeDto dto=null;
+		try{
+			dto=session.selectOne("notice.getWriter", writer);
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+		return dto;
+	}	
+	public void update(NoticeDto dto){
+		SqlSession session=factory.openSession(true);
+		try{
+			session.update("notice.update", dto);
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+	}	
+	public void delete(int num){
+		SqlSession session=factory.openSession(true);
+		try{
+			session.update("notice.delete", num);
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+	}		
+
 }
