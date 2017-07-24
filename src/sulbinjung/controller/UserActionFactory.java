@@ -19,10 +19,11 @@ import sulbinjung.members.action.MembersDeleteAction;
 import sulbinjung.members.action.MembersInfoAction;
 import sulbinjung.members.action.MembersUpdateAction;
 import sulbinjung.members.action.MembersUpdateformAction;
-import sulbinjung.members.action.SigninAction;
-import sulbinjung.members.action.SigninFormAction;
-import sulbinjung.members.action.SignoutAction;
+import sulbinjung.members.action.LoginAction;
+import sulbinjung.members.action.LoginFormAction;
+import sulbinjung.members.action.LogoutAction;
 import sulbinjung.members.action.SignupAction;
+import sulbinjung.members.action.SignupFormAction;
 
 public class UserActionFactory {
 	private static UserActionFactory factory;
@@ -40,7 +41,10 @@ public class UserActionFactory {
 		Action action = null;
 		if(command.equals("/home")){
 			action=new HomeAction();
-		}else if(command.equals("/admin/login")){
+		}
+		
+		/* 관리자 Action*/	
+		else if(command.equals("/admin/login")){
 			action=new AdminLoginAction();
 		}else if(command.equals("/admin/logout")){
 			action=new AdminLogoutAction();
@@ -60,16 +64,21 @@ public class UserActionFactory {
 			action=new AdminFaqUpdateAction();
 		}else if(command.equals("/admin/faq/delete")){
 			action=new AdminFaqDeleteAction();
-		}else if(command.equals("/members/checkid")){
+		}
+		
+		/* 회원 Action */
+		else if(command.equals("/members/checkid")){
 			action=new CheckIdAction();
+		}else if(command.equals("/members/signupform")){
+			action=new SignupFormAction();
 		}else if(command.equals("/members/signup")){
 			action=new SignupAction();
-		}else if(command.equals("/members/signin_form")){	
-			action=new SigninFormAction();
-		}else if(command.equals("/members/signin")){
-			action=new SigninAction();
-		}else if(command.equals("/members/signout")){
-			action=new SignoutAction();
+		}else if(command.equals("/members/loginform")){	
+			action=new LoginFormAction();
+		}else if(command.equals("/members/login")){
+			action=new LoginAction();
+		}else if(command.equals("/members/logout")){
+			action=new LogoutAction();
 		}else if(command.equals("/members/private/info")){
 			action=new MembersInfoAction();
 		}else if(command.equals("/members/private/delete")){

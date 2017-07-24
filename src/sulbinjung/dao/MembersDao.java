@@ -1,9 +1,5 @@
 package sulbinjung.dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -36,21 +32,19 @@ public class MembersDao {
 				session.close();
 			}
 			return dto;
-		}
+		}		
 		
-		
-		//회원정보를 저장하는 메소드 
-		public void insert(MembersDto dto){
-			SqlSession session=factory.openSession(true);
-			try{
-				session.insert("members.insert", dto);
-			}catch(Exception e){
-				e.printStackTrace();
-			}finally{
-				session.close();
-			}
-			
-		}//insert()
+	//회원정보를 저장하는 메소드 
+	public void insert(MembersDto dto){
+		SqlSession session=factory.openSession(true);
+		try{
+			session.insert("members.insert", dto);
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}	
+	}//insert()
 	
 	//로그인 아이디, 비밀번호 매칭
 	public boolean isValid(MembersDto dto){
@@ -68,9 +62,7 @@ public class MembersDao {
 		}else{
 			return true;
 		}
-	}//isValid()
-	
-	
+	}//isValid()	
 	
 	//회원정보 수정
 	public void update(MembersDto dto){

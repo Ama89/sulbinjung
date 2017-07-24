@@ -40,7 +40,7 @@
 		<div class="row">
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4">	
-				<form action="signup.jsp" method="post">
+				<form action="signup.do" method="post">
 					<br/>
 					<hr style="border: 1.2px solid #cecece;">
 					<br/>

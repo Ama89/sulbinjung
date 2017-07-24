@@ -6,8 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import sulbinjung.dto.NoticeDto;
-import sulbinjung.mybatis.SqlMapConfig;
 
+import sulbinjung.mybatis.SqlMapConfig;
 
 public class NoticeDao {
 	private static NoticeDao dao;

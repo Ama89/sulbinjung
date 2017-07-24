@@ -6,9 +6,12 @@ import javax.servlet.http.HttpServletResponse;
 import sulbinjung.controller.Action;
 import sulbinjung.controller.ActionForward;
 
-public class HomeAction extends Action{
+public class LoginAction extends Action{
+
 	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {		
-		return new ActionForward("/views/home.jsp");
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+
+		return null;
 	}
+
 }
