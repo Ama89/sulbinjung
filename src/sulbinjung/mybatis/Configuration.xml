@@ -29,6 +29,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="sulbinjung/mybatis/AdminMapper.xml"/>
 		<mapper resource="sulbinjung/mybatis/FaqMapper.xml"/>
 		<mapper resource="sulbinjung/mybatis/MemberMapper.xml"/>
+		<mapper resource="sulbinjung/mybatis/NoticeMapper.xml"/>
 	</mappers>	
 </configuration>
 

@@ -80,7 +80,7 @@ public class AdminNoticeWriteAction extends Action{
 	                    File storeFile = new File(filePath);
 	                    item.write(storeFile);
 	                    //원본 파일명과 저장된 파일명을 FileDto 객체에 담는다.
-	                   	dto.setOrgfileName(orgFileName);
+	                   	dto.setOrgFileName(orgFileName);
 	                   	dto.setSaveFileName(saveFileName);
 	                   	//파일 사이즈도 담는다?
 	                   	dto.setFileSize(item.getSize());
@@ -88,9 +88,9 @@ public class AdminNoticeWriteAction extends Action{
 	                }else{//폼 필드라면 
 	                	if(item.getFieldName().equals("writer")){
 	                		//작성자 읽어오기
-	                		NoticeDao.getInstance().getWriter();
-	                		String writer=item.getString("utf-8");
-	                		dto.setWriter(writer);
+	                		String id=request.getSession().getId();         		
+	                		String adminId=id;
+	                		dto.setAdminId(adminId);
 	                	}
 	                	if(item.getFieldName().equals("title")){
 	                		//제목 읽어오기

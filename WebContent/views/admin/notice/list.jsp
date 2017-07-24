@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-	String id=(String)session.getAttribute("id");
-%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -28,7 +25,7 @@
 			<tr>
 				<td>${tmp.num }</td>
 				<td><a href="detail.do?num=${tmp.num }">${tmp.title }</a></td>
-				<td><%=id %></td>
+				<td>${tmp.adminId }</td>
 				<td>${tmp.contents }</td>
 				<td>${tmp.viewCount }</td>
 				<td>${tmp.regdate }</td>

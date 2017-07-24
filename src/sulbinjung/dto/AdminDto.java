@@ -5,7 +5,7 @@ public class AdminDto {
 	
 	public AdminDto() {}
 
-	public AdminDto(int num, String id, String pwd, String name, String job) {
+	public AdminDto(String id, String pwd, String name, String job) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
@@ -43,7 +43,5 @@ public class AdminDto {
 
 	public void setJob(String job) {
 		this.job = job;
-	}
-	
-	
+	}	
 }

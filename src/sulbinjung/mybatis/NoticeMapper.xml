@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="notice">
 	<insert id="insert" parameterType="noticeDto">
 		INSERT INTO notices
-		(num, title, contents, regdate, hit, orgfileName, saveFileName, fileSize, ADMINNUM)
-		VALUES(faq_seq.NEXTVAL,#{title},#{contents},SYSDATE,#{hit},#{orgfileName},#{saveFileName},#{fileSize},#{ADMINNUM})
+		(num, title, contents, regdate, hit, orgFileName, saveFileName, fileSize, adminId)
+		VALUES(faq_seq.NEXTVAL,#{title},#{contents},SYSDATE,#{hit},#{orgFileName},#{saveFileName},#{fileSize},#{adminId})
 	</insert>
 	<select id="getList" resultType="noticeDto">
-		SELECT num, title, contents, regdate, hit, ADMINNUM
+		SELECT num, title, contents, regdate, hit, orgFileName, saveFileName, fileSize, adminId
 		FROM notices
 		ORDER BY num DESC
 	</select>	
 	<select id="getData" parameterType="int" resultType="noticeDto">
-		SELECT num, title, contents, regdate, hit, orgfileName, saveFileName, ADMINNUM
+		SELECT num, title, contents, regdate, hit, orgFileName, saveFileName, adminId
 		FROM notices
 		WHERE num=#{num}
 	</select>	
+	<select id="getAdminId" parameterType="string" resultType="string">
+		SELECT a.id
+		FROM notices n, admins a
+		WHERE ${id}=a.id
+	</select>		
 	<update id="update" parameterType="noticeDto">
 		UPDATE notices
 		SET title=#{title},contents=#{contents},orgfileName=#{orgfileName},saveFileName=#{saveFileName}

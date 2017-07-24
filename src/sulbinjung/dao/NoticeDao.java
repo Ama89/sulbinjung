@@ -59,17 +59,17 @@ public class NoticeDao {
 		}
 		return dto;
 	}
-	public NoticeDto getWriter(String writer){
+	public String getAdminId(String id){
 		SqlSession session=factory.openSession();
-		NoticeDto dto=null;
+		String adminId=null;
 		try{
-			dto=session.selectOne("notice.getWriter", writer);
+			adminId=session.selectOne("notice.getAdminId", id);
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
 			session.close();
 		}
-		return dto;
+		return adminId;
 	}	
 	public void update(NoticeDto dto){
 		SqlSession session=factory.openSession(true);

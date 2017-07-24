@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="container" style="margin-top:30px">
-		<form action="write.do" method="post">
+		<form action="write.do" method="post" enctype="multipart/form-data">
 			<div class="form-group"> <!-- Subject field -->
 				<label class="control-label " for="subject">Title</label>
 				<input class="form-control" id="title" name="title" type="text"/>
@@ -24,7 +24,7 @@
 					
 			<div class="form-group"> <!-- Name field -->
 				<label class="control-label " for="name">Name</label>
-				<input class="form-control" id="job" name="job" type="text" disabled="true" value="<%=id%>"/>
+				<input class="form-control" id="writer" name="writer" type="text" disabled="true" value="<%=id%>"/>
 			</div>
 			
 			<div class="form-group"> <!-- Email field -->
