@@ -43,9 +43,16 @@
     }
     
     .grid{
-    	display: inline;
-    	float:left;
+    	display: inline-block;
+    	margin: 0 auto;
     	margin: 15px;
+    }
+    
+    .content_title{
+    	color: black;
+    	list-style: none;
+    	font-family: basicfont;
+    	font-size: 16px;
     }
 </style>
 </head>
@@ -92,6 +99,7 @@
 				</form>
 				<br/>
 				<br/>
+				
 				<!-- 게시물 리스트 -->
 				<div class="contents">
 					<div class="galleryList">
@@ -100,6 +108,7 @@
 							<li class="grid">
 								<a href="">
 								<img src="<%=cPath %>/resource/images/event1.jpg" alt="맥주이벤트" width="290" height="" />
+
 								<div class="info">
 									<a href="">
 										<div class="content_title">sulbinjung 시원한 여름나기</div>
@@ -107,6 +116,7 @@
 								</div>
 								</a>
 							</li>
+							
 							<!-- 두번째 이벤트 게시물 -->
 							<li class="grid">
 								<a href="">
@@ -114,17 +124,29 @@
 								<div class="info">
 									<a href="">
 										<div class="content_title">선물의 크기보다 마음의 크기가 중요해요<br/>
-												화이트데이 이벤트</div>
+										</div>
+									</a>
+								</div>
+								</a>
+							</li>
+							
+							<!-- 세번째 이벤트 게시물 -->
+							<li class="grid">
+								<a href="">
+								<img src="<%=cPath %>/resource/images/event3.jpg" alt="화이트데이 이벤트" width="290" height="" />
+								<div class="info">
+									<a href="">
+										<div class="content_title">공연 이벤트<br/>
+										</div>
 									</a>
 								</div>
 								</a>
 							</li>
 						</ul>
+						
 					</div>
-				</div>
-			</div>	
-
-			
+				</div> <!-- 게시물 -->		
+			</div>			
 		</div>
 	</div>
 	    
