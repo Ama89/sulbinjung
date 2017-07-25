@@ -60,7 +60,11 @@
     
 </style>
 </head>
+<!-- jQuery -->
+<script src="<%= cPath %>/resource/js/jquery-3.2.0.js"></script>
 
+ <!-- Bootstrap Core JavaScript -->
+<script src="<%= cPath %>/resource/js/bootstrap.min.js"></script>
 <body>
 	<jsp:include page="../header.jsp"></jsp:include>
     
@@ -88,23 +92,23 @@
 				<hr id="hr1"> 
 				<p class="store_title1">강남점 </p>
 				<br/>
+				<!-- Carousel1 -->
 				<div class="col-xs-8 col-xs-push-2">
-				<!-- Carousel -->
-					<div id="storeCarousel" class="carousel slide" data-ride="carousel" date-interval="5000">
-						<ol ass="carousel-indicators">
-							<li data-target="#storeCarousel" data-slide-to="0"></li>
+					<div id="storeCarousel" class="carousel slide carousel-fade" data-ride="carousel" date-interval="3000">
+						<ol class="carousel-indicators">
+							<li data-target="#storeCarousel" data-slide-to="0" class="active"></li>
 							<li data-target="#storeCarousel" data-slide-to="1"></li>
 							<li data-target="#storeCarousel" data-slide-to="2"></li>
 						</ol>
 						<div class="carousel-inner">
-							<div class="item active" role="listbox">
-							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							<div class="item active">
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="강남" />
 							</div>
 							<div class="item">
-							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_7.png" alt="강남" />
 							</div>
 							<div class="item">
-							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_10.png" alt="강남" />
 							</div>
 						</div>
 						<a href="#storeCarousel" class="left carousel-control" data-slide="prev">
@@ -153,16 +157,46 @@
 			<br/><br/> 
 				<hr id="hr1"> 
 					<p class="store_title1">홍대입구점</p>
-					<br/>		
-					<img id="img1" src="<%=cPath %>/resource/images/mu_13.png" alt="홍대점" />
-					<br/><br/><br/><br/>				
+					<br/>	
+					<!-- Carousel1 -->
+				<div class="col-xs-8 col-xs-push-2">
+					<div id="storeCarousel2" class="carousel slide carousel-fade" data-ride="carousel" date-interval="3000">
+						<ol class="carousel-indicators">
+							<li data-target="#storeCarousel2" data-slide-to="0" class="active"></li>
+							<li data-target="#storeCarousel2" data-slide-to="1"></li>
+							<li data-target="#storeCarousel2" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_15.png" alt="강남" />
+							</div>
+							<div class="item">
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_17.png" alt="강남" />
+							</div>
+							<div class="item">
+							<img class="img-responsive" id="img1" src="<%=cPath %>/resource/images/mu_11.png" alt="강남" />
+							</div>
+						</div>
+						<a href="#storeCarousel2" class="left carousel-control" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">이전</span>
+						</a>
+						<a href="#storeCarousel2" class="right carousel-control" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">다음</span>
+						</a>
+					</div>
+				</div>	
+				
+				<div class="col-xs-12">	
 					<ul id="content">
 						<li><span>OPEN 11:30 CLOSE 23:00</span></li><br/>
 						<li><span>TEL 02-719-1994</span></li><br/>
 						<li><span>ADDRESS 서울 마포구 어울로마당로 44</span></li>
 					</ul>
 				</div>
-				
+			</div>
+			
 				<div class="col-xs-12">
 					<br/>
 					
