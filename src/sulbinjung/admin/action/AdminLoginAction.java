@@ -26,8 +26,6 @@ public class AdminLoginAction extends Action{
 			return new ActionForward("/views/admin/index.jsp");
 		}else{//유효하지 않은 경우 
 			return new ActionForward("/views/admin/login.jsp");
-		}		
-		
+		}	
 	}
-
 }

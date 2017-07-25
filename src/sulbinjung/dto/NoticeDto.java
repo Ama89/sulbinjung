@@ -1,7 +1,8 @@
 package sulbinjung.dto;
 
 public class NoticeDto {
-	private int hit, fileSize;
+	private int hit;
+	private long fileSize;
 	private String title, contents, regdate, orgFileName, saveFileName, adminId;
 	
 	public NoticeDto() {}
@@ -27,11 +28,11 @@ public class NoticeDto {
 		this.hit = hit;
 	}
 
-	public int getFileSize() {
+	public long getFileSize() {
 		return fileSize;
 	}
 
-	public void setFileSize(int fileSize) {
+	public void setFileSize(long fileSize) {
 		this.fileSize = fileSize;
 	}
 
