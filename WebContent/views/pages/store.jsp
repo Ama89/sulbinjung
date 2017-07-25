@@ -49,7 +49,7 @@
     #content > li{
     	font-family: basicfont;
     	list-style: none;
-    	font-size: 17px;
+    	font-size: 17px; 
     }
     
     #map_content > li{
