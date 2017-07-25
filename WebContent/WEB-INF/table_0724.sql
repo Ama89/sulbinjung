@@ -49,7 +49,7 @@ CREATE TABLE NOTICES
 	contents		VARCHAR2(500)	NOT NULL,
 	regdate			DATE,
 	hit				NUMBER,
-	orgfileName		VARCHAR2(100),
+	orgFileName		VARCHAR2(100),
 	saveFileName	VARCHAR2(100),
 	fileSize		NUMBER,
 	adminId			VARCHAR2(100)			REFERENCES ADMINS(ID)

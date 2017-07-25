@@ -110,6 +110,4 @@ public class AdminNoticeWriteAction extends Action{
 	    //리다일렉트 이동 
 		return new ActionForward("/admin/notice/list.do", true);
 	}
-
-
 }

@@ -46,20 +46,22 @@
 	<div class="container">								
  	
  	<!-- about us -->
- 	<div class="row" style="text-align: center;"> 		 		
- 		<h2> About us <br/><h6>술빈정 살펴보기</h6></h2><br/> 	
+ 	<div class="row" style="text-align: center; margin-top: 100px;"> 		 		
+ 		<h2><strong>About us</strong></h2>
+ 		<h6>술빈정 살펴보기</h6><br/> 	
 	</div>
  	<jsp:include page="aboutus.jsp"></jsp:include>
  	<br/><br/><br/><br/><br/><br/><br/><br/>
  	
 		<!--베스트메뉴-->
 		<div class="row" style="text-align: center;"> 		 		
- 		<h2> Best Menu <br/><h6>베스트 메뉴</h6></h2><br/> 	
+ 		<h2><strong>Best Menu</strong></h2>
+ 		<h6>베스트 메뉴</h6><br/> 	
 		</div>
 		<div class="container" id="best_container">
 		  	<div class="blog-posts">
 			    <div class="post featured">	      
-			        <div class="image" style="background-image: url(<%=cPath%>/resource/images/mu_4.png)">
+			        <div class="image" style="background-image: url(<%=cPath%>/resource/images/best1.png)">
 			          <div class="sidediv">
 			            <div class='time'>
 			              <div class='date'>Best</div>
@@ -68,46 +70,46 @@
 			          </div>
 			        </div>
 			        <div class="content">
-			          <h3>Best Menu1</h3>
-			          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas illo tempore at eveniet adipisci harum error deserunt in sint aspernatur magni asperiores explicabo corporis ratione praesentium illum magnam esse ipsa dignissimos quaerat perferendis dolor vero? Maiores hic modi optio eaque...</p>
+			          <h3><strong>간장새우덮밥</strong></h3>
+			          <p>간장새우를 밥에 넣어 김에 싸 먹는 맛이 일품입니다.</p>
 				   </div>	      
 			    </div>   	
 		    	<br/><br/>
 				<div class='row cf'>
 			      	<div class='post'>	        
-						<div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_1.png)">
+						<div class='image' style="background-image: url(<%=cPath%>/resource/images/best2.png)">
 						  <div class='time'>
 						    <div class='date'>Best</div>
 						    <div class='month'>02</div>
 						  </div>
 						</div>
 						<div class='content'>
-						  <h3>Best Menu2</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+						  <h3 style="font-size: 20px;"><strong>육회소바</strong></h3>
+						  <p>시원한 육회소바와 튀김이 함께 제공됩니다.</p>	    
 						</div>
 			      	</div>
 					<div class='post'>	        
-					    <div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_2.png)">
+					    <div class='image' style="background-image: url(<%=cPath%>/resource/images/best3.png)">
 					      <div class='time'>
 					        <div class='date'>Best</div>
 					        <div class='month'>03</div>
 					      </div>
 					    </div>
 					    <div class='content'>
-					      <h3>Best Menu3</h3>
-					      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+					      <h3 style="font-size: 20px;"><strong>한방바베큐보쌈</strong></h3>
+					      <p>보쌈은 겉은 바삭 속은 부드럽게 요리하여 한방소스로 졸여낸 메뉴입니다.</p>	    
 					    </div>
 					</div>
 			        <div class='post'>	        
-					    <div class='image' style="background-image: url(<%=cPath%>/resource/images/menu_3.png)">
+					    <div class='image' style="background-image: url(<%=cPath%>/resource/images/best4.png)">
 					      <div class='time'>
 					        <div class='date'>Best</div>
 					        <div class='month'>04</div>
 					      </div>
 					    </div>
 					    <div class='content'>
-					      <h3>Best Menu4</h3>
-					      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam a nostrum nihil nulla hic laborum illum...</p>	    
+					      <h3 style="font-size: 20px;"><strong>골동반</strong></h3>
+					      <p>영양소를 두루 갖춘 비빔밥입니다. (밥 리필 가능)</p>	    
 					    </div>
 					</div>
 			   	</div>

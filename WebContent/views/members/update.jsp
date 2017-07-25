@@ -15,9 +15,9 @@
 	String phone=request.getParameter("phone");
 	String regdate=request.getParameter("regdate");
 	String gender=request.getParameter("gender");
-	boolean isMember=Boolean.parseBoolean(request.getParameter("isMember"));
+	String isMember=request.getParameter("isMember");
 	//MemberDto 객체에 담는다.
-	MembersDto dto=new MembersDto(num, id, pwd, name, birth, email, phone, 
+	MembersDto dto=new MembersDto(id, pwd, name, birth, email, phone, 
 			regdate, gender, isMember);
 	//MemberDao 객체를 이용해서 수정반영한다.
 	MembersDao dao=MembersDao.getInstance();

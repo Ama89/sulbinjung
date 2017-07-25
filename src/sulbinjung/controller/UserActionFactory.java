@@ -64,8 +64,13 @@ public class UserActionFactory {
 			action=new AdminFaqUpdateAction();
 		}else if(command.equals("/admin/faq/delete")){
 			action=new AdminFaqDeleteAction();
-		}
-		
+		}else if(command.equals("/admin/notice/list")){
+		action=new AdminNoticeListAction();
+		}else if(command.equals("/admin/notice/writeform")){
+			action=new AdminNoticeWriteformAction();
+		}else if(command.equals("/admin/notice/write")){
+			action=new AdminNoticeWriteAction();
+		}	
 		/* 회원 Action */
 		else if(command.equals("/members/checkid")){
 			action=new CheckIdAction();
@@ -87,12 +92,6 @@ public class UserActionFactory {
 			action=new MembersUpdateformAction();
 		}else if(command.equals("/members/private/update")){
 			action=new MembersUpdateAction();
-		}else if(command.equals("/admin/notice/list")){
-			action=new AdminNoticeListAction();
-		}else if(command.equals("/admin/notice/writeform")){
-			action=new AdminNoticeWriteformAction();
-		}else if(command.equals("/admin/notice/write")){
-			action=new AdminNoticeWriteAction();
 		}
 		return action;
 	}

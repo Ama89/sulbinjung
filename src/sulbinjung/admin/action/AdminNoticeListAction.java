@@ -15,6 +15,7 @@ public class AdminNoticeListAction extends Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		List<NoticeDto> list=NoticeDao.getInstance().getList();
+		request.setAttribute("list", list);
 		return new ActionForward("/views/admin/notice/list.jsp");
 	}
 

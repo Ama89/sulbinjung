@@ -1,5 +1,6 @@
 package sulbinjung.dto;
 
+
 public class NoticeDto {
 	private int hit;
 	private long fileSize;
@@ -7,8 +8,9 @@ public class NoticeDto {
 	
 	public NoticeDto() {}
 
+
 	public NoticeDto(String title, String contents, String regdate, int hit, String orgFileName,
-			String saveFileName, int fileSize, String adminId) {
+			String saveFileName, long fileSize, String adminId) {
 		super();
 		this.title = title;
 		this.contents = contents;
