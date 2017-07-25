@@ -46,10 +46,6 @@
     	border: 1px solid #cecece;
     }
     
-    #img1{
-    	width: 500px; 
-    	height: 400px;    	
-    }
     #content > li{
     	font-family: basicfont;
     	list-style: none;
@@ -91,26 +87,58 @@
 				<p class="store_title">store<br/><strong>매장안내</strong></p>
 				<hr id="hr1"> 
 				<p class="store_title1">강남점 </p>
-				<br/>	
-				<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
-				<br/><br/><br/><br/>			
+				<br/>
+				<div class="col-xs-8 col-xs-push-2">
+				<!-- Carousel -->
+					<div id="storeCarousel" class="carousel slide" data-ride="carousel" date-interval="5000">
+						<ol ass="carousel-indicators">
+							<li data-target="#storeCarousel" data-slide-to="0"></li>
+							<li data-target="#storeCarousel" data-slide-to="1"></li>
+							<li data-target="#storeCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active" role="listbox">
+							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							</div>
+							<div class="item">
+							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							</div>
+							<div class="item">
+							<img id="img1" src="<%=cPath %>/resource/images/mu_9.png" alt="홍대점" />
+							</div>
+						</div>
+						<a href="#storeCarousel" class="left carousel-control" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">이전</span>
+						</a>
+						<a href="#storeCarousel" class="right carousel-control" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">다음</span>
+						</a>
+					</div>
+				</div>	
+				
+				<div class="col-xs-12">
+				<div class="box" style="width: 100%; height: 70px;"></div>			
 				<ul id="content">
 					<li><span>OPEN 11:00 CLOSE 23:00</span></li><br/>
 					<li><span>TEL 02-108-1994</span></li><br/>
 					<li><span>ADDRESS 서울 강남구 강남대로 102길 23</span></li>
 				</ul>
-				
-				</div> 
+				</div>
+		</div> 
 				
 				<div class="col-xs-12">
 					<br/>
+					
+					<div class="col-xs-6">
 					<p style="font-family:poetfont; font-size:25px;">location</p>
 					<br/><br/><br/>
-					<div class="col-xs-6">
-						<div id="map" style="width:450px;height:350px;"></div>	
+						<div id="map" style="width:450px;height:350px;"></div>
+							
 					</div>
 					<br/>
-					<br/>
+					<br/><br/><br/>
 						<ul id="map_content" calss="col-xs-push-8">
 								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
 								<li><span>강남역 11번출구 10분거리</span></li><br/>
@@ -137,12 +165,13 @@
 				
 				<div class="col-xs-12">
 					<br/>
-					<p style="font-family:poetfont; font-size:25px;">location</p>
-					<br/><br/><br/>
+					
 					<div class="col-xs-6">
+						<p style="font-family:poetfont; font-size:25px;">location</p>
+					`<br/><br/><br/>
 						<div id="map2" style="width:450px;height:350px;"></div>	
 					</div>
-					<br/>
+					<br/><br/><br/><br/>
 						<ul id="map_content" calss="col-xs-push-8">
 								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
 								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
