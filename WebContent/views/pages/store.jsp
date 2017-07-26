@@ -92,7 +92,7 @@
 				<hr id="hr1"> 
 				<p class="store_title1">강남점 </p>
 				<br/>
-				<!-- Carousel1 -->
+				<!-- 강남점 매장사진 Carousel1 -->
 				<div class="col-xs-8 col-xs-push-2">
 					<div id="storeCarousel" class="carousel slide carousel-fade" data-ride="carousel" date-interval="3000">
 						<ol class="carousel-indicators">
@@ -121,7 +121,7 @@
 						</a>
 					</div>
 				</div>	
-				
+				<!-- 강남점 매장 정보 -->
 				<div class="col-xs-12">
 				<div class="box" style="width: 100%; height: 70px;"></div>			
 				<ul id="content">
@@ -131,26 +131,21 @@
 				</ul>
 				</div>
 		</div> 
-				
+				<!-- 강남점 지도 -->
 				<div class="col-xs-12">
-					<br/>
-					
 					<div class="col-xs-6">
-					<p style="font-family:poetfont; font-size:25px;">location</p>
-					<br/><br/><br/>
+						<p style="font-family:poetfont; font-size:25px;">location</p>
+						<br/>
 						<div id="map" style="width:450px;height:350px;"></div>
-							
-					</div>
-					<br/>
-					<br/><br/><br/>
+						</div>
+						<div class="box" style="width: 100%; height: 150px;"></div>
+						<!-- 강남점 위치 정보 -->
 						<ul id="map_content" calss="col-xs-push-8">
 								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
 								<li><span>강남역 11번출구 10분거리</span></li><br/>
 								<li><span>신논현역 5번출구 5분거리</span></li>
 						</ul>
-						
-				</div>
-				
+				</div>			
 				
 			<!-- 홍대점 소개 -->
 			<div class="col-xs-12"  style="text-align:center;">
@@ -158,7 +153,7 @@
 				<hr id="hr1"> 
 					<p class="store_title1">홍대입구점</p>
 					<br/>	
-					<!-- Carousel1 -->
+					<!-- 홍대입구 매장 사진 Carousel2 -->
 				<div class="col-xs-8 col-xs-push-2">
 					<div id="storeCarousel2" class="carousel slide carousel-fade" data-ride="carousel" date-interval="3000">
 						<ol class="carousel-indicators">
@@ -187,8 +182,9 @@
 						</a>
 					</div>
 				</div>	
-				
+				<!-- 홍대입구점 매장 정보 -->
 				<div class="col-xs-12">	
+					<div class="box" style="width: 100%; height: 70px;"></div>			
 					<ul id="content">
 						<li><span>OPEN 11:30 CLOSE 23:00</span></li><br/>
 						<li><span>TEL 02-719-1994</span></li><br/>
@@ -197,25 +193,21 @@
 				</div>
 			</div>
 			
+			<!-- 홍대입구 지도 -->
 				<div class="col-xs-12">
-					<br/>
-					
 					<div class="col-xs-6">
 						<p style="font-family:poetfont; font-size:25px;">location</p>
-					`<br/><br/><br/>
+					<br/>
 						<div id="map2" style="width:450px;height:350px;"></div>	
 					</div>
-					<br/><br/><br/><br/>
+					<div class="box" style="width: 100%; height: 150px;"></div>
+						<!-- 홍대입구 위치정보 -->
 						<ul id="map_content" calss="col-xs-push-8">
 								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
 								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
-						</ul>
-						
-				</div>
-				
-				
-			</div>
-			
+						</ul>						
+				</div>				
+			</div>		
 			<br/><br/><br/>
 	</div>
 	<!-- 강남점 지도 설정 -->
