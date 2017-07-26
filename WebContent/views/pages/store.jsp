@@ -38,7 +38,7 @@
     .store_title1{
     	font-family: poetfont;
     	font-size: 25px;
-    	text-align: center;
+    	text-align: center; 
     }
     
     #hr1{
@@ -131,16 +131,15 @@
 				</ul>
 				</div>
 		</div> 
+			
 				<!-- 강남점 지도 -->
+				<p style="font-family:poetfont; font-size:25px; text-align: center;">location</p>
 				<div class="col-xs-12">
-					<div class="col-xs-6">
-						<p style="font-family:poetfont; font-size:25px;">location</p>
 						<br/>
-						<div id="map" style="width:450px;height:350px;"></div>
-						</div>
-						<div class="box" style="width: 100%; height: 150px;"></div>
+						<div id="map" style="width:600px;height:450px; margin: 0 auto;"></div>
+						<div class="box" style="width: 100%; height: 50px;"></div>
 						<!-- 강남점 위치 정보 -->
-						<ul id="map_content" calss="col-xs-push-8">
+						<ul id="map_content" calss="col-xs-push-8" style="text-align: center;">
 								<li><span>서울시 강남구 역삼동 812-15번지</span></li><br/>
 								<li><span>강남역 11번출구 10분거리</span></li><br/>
 								<li><span>신논현역 5번출구 5분거리</span></li>
@@ -192,17 +191,14 @@
 					</ul>
 				</div>
 			</div>
-			
+			<div class="box" style="width: 100%; height: 150px;"></div>
 			<!-- 홍대입구 지도 -->
+				<p style="font-family:poetfont; font-size:25px; text-align: center;">location</p>
 				<div class="col-xs-12">
-					<div class="col-xs-6">
-						<p style="font-family:poetfont; font-size:25px;">location</p>
-					<br/>
-						<div id="map2" style="width:450px;height:350px;"></div>	
-					</div>
-					<div class="box" style="width: 100%; height: 150px;"></div>
+					<div id="map2" style="width:600px;height:450px; margin:0 auto;"></div>	
+					<div class="box" style="width: 100%; height: 50px;"></div>
 						<!-- 홍대입구 위치정보 -->
-						<ul id="map_content" calss="col-xs-push-8">
+						<ul id="map_content" calss="col-xs-push-8" style="text-align: center;">
 								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
 								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
 						</ul>						
