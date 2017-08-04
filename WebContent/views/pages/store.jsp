@@ -131,7 +131,9 @@
 				</ul>
 				</div>
 		</div> 
-			
+		
+		
+				<div class="box" style="width: 100%; height: 50px;"></div>
 				<!-- 강남점 지도 -->
 				<p style="font-family:poetfont; font-size:25px; text-align: center;">location</p>
 				<div class="col-xs-12">
@@ -192,6 +194,8 @@
 				</div>
 			</div>
 			<div class="box" style="width: 100%; height: 150px;"></div>
+			
+			<div class="box" style="width: 100%; height: 50px;"></div>
 			<!-- 홍대입구 지도 -->
 				<p style="font-family:poetfont; font-size:25px; text-align: center;">location</p>
 				<div class="col-xs-12">
@@ -200,7 +204,7 @@
 						<!-- 홍대입구 위치정보 -->
 						<ul id="map_content" calss="col-xs-push-8" style="text-align: center;">
 								<li><span>상수역 1번 출구 도보 5분</span></li><br/>
-								<li><span>합정역 6번 출구 도보 11분</span></li><br/>
+			 					<li><span>합정역 6번 출구 도보 11분</span></li><br/>
 						</ul>						
 				</div>				
 			</div>		
